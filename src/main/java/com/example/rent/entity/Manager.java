@@ -32,10 +32,12 @@ public class Manager {
     }
 
     public Integer getSum() {
-        return sum;
+        return this.sum;
     }
 
     public void setSum(Integer sum) {
         this.sum = sum;
     }
+
+
 }

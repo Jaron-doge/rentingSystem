@@ -6,11 +6,11 @@ public class House {
     private String  city;
     private String  district;
     private String address;
-    private String  price;
+    private Integer  price;
     private String  type;
     private String area;
     private String detail;
-    private String managerId;
+    private Integer managerId;
 
     public Integer getHouseId() {
         return houseId;
@@ -52,12 +52,20 @@ public class House {
         this.address = address;
     }
 
-    public String getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public Integer getManagerId() {
+        return managerId;
+    }
+
+    public void setManagerId(Integer managerId) {
+        this.managerId = managerId;
     }
 
     public String getType() {
@@ -84,11 +92,4 @@ public class House {
         this.detail = detail;
     }
 
-    public String getManagerId() {
-        return managerId;
-    }
-
-    public void setManagerId(String managerId) {
-        this.managerId = managerId;
-    }
 }
