@@ -1,0 +1,33 @@
+#picture{/*轮播框样式*/
+    border: none;
+    width: 1100px;
+    height: 350px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;/*隐藏溢出的图片*/
+}
+#pRotation{/*图片样式（4张图片在一排）*/
+    position: absolute;
+    width: 4400px;
+    height: 350px;
+    transition: 2s;
+}
+#numberD {/*数字的位置*/
+    position: absolute;
+    top: 320px;
+    left: 43%;
+}
+#numberS {/*数字的样式*/
+    height: 13px;
+    width: 13px;
+    border: 1px solid #000;
+    z-index: 10;
+    float: left;
+    list-style: none;
+    border-radius: 50%;/*圆形*/
+    margin-left: 8px;
+    text-align: center;
+    cursor:pointer;
+    font-size: 3px; 
+}
