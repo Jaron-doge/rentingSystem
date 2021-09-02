@@ -12,13 +12,21 @@
             height: 350px;
             margin: auto;
             text-align: center;
+            position: relative;
+            overflow: hidden;/*隐藏溢出的图片*/
         }
-        #biao {/*数字的位置*/
+        #pRotation{/*图片样式（4张图片在一排）*/
+            position: absolute;
+            width: 4400px;
+            height: 350px;
+            transition: 2s;
+        }
+        #numberD {/*数字的位置*/
             position: absolute;
             top: 320px;
             left: 43%;
         }
-        #number {/*数字的样式*/
+        #numberS {/*数字的样式*/
             height: 13px;
             width: 13px;
             border: 1px solid #000;
@@ -33,40 +41,47 @@
         }
     </style>
 </head>
-<body onload="init()">
-    <div>
-        <div id="picture">
-            <img id="pRotation" src="image/house1.jpeg" width="100%" height="100%">
+<body>
+    <div id="picture">
+        <div id="pRotation">
+            <img src="images/house1.png" height="100%">
+            <img src="images/house2.png" height="100%">
+            <img src="images/house3.png" height="100%">
+            <img src="images/house4.png" height="100%">
         </div>
-        <div id="biao">
+        <div id="numberD">
             <ul>
-                <li id="number">1</li>
-                <li id="number">2</li>
-                <li id="number">3</li>
-                <li id="number">4</li>
+                <li id="numberS">1</li>
+                <li id="numberS">2</li>
+                <li id="numberS">3</li>
+                <li id="numberS">4</li>
             </ul>
         </div>
     </div>
 </body>
-<script>
+<script  type="text/javascript">
+    var pictureRotation=document.getElementById("pRotation");
     var numberColor=document.getElementsByTagName("li");
-    function init(){
-        setInterval("changeImg()",1000);
-    }
     var i=0;
+    console.log(numberColor);
+    auto();/*自动播放*/
     numberColor[0].style.cssText="background:#ff6700;color:#fff;";
-    function changeImg(){
-        i++;
-        if(i<3){
-            document.getElementById("pRotation").src="image/house"+i+".jpeg" 
-            numberColor[i].style.cssText="background:#ff6700;color:#fff;";
-            numberColor[i-1].style.cssText="background:none;color:#000;";
-        }
-        else{
-            numberColor[3].style.cssText="background:#ff6700;color:#fff;";
-            numberColor[0].style.cssText="background:none;color:#000;";
-            i=0;
-        }
+    function auto(){
+        time = setInterval(function(){
+            i++;
+            if(i<=3){
+                pictureRotation.style.left = pictureRotation.offsetLeft - 1100 + "px";/*图片向左滚动一个图片的单位*/
+                numberColor[i].style.cssText="background:#ff6700;color:#fff;";
+                numberColor[i-1].style.cssText="background:none;color:#000;";
+            }
+            else{
+                pictureRotation.style.left ="0px";/*归位*/
+                numberColor[3].style.cssText="background:none;color:#000;";
+                numberColor[0].style.cssText="background:#ff6700;color:#fff;";
+                i=0;
+            }
+            console.log(i);
+        },5000)
     }
     
 </script>
