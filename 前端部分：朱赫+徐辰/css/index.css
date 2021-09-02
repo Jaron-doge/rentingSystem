@@ -163,7 +163,6 @@
 }
 
 .houseleft {
-    background-color: skyblue;
     float: left;
     width: 869px;
 }
@@ -188,6 +187,7 @@
 }
 
 .detailinfo ul li {
+    position: relative;
     height: 160px;
     padding: 20px 0;
     border-bottom: 1px solid #e4e4e4;
@@ -198,21 +198,66 @@
 }
 
 .detailinfo ul li dl {
-    margin: 0 20px;
+    margin: 0 180px;
     height: 20px;
-    background-color: pink;
+}
+
+.detailinfo ul li dl dt {
+    height: 30px;
+    line-height: 30px;
+}
+
+.detailinfo ul li span {
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    font-size: 20px;
+    color: #f59a23;
+}
+
+.title {
+    color: #333333;
+    font-size: 18px;
+}
+
+.title:hover {
+    color: #f59a23;
 }
 
 .houseright {
-    background-color: pink;
     float: right;
     width: 300px;
 }
 
 .retui {
     height: 40px;
+    line-height: 40px;
+    margin: 20px 0;
+    color: #f59a23;
+    font-size: 14px;
 }
 
 .retuiinfo ul li {
-    height: 270px;
+    height: 260px;
+    border-bottom: 1px solid #e4e4e4;
 }
+
+.retuiinfo ul li dl {
+    float: left;
+    margin-left: 10px;
+}
+
+.retuiinfo ul li dl dt {
+    height: 30px;
+    line-height: 30px;
+}
+
+.retuidetail {
+    font-size: 14px;
+}
+
+.retuiprice {
+    font-size: 20px;
+    color: #ff552e;
+}
+
