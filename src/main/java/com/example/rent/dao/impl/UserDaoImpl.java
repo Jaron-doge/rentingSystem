@@ -63,7 +63,7 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public boolean register(User user) {
-        String sql = "insert into user values (?,?,?,?,?)";
+        String sql = "insert into user values (?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(user.getUserId());
         list.add(user.getUserName());
@@ -194,7 +194,7 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public boolean updateUser(User user) {
-        String sql = "update user set userPwd=?,usename=?where userid=?";
+        String sql = "update user set userPwd=?,userName=?where userid=?";
         List<Object> list = new ArrayList<Object>();
         list.add(user.getUserPwd());
         list.add(user.getUserName());
