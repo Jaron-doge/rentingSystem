@@ -26,7 +26,7 @@
         }
         .divS2-2 {
             position: relative;
-            width: 450px;
+            width: 500px;
             height: 400px;
             float: left;
             overflow: hidden;
@@ -56,24 +56,32 @@
             height: 550px;
             float: left;
         }
+        .divS4 {
+            height: 150px;
+            width: 100%;
+            background-color: #f0d7d7;
+        }
         .divS4-1 {
             position: relative;
             width: 280px;
             height: 150px;
             left: 180px;
             float: left;
+            background-color: #f0d7d7;
         }
         .divS4-2 {
             position: relative;
             width: 800px;
             height: 150px;
             float: left;
+            background-color: #f0d7d7;
         }
         .divS4-3 {
             position: relative;
             width:200px;
             height: 150px;
             float: left;
+            background-color: #f0d7d7;
         }
         .fontS1 {/*第一行字体样式*/
             text-align: left;
@@ -159,6 +167,7 @@
             width: 100px;
             height: 30px;
             font-size: 10px;
+            top:0px;
         }
     </style>
 </head>
@@ -180,14 +189,12 @@
                     <img src="images/house7.png" height="100%">
                     <img src="images/house8.png" height="100%">
                 </div>
-                
             </div>
-            
         </div>
         <div class="divS2-2 fontS2-1">
             <p class="fontS2-2">2680元/月</p>
             <p>租赁方式：合租</p>
-            <p>房屋类型：3室1厅1卫 20平 精装修</p>
+            <p>房屋类型：3室1厅1卫 朝南 20平 精装修</p>
             <p>房屋类型：中层/25层</p>
             <p>所在小区：首科花园（D区）</p>
             <p>所属区域：丰台 六里桥距离地铁9号线六里桥东站1511米</p>
@@ -196,9 +203,11 @@
         <div class="divS2-3 fontS2-3">
             <img src="images/user.png" class="user-photoS-1"><br/>
             <p>XXXXXXX有限公司</p>
-            <img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">电话</button><br/>
-            <img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">管理房屋</button><br/>
-            <img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">企业信息及投诉记录</button><br/>
+            
+                <p><img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">电话</button></p>
+                <p><img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">管理房屋</button></p>
+                <p><img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">企业信息及投诉记录</button></p>
+            
         </div>
     </div>
     <div>
@@ -207,7 +216,7 @@
             <p class="fontS3-2">房源详情</p>
             <p>卧室设置</p>
             <p>公共设施</p>
-            <p>房屋亮点</p>
+            <p>出租要求</p>
             <p>房源描述</p>           
         </div>
         <div class="divS3-2 fonts3-1">
@@ -217,8 +226,8 @@
             <img src="images/logo-weishengjian.png" class="logoS"><img src="images/logo-zhinengmensuo.png" class="logoS"><br/>
             <img src="images/logo-bingxiang.png" class="logoS"><img src="images/logo-xiyiji.png" class="logoS"><img src="images/logo-shafa.png" class="logoS">
             <img src="images/logo-youyanji.png" class="logoS"><img src="images/logo-kezuofan.png" class="logoS"><img src="images/logo-kuandai.png" class="logoS">
-            <img src="images/logo-reshuiqi.png" class="logoS"><img src="images/logo-ranqizao.png" class="logoS"><br/>
-            <p class="fontS3-3">独卫 独立阳台 配套齐全 精装修 首次出租</p>
+            <img src="images/logo-reshuiqi.png" class="logoS"><img src="images/logo-ranqizao.png" class="logoS"><img src="images/logo-dianti.png" class="logoS"><br/>
+            <p class="fontS3-3">租户稳定 作息正常 禁养宠物</p>
             <p>装修：北欧风格精装修，精装大主卧，干净卫生，南向采光</p>
             <p>家配套：配备品牌家具家电、配套床垫、抱枕、台灯、壁灯、减轻疲劳桌椅、衣柜、空调、洗衣机、冰箱和厨房，高速宽带。</p>
             <p>环境：小区环境优美，安静祥和</p>
@@ -242,30 +251,34 @@
     </div>    
     <div>
         <hr style="width:1200PX;">
-        <div class="divS4-1">
-            <img src="images/user.png" class="logoS-2">
+        <div class="divS4">
+            <div class="divS4-1">
+                <br/><br/>
+                <img src="images/user.png" class="logoS-2">
+            </div>
+            <div class="divS4-2 fontS4">
+                <br/><br/><br/><br/>
+                <a href="#">网站首页</a>
+                <a href="#">帮助中心</a>
+                <a href="#">联系我们</a>
+                <a href="#">招聘信息</a>
+                <a href="#">客户服务</a>
+                <a href="#">隐私政策</a>
+                <a href="#">广告服务</a>
+                <a href="#">网站地图</a>
+                <a href="#">隐私反馈</a>
+                24小时客服热线400-000-0000
+            </div>
+            <div class="divS4-3">
+                <img src="images/user.png" class="logoS-3" onmouseover="changeSrc(this)" onmouseleave="changeSrc2(this)">
+                <img src="images/user.png" class="logoS-3" onmouseover="changeSrc3(this)" onmouseleave="changeSrc4(this)"">
+                <img src="images/user.png" class="logoS-3">
+                <br/>
+                <img src="images/二维码.png" class="logoS-4" id="EWM1">
+                <img src="images/二维码2.png" class="logoS-4" id="EWM2">
+            </div>
         </div>
-        <div class="divS4-2 fontS4">
-            <br/><br/>
-            <a href="#">网站首页</a>
-            <a href="#">帮助中心</a>
-            <a href="#">联系我们</a>
-            <a href="#">招聘信息</a>
-            <a href="#">客户服务</a>
-            <a href="#">隐私政策</a>
-            <a href="#">广告服务</a>
-            <a href="#">网站地图</a>
-            <a href="#">隐私反馈</a>
-            24小时客服热线400-000-0000
-        </div>
-        <div class="divS4-3">
-            <img src="images/user.png" class="logoS-3" onmouseover="changeSrc(this)" onmouseleave="changeSrc2(this)">
-            <img src="images/user.png" class="logoS-3" onmouseover="changeSrc3(this)" onmouseleave="changeSrc4(this)"">
-            <img src="images/user.png" class="logoS-3">
-            <br/>
-            <img src="images/二维码.png" class="logoS-4" id="EWM1">
-            <img src="images/二维码2.png" class="logoS-4" id="EWM2">
-        </div>
+        
     </div>
 </body>
 <script  type="text/javascript">
@@ -285,19 +298,19 @@
     function changeSrc4(obj) {
         imgXL.style.display="none";
     }
-    auto2();/*自动播放*/
+    /*auto2();
     function auto2(){
         time = setInterval(function(){
             i++;
             if(i<=3){
-                productRotation.style.left = productRotation.offsetLeft - 600 + "px";/*图片向左滚动一个图片的单位*/ 
+                productRotation.style.left = productRotation.offsetLeft - 600 + "px";
             }
             else{
-                productRotation.style.left ="0px";/*归位*/   
+                productRotation.style.left ="0px";
                 i=0;
             }
         },1000)
-    };
+    };*/
     
     
 </script>
