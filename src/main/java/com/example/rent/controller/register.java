@@ -20,15 +20,17 @@ public class register extends HttpServlet {
         User user=new User();
         //获取register.jsp页面提交的账号和密码
 
-        String name=request.getParameter("id");
+        Integer id =Integer.parseInt(request.getParameter("id").trim());
         String password=request.getParameter("password");
+        String name = "user";
         Integer icon =1;
 
         //获取register.jsp页面提交的账号和密码设置到实体类User中
 
-        user.setUserName(name);
+        user.setUserId(id);
         user.setUserPwd(password);
         user.setIcon(icon);
+        user.setUserName(name);
 
 
         //引入数据交互层

@@ -42,7 +42,7 @@ public class UserDaoImpl implements UserDao {
                 users.setUserId(rs.getInt("userid"));
                 users.setUserName(rs.getString("username"));
                 users.setUserPwd(rs.getString("userPwd"));
-                user.setIcon(rs.getInt("icon"));
+                user.setIcon(rs.getInt("userIcon"));
 
                 // 返回的是你查询出来的完整的对象
                 return users;
@@ -66,9 +66,8 @@ public class UserDaoImpl implements UserDao {
         String sql = "insert into User values (?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(user.getUserId());
-        list.add(user.getUserName());
         list.add(user.getUserPwd());
-
+        list.add(user.getUserName());
         list.add(user.getIcon());
 
         boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());
@@ -106,8 +105,9 @@ public class UserDaoImpl implements UserDao {
                 User user = new User();
                 // 从数据库中获取值到实体类的setter方法中
                 user.setUserId(rs.getInt("userid"));
-                user.setUserName(rs.getString("username"));
                 user.setUserPwd(rs.getString("userPwd"));
+                user.setUserName(rs.getString("username"));
+
 
                 user.setIcon(rs.getInt("userIcon"));
 
