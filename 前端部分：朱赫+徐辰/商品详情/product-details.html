@@ -29,6 +29,7 @@
             width: 450px;
             height: 400px;
             float: left;
+            overflow: hidden;
         }
         .divS2-3 {
             position: relative;
@@ -135,6 +136,25 @@
             height: 60px;
             border-radius: 50%;
         }
+        .logoS-4{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            display: none;
+        }
+        #productRotation-1 {
+            border: none;
+            width: 600px;
+            height: 400px;
+            margin: auto;
+            overflow: hidden;
+        }
+        #productRotation-2 {
+            width: 2500px;
+            height: 400px;
+            transition: 1s;
+            overflow: hidden;
+        }
         .buttonS2 {
             width: 100px;
             height: 30px;
@@ -151,10 +171,18 @@
             <a href="#"><img src="images/collect1.png" title="加入收藏"></a>
         </div>
     </div>
-    <div class="divS2">
+    <div>
         <hr style="width:1200PX;">
-        <div class="divS2-1">
-
+            <div class="divS2-1" id="productRotation-1">
+                <div id="productRotation-2">
+                    <img src="images/house5.png" height="100%">
+                    <img src="images/house6.png" height="100%">
+                    <img src="images/house7.png" height="100%">
+                    <img src="images/house8.png" height="100%">
+                </div>
+                
+            </div>
+            
         </div>
         <div class="divS2-2 fontS2-1">
             <p class="fontS2-2">2680元/月</p>
@@ -231,11 +259,46 @@
             24小时客服热线400-000-0000
         </div>
         <div class="divS4-3">
+            <img src="images/user.png" class="logoS-3" onmouseover="changeSrc(this)" onmouseleave="changeSrc2(this)">
+            <img src="images/user.png" class="logoS-3" onmouseover="changeSrc3(this)" onmouseleave="changeSrc4(this)"">
+            <img src="images/user.png" class="logoS-3">
             <br/>
-            <img src="images/user.png" class="logoS-3">
-            <img src="images/user.png" class="logoS-3">
-            <img src="images/user.png" class="logoS-3">
+            <img src="images/二维码.png" class="logoS-4" id="EWM1">
+            <img src="images/二维码2.png" class="logoS-4" id="EWM2">
         </div>
     </div>
 </body>
+<script  type="text/javascript">
+    var productRotation=document.getElementById("productRotation-2");
+    var imgWX=document.getElementById("EWM1");
+    var imgXL=document.getElementById("EWM2");
+    var i=0;
+    function changeSrc(obj) {
+        imgWX.style.display="block";
+    }
+    function changeSrc2(obj) {
+        imgWX.style.display="none";
+    }
+    function changeSrc3(obj) {
+        imgXL.style.display="block";
+    }
+    function changeSrc4(obj) {
+        imgXL.style.display="none";
+    }
+    auto2();/*自动播放*/
+    function auto2(){
+        time = setInterval(function(){
+            i++;
+            if(i<=3){
+                productRotation.style.left = productRotation.offsetLeft - 600 + "px";/*图片向左滚动一个图片的单位*/ 
+            }
+            else{
+                productRotation.style.left ="0px";/*归位*/   
+                i=0;
+            }
+        },1000)
+    };
+    
+    
+</script>
 </html>
