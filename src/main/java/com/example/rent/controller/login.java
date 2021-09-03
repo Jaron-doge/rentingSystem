@@ -21,7 +21,7 @@ public class login extends HttpServlet {
         User user = new User();
         UserDao dao = new UserDaoImpl();
 
-        String username = request.getParameter("username");
+        String username = request.getParameter("userid");
         String password = request.getParameter("userpassword");
 
         user.setUserName(username);
@@ -30,17 +30,8 @@ public class login extends HttpServlet {
         // 获取用户登录信息
         User us = dao.login(user);
 
-        // 把数据库里面的User获取出来
-        UserService service = new UserServiceImpl();
-        List<User> list = service.selectUser(username);
-        for (int i = 0; i < list.size(); i++) {
-            user = list.get(i);
-        }
-
         System.out.println("----us的信息----");
         System.out.println(us);
-
-
 
 
         if (us != null ) {

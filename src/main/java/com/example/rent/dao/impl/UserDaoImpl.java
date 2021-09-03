@@ -28,7 +28,7 @@ public class UserDaoImpl implements UserDao {
             // 1.获取数据库连接
             con = BaseDao.getConnection();
             // 2.写sql
-            String sql = "select * from user where username = ? and userPwd = ?";
+            String sql = "select * from user where userid = ? and userPwd = ?";
             // 3.预编译
             ps = con.prepareStatement(sql);
             // 4.设置值

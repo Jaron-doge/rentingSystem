@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
         List<Object> list = new ArrayList<Object>();
         if(username != null){
 
-            sql.append(" and userName = ?");
+            sql.append(" and userid = ?");
             list.add(username);
         }
         // 交给dao层处理逻辑

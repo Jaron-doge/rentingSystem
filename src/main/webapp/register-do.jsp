@@ -24,7 +24,7 @@
     User user=new User();
     //获取register.jsp页面提交的账号和密码
 
-    String name=request.getParameter("name");
+    String name=request.getParameter("id");
     String password=request.getParameter("password");
     Integer icon =1;
 

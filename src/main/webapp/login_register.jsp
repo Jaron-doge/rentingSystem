@@ -53,7 +53,7 @@
             <!-- <form> 标签用于为用户输入创建 HTML 表单 -->
             <form action="/rentingSystem/login" method="post" class="form">
                 <div>
-                    <input type="text" name="username" id="username" placeholder="请输入用户名">
+                    <input type="text" name="userid" id="userid" placeholder="请输入手机号">
                 </div>
                 <div>
                     <input type="password" name="userpassword" id="userpassword"placeholder="请输入密码">
@@ -82,7 +82,7 @@
             <!-- <form> 标签用于为用户输入创建 HTML 表单 -->
             <form action="register-do.jsp" class="Form" method="post" name="registerForm">
 
-                <div><input type="text" name="name" id="name" placeholder="请输入您的用户名"></div>
+                <div><input type="text" name="id" id="id" placeholder="请输入您的手机号"></div>
                 <div>
                     <i class="fa fa-key"></i>
                     <input type="password" name="password" id="password" placeholder="请设置您的密码">
@@ -119,12 +119,11 @@
         signup.style.transform = "rotateY(-180deg)";
     })
     function checkForm() {
-        var name = registerForm.name.value;
+        var name = registerForm.id.value;
         var pwd = registerForm.password.value;
-        //alert(name + pwd + repwd);
-        if (name == "" || name == null) {
+        if (id == "" || name == null) {
             alert("请输入用户名");
-            registerForm.name.focus();
+            registerForm.id.focus();
             return false;
         } else if (pwd == "" || pwd == null) {
             alert("请输入密码");
