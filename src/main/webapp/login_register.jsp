@@ -51,7 +51,7 @@
             <h1>欢迎登录</h1>
 
             <!-- <form> 标签用于为用户输入创建 HTML 表单 -->
-            <form action="login-do-info.jsp" method="post" class="form">
+            <form action="/rentingSystem/login" method="post" class="form">
                 <div>
                     <input type="text" name="username" id="username" placeholder="请输入用户名">
                 </div>
