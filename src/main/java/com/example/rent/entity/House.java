@@ -91,5 +91,20 @@ public class House {
     public void setDetail(String detail) {
         this.detail = detail;
     }
+    @Override
+    public String toString() {
+        return "House{" +
+                "houseId=" +houseId +
+                ", userId=" + userId +
+                ", managerId=" + managerId+ '\''  +
+                ", area='" + area +
+                ", city='" + city  +
+                ", district=" +district +
+                ", address=" +address +
+                ", price=" +price+ '\'' +
+                ", type=" +type +'\'' +
+                ", detail=" +detail+ '\'' +
+                '}';
+    }
 
 }
