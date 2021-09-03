@@ -1,0 +1,44 @@
+package com.example.rent.controller;
+
+import com.example.rent.dao.UserDao;
+import com.example.rent.dao.impl.UserDaoImpl;
+import com.example.rent.entity.User;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet("/register")
+public class register extends HttpServlet {
+    @Override
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 设置获取注册时的编码为UTF-8
+        request.setCharacterEncoding("UTF-8");
+        User user=new User();
+        //获取register.jsp页面提交的账号和密码
+
+        String name=request.getParameter("id");
+        String password=request.getParameter("password");
+        Integer icon =1;
+
+        //获取register.jsp页面提交的账号和密码设置到实体类User中
+
+        user.setUserName(name);
+        user.setUserPwd(password);
+        user.setIcon(icon);
+
+
+        //引入数据交互层
+        UserDao dao=new UserDaoImpl();
+        boolean flag=dao.register(user);
+
+        if(flag){
+            response.sendRedirect("login_register.jsp");
+        }else{
+            response.sendRedirect("index.jsp");
+        }
+    }
+}

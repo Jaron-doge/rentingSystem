@@ -80,7 +80,7 @@
 
             <h1>开始安居</h1>
             <!-- <form> 标签用于为用户输入创建 HTML 表单 -->
-            <form action="register-do.jsp" class="Form" method="post" name="registerForm">
+            <form action="/rentingSystem/register" class="Form" method="post" name="registerForm">
 
                 <div><input type="text" name="id" id="id" placeholder="请输入您的手机号"></div>
                 <div>
