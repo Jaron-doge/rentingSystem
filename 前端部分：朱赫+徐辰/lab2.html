@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片轮播</title>
+    <style type="text/css">
+        #picture {
+            width: 1200px;
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+            margin: 0px auto;  
+        }
+          
+        #pRatation {
+            height: 350px;
+            width: 4800px;
+            position: absolute;
+            transition: 1s;
+            left: 0px;
+        }
+
+        #pRatation img {
+            float: left;
+        }
+
+        #numberD {
+            position: absolute;
+            top: 320px;
+            left: 43%;
+        }
+            
+        #numberS {
+            height: 20px;
+            width: 20px;
+            border: 1px solid #000000;
+            z-index: 10;
+            float: left;
+            list-style: none;
+            border-radius: 50%;
+            margin-left: 10px;
+            text-align: center;
+            cursor:pointer;
+        }
+        .buttonP{
+            height: 12px;
+            width: 24px;
+            border: none;
+            float: left;
+            border: 1px solid #000000;
+            list-style: none;
+            border-radius: 30%;
+            margin-left: 10px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #e7dcdc;
+
+        }       
+    </style>
+</head>
+
+<body>
+    <div id="picture">
+        <div id="pRatation">
+            <img src="images/house1.png" width="1200px" height="350px"/>
+            <img src="images/house2.png" width="1200px" height="350px"/>
+            <img src="images/house3.png" width="1200px" height="350px"/>
+            <img src="images/house4.png" width="1200px" height="350px"/>
+        </div>
+        <div id="numberD">
+            <ul>
+                <button class="buttonP" onclick="changeColor1A(this)" onmouseleave="changeColor1B(this)"></button>
+                <button class="buttonP" onclick="changeColor2A(this)" onmouseleave="changeColor2B(this)"></button>
+                <button class="buttonP" onclick="changeColor3A(this)" onmouseleave="changeColor3B(this)"></button>
+                <button class="buttonP" onclick="changeColor4A(this)" onmouseleave="changeColor4B(this)"></button>
+            </ul>
+        </div>
+    </div> 
+</body>
+<script type="text/javascript">
+    var pictureRotation = document.getElementById("pRatation");
+    var numberColor=document.getElementsByClassName("buttonP");
+    console.log(numberColor);
+    var i =0;
+    auto();
+    numberColor[0].style.backgroundColor="#969393";
+    function auto(){
+        time = setInterval(function(){
+            i++;
+            if(i <= 3) {
+                pictureRotation.style.left = pictureRotation.offsetLeft - 1200 + "px";
+                numberColor[i].style.backgroundColor="#969393";
+                numberColor[i-1].style.backgroundColor="#e7dcdc";
+            } 
+            else {
+                pictureRotation.style.left ="0px";
+                numberColor[3].style.backgroundColor="#e7dcdc";
+                numberColor[0].style.backgroundColor="#969393";
+                i=0;
+            }
+            console.log(i);
+        }, 5000)
+    }
+    function changeColor1A(obj){
+        pictureRotation.style.left ="0px";
+        numberColor[0].style.backgroundColor="#969393";
+        numberColor[1].style.backgroundColor="#e7dcdc";
+        numberColor[2].style.backgroundColor="#e7dcdc";
+        numberColor[3].style.backgroundColor="#e7dcdc";
+    }
+    function changeColor1B(obj){
+        numberColor[0].style.backgroundColor="#e7dcdc";
+    }
+    function changeColor2A(obj){
+        pictureRotation.style.left ="-1200px";
+        numberColor[1].style.backgroundColor="#969393";
+        numberColor[0].style.backgroundColor="#e7dcdc";
+        numberColor[2].style.backgroundColor="#e7dcdc";
+        numberColor[3].style.backgroundColor="#e7dcdc";
+    }
+    function changeColor2B(obj){
+        numberColor[1].style.backgroundColor="#e7dcdc";
+    }
+    function changeColor3A(obj){
+        pictureRotation.style.left ="-2400px";
+        numberColor[2].style.backgroundColor="#969393";
+        numberColor[0].style.backgroundColor="#e7dcdc";
+        numberColor[1].style.backgroundColor="#e7dcdc";
+        numberColor[3].style.backgroundColor="#e7dcdc";
+    }
+    function changeColor3B(obj){
+        numberColor[2].style.backgroundColor="#e7dcdc";
+    }
+    function changeColor4A(obj){
+        pictureRotation.style.left ="-3600px";
+        numberColor[3].style.backgroundColor="#969393";
+        numberColor[0].style.backgroundColor="#e7dcdc";
+        numberColor[1].style.backgroundColor="#e7dcdc";
+        numberColor[2].style.backgroundColor="#e7dcdc";
+    }
+    function changeColor4B(obj){
+        numberColor[3].style.backgroundColor="#e7dcdc";
+        
+    }
+</script>
+</html>
