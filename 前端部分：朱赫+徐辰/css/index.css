@@ -162,9 +162,13 @@
     font-size: 14px;
 }
 
+.house {
+    height: 1780px;
+}
+
 .houseleft {
     float: left;
-    width: 869px;
+    width: 870px;
 }
 
 .reco {
@@ -191,6 +195,7 @@
     height: 160px;
     padding: 20px 0;
     border-bottom: 1px solid #e4e4e4;
+    background-color: white;
 }
 
 .detailinfo ul li img {
@@ -261,3 +266,68 @@
     color: #ff552e;
 }
 
+.fix {
+    position: fixed;
+    bottom: 0.5%;
+    right: 0.5%;
+}
+
+.fix ul li {
+    width: 60px;
+    height: 60px;
+    margin: 5px 0;
+    background-color: skyblue;
+}
+
+.page {
+    position: relative;
+    height: 100px;
+    background-color: pink;
+}
+
+.page ul {
+    position: absolute;
+    left: 255px;
+    top: 20px;
+}
+
+.page ul li {
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+    float: left;
+}
+
+.page ul li a {
+    font-size: 18px;
+    border: 2px solid #666666;
+}
+
+.page ul li a:hover{
+    border: 2px solid #f59a23;
+}
+
+.blogroll {
+    margin-top: 10px;
+    height: 80px;
+    border-bottom: 1px solid #666666;
+}
+
+.blogroll h1 {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+}
+
+.blogroll ul li {
+    float: left;
+    width: 300px;
+    padding-left: 50px;
+    font-size: 14px;
+}
+
+.footer {
+    height: 150px;
+    background-color: pink;
+}
