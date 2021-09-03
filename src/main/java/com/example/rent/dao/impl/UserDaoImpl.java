@@ -28,7 +28,7 @@ public class UserDaoImpl implements UserDao {
             // 1.获取数据库连接
             con = BaseDao.getConnection();
             // 2.写sql
-            String sql = "select * from user where userid = ? and userPwd = ?";
+            String sql = "select * from User where userid = ? and userPwd = ?";
             // 3.预编译
             ps = con.prepareStatement(sql);
             // 4.设置值
@@ -63,7 +63,7 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public boolean register(User user) {
-        String sql = "insert into user values (?,?,?,?)";
+        String sql = "insert into User values (?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(user.getUserId());
         list.add(user.getUserName());
@@ -142,7 +142,7 @@ public class UserDaoImpl implements UserDao {
             // 1.连接数据库
             con = BaseDao.getConnection();
             // 2.预编译
-            String sql = "select * from user where userid = ?";
+            String sql = "select * from User where userid = ?";
             ps = con.prepareStatement(sql);
             ps.setInt(1,userid);
             // 3.执行sql
@@ -172,7 +172,7 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public boolean addUser(User user) {
-        String sql = "insert into user values (?,?,?,?)";
+        String sql = "insert into User values (?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(user.getUserId());
         list.add(user.getUserName());
@@ -194,7 +194,7 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public boolean updateUser(User user) {
-        String sql = "update user set userPwd=?,userName=?where userid=?";
+        String sql = "update User set userPwd=?,userName=?where userid=?";
         List<Object> list = new ArrayList<Object>();
         list.add(user.getUserPwd());
         list.add(user.getUserName());
@@ -213,7 +213,7 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public boolean deleteUser(Integer userid) {
-        String sql = "delete from user where userid=?";
+        String sql = "delete from User where userid=?";
         List<Object> list = new ArrayList<Object>();
         list.add(userid);
 

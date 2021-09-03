@@ -12,7 +12,7 @@ public class HouseServiceImpl implements HouseService {
     private HouseDao houseDao = new HouseDaoImpl();
         @Override
         public List<House> select(Integer houseid) {
-            StringBuffer sql = new StringBuffer("select * from book where 1 = 1 ");
+            StringBuffer sql = new StringBuffer("select * from House where 1 = 1 ");
             List<Object> list = new ArrayList<Object>();
             if(houseid != null){
                 sql.append(" and houseid = ?");

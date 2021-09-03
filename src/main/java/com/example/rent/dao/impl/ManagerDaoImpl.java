@@ -31,7 +31,7 @@ public class ManagerDaoImpl implements ManagerDao {
             // 1.获取数据库连接
             con = BaseDao.getConnection();
             // 2.写sql
-            String sql = "select * from manager where managername = ? and managerPwd = ?";
+            String sql = "select * from Manager where managername = ? and managerPwd = ?";
             // 3.预编译
             ps = con.prepareStatement(sql);
             // 4.设置值
@@ -72,7 +72,7 @@ public class ManagerDaoImpl implements ManagerDao {
     @Override
     public boolean register(Manager manager) {
 
-        String sql = "insert into manager values (?,?,?,?,?)";
+        String sql = "insert into Manager values (?,?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(manager.getManagerId());
         list.add(manager.getName());
@@ -159,7 +159,7 @@ public class ManagerDaoImpl implements ManagerDao {
             // 1.连接数据库
             con = BaseDao.getConnection();
             // 2.预编译
-            String sql = "select * from manager where userid = ?";
+            String sql = "select * from Manager where userid = ?";
             ps = con.prepareStatement(sql);
             ps.setInt(1,managerid);
             // 3.执行sql
@@ -191,7 +191,7 @@ public class ManagerDaoImpl implements ManagerDao {
      */
     @Override
     public boolean addUManager(Manager manager) {
-        String sql = "insert into manager values (?,?,?,?,?)";
+        String sql = "insert into Manager values (?,?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(manager.getManagerId());
         list.add(manager.getName());
@@ -217,7 +217,7 @@ public class ManagerDaoImpl implements ManagerDao {
      */
     @Override
     public boolean updateManager(Manager manager) {
-        String sql = "update manager set managerPwd=?,managerName=?,managerIcon=?,where managerId=?";
+        String sql = "update Manager set managerPwd=?,managerName=?,managerIcon=?,where managerId=?";
         List<Object> list = new ArrayList<Object>();
         list.add(manager.getPwd());
         list.add(manager.getName());
@@ -239,7 +239,7 @@ public class ManagerDaoImpl implements ManagerDao {
      */
     @Override
     public boolean deleteManager(Integer managerid) {
-        String sql = "delete from manager where managerId=?";
+        String sql = "delete from Manager where managerId=?";
         List<Object> list = new ArrayList<Object>();
         list.add(managerid);
 

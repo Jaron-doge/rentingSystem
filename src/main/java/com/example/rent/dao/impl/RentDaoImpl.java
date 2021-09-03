@@ -20,7 +20,7 @@ public class RentDaoImpl implements RentDao {
             // 1.连接数据库
             con = BaseDao.getConnection();
             // 2.预编译
-            String sql = "select * from rent where userid=?";
+            String sql = "select * from Rent where userid=?";
             ps = con.prepareStatement(sql);
             if(userid != null){
                 // 传入sql的参数
@@ -56,7 +56,7 @@ public class RentDaoImpl implements RentDao {
 
     @Override
     public boolean addRent(Rent bookShelf) {
-        String sql = "insert into rent values (?,?,?,?,?,now())";
+        String sql = "insert into Rent values (?,?,?,?,?,now())";
         Rent rent =new Rent();
         List<Object> list = new ArrayList<Object>();
         list.add(rent.getRentId());
@@ -75,7 +75,7 @@ public class RentDaoImpl implements RentDao {
 
     @Override
     public boolean removeRent(Integer userid, Integer rentid) {
-        String sql = "delete from rent where userId=? and rentId=?";
+        String sql = "delete from Rent where userId=? and rentId=?";
         List<Object> list = new ArrayList<Object>();
         list.add(userid);
         list.add(rentid);

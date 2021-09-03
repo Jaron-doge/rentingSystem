@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> selectUser(String username) {
 
-        StringBuffer sql = new StringBuffer("select * from user where 1 = 1 ");
+        StringBuffer sql = new StringBuffer("select * from User where 1 = 1 ");
         List<Object> list = new ArrayList<Object>();
         if(username != null){
 
