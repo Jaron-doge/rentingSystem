@@ -28,7 +28,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jc</title>
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./login-register.css">
 </head>
 
 <body>
