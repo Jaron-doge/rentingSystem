@@ -5,10 +5,10 @@ import java.sql.*;
 
 public class BaseDao {
 
-    private static String driver = "com.mysql.cj.jdbc.Driver";
-    private static String url = "jdbc:mysql://localhost/rentingsystem?serverTimezone=UTC";
-    private static String user = "root";
-    private static String password = "woshimaomao";
+    private static String driver = "com.mysql.jdbc.Driver";
+    private static String url = "jdbc:mysql://bj-cynosdbmysql-grp-n1ox8dpy.sql.tencentcdb.com:23867/rentingSystem?useUnicode=true&characterEncoding=utf-8";
+    private static String user = "admin";
+    private static String password = "Ad123456";
 
     /**
      * 连接数据库的方法n

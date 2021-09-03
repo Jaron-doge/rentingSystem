@@ -109,7 +109,7 @@ public class UserDaoImpl implements UserDao {
                 user.setUserName(rs.getString("username"));
                 user.setUserPwd(rs.getString("userPwd"));
 
-                user.setIcon(rs.getInt("icon"));
+                user.setIcon(rs.getInt("userIcon"));
 
 
                 // 测试数据
@@ -152,7 +152,7 @@ public class UserDaoImpl implements UserDao {
                 user.setUserId(rs.getInt("userid"));
                 user.setUserName(rs.getString("userName"));
                 user.setUserPwd(rs.getString("userPwd"));
-                user.setIcon(rs.getInt("icon"));
+                user.setIcon(rs.getInt("userIcon"));
 
                 return user;
             }

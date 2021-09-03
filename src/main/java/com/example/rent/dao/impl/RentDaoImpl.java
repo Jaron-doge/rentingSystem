@@ -75,7 +75,7 @@ public class RentDaoImpl implements RentDao {
 
     @Override
     public boolean removeRent(Integer userid, Integer rentid) {
-        String sql = "delete from rent where userid=? and bookid=?";
+        String sql = "delete from rent where userId=? and rentId=?";
         List<Object> list = new ArrayList<Object>();
         list.add(userid);
         list.add(rentid);

@@ -4,6 +4,7 @@ public class Manager {
    private Integer managerId;
     private String  pwd;
     private String  name;
+    private String managerIcon;
     private Integer sum;
 
 
@@ -31,8 +32,17 @@ public class Manager {
         this.name = name;
     }
 
+    public String getManagerIcon() {
+        return managerIcon;
+    }
+
+    public void setManagerIcon(String managerIcon) {
+        this.managerIcon = managerIcon;
+    }
+
     public Integer getSum() {
         return this.sum;
+
     }
 
     public void setSum(Integer sum) {
@@ -44,6 +54,7 @@ public class Manager {
                 "managerId=" + managerId +
                 ", pwd='" + pwd + '\'' +
                 ", name='" + name + '\'' +
+                ", managerIcon='" + managerIcon + '\'' +
                 ", sum='" + sum + '\'' +
                 '}';
     }
