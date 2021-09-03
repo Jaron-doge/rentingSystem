@@ -1,38 +1,36 @@
 package com.example.rent.service;
 
-
-
 import com.example.rent.entity.User;
 
 import java.util.List;
 
-public interface UserService {
+public interface ManagerService {
 
     /**
      * 查询用户信息
      */
-    public List<User> selectUser(String username);
+    public List<User> selectManager(String username);
 
 
 
     /**
      * 根据用户编号进行查询
      */
-    public User getUser(Integer userid);
+    public User getManager(Integer userid);
 
 
     /**
      * 用户新增
      */
-    public boolean addUser(User user);
+    public boolean addManager(User user);
 
     /**
      * 用户修改
      */
-    public boolean updateUser(User user);
+    public boolean updateManager(User user);
 
     /**
      * 删除用户
      */
-    public boolean deleteUser(Integer userid);
+    public boolean deleteManager(Integer userid);
 }

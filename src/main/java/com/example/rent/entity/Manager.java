@@ -38,6 +38,14 @@ public class Manager {
     public void setSum(Integer sum) {
         this.sum = sum;
     }
-
+    @Override
+    public String toString() {
+        return "Manager{" +
+                "managerId=" + managerId +
+                ", pwd='" + pwd + '\'' +
+                ", name='" + name + '\'' +
+                ", sum='" + sum + '\'' +
+                '}';
+    }
 
 }

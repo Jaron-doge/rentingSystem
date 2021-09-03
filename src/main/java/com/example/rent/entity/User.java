@@ -42,4 +42,13 @@ public class User {
     public void setIcon(Integer icon) {
         this.icon = icon;
     }
+    @Override
+    public String toString() {
+        return "User{" +
+                "userid=" + userId +
+                ", username='" + userName + '\'' +
+                ", password='" + userPwd + '\'' +
+                ", icon='" + icon + '\'' +
+                '}';
+    }
 }

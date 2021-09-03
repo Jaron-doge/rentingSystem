@@ -5,7 +5,7 @@ import java.util.Date;
 public class Rent {
     private Integer rentId;
     private Integer houseId;
-    private Integer  userrentId;
+    private Integer userrentId;
     private Integer managerId;
     private Integer tenancy;
     private Date startDate;
@@ -56,5 +56,17 @@ public class Rent {
 
     public void setStartDate(Date startDate) {
         this.startDate = startDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Rent{" +
+                "rentId=" + rentId +
+                ", userrentId=" + userrentId +
+                ", managerId=" + managerId +
+                ", houseId='" + houseId + '\'' +
+                ", tenancy='" + tenancy + '\'' +
+                ", startDate=" + startDate +
+                '}';
     }
 }
