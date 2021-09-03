@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f5f5;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #b83f0f;
+    clip-path: circle(20% at 100% 0);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20rem;
+    height: 28rem;
+    perspective: 1500px;
+    -webkit-perspective: 1500px;
+    -moz-perspective: 1500px;
+   
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 28rem;
+    border-radius: 10px;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    user-select: none;
+    
+}
+
+.signup {
+    /* background-color: blue; */
+    transform: rotateY(-108deg);
+}
+
+.container .form-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 0 1px #b83f0f;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.container .form-content .avtar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container .form-content .avtar .pic {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #b83f0f;
+}
+
+.container .form-content .avtar .pic img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .form-content {
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-family: "楷体";
+}
+
+.container .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .form input {
+    width: 16rem;
+    padding: 0.8rem;
+    padding-left: 3rem;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    margin: 5px;
+}
+
+.container .form div {
+    position: relative;
+}
+
+.container .form div .fa {
+    position: absolute;
+    top: 18px;
+    left: 25px;
+}
+
+.container .form .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.container .form .btn button {
+    text-transform: uppercase;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: #b83f0f;
+    color: #fff;
+    width: 12rem;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.container .btn-something {
+    color: #888;
+    font-size: 14px;
+}
+
+.container .btn-something span {
+    color: #b83f0f;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+svg {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+
+.user .fa-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: #b83f0f;
+}
+
+.head {
+    margin: auto;
+    font-size: 2rem;
+    font-family: "微软雅黑";
+    font-weight: 1000;
+    user-select: none;  /* 文字规定不能被选取 */
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
