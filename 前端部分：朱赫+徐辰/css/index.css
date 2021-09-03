@@ -149,6 +149,19 @@
     border-bottom: 4px solid #f59a23;
 }
 
+.area {
+    height: 100px;
+}
+
+.area ul li {
+    height: 25px;
+    line-height: 25px;
+}
+
+.area ul li span {
+    padding: 0 10px;
+}
+
 .kefu {
     height:40px;
     line-height: 40px;
