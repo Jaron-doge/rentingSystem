@@ -67,23 +67,24 @@
 .search {
     position: absolute;
     display: inline-block;
-    left: 215px;
+    left: 415px;
     top: 15px;
-    width: 700px;
+    width: 500px;
     height: 50px;
     border: 2px solid #f59a23;
 }
 .search input {
     float: left;
-    width: 614px;
+    width: 414px;
     height: 46px;
     padding-left: 20px;
     border-right: 2px solid #f59a23;
+    font-size: 18px;
 }
 .search img {
     position: absolute;
     top: 8px;
-    left: 640px;
+    left: 440px;
     display: inline-block;
 }
 
@@ -282,7 +283,6 @@
 .page {
     position: relative;
     height: 100px;
-    background-color: pink;
 }
 
 .page ul {
@@ -329,5 +329,4 @@
 
 .footer {
     height: 150px;
-    background-color: pink;
 }
