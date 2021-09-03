@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片轮播</title>
+    <style type="text/css">
+        #picture {
+            width: 1200px;
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+            margin: 0px auto;  
+        }
+          
+        #pRatation {
+            height: 350px;
+            width: 4800px;
+            position: absolute;
+            transition: 1s;
+            left: 0px;
+        }
+
+        #pRatation img {
+            float: left;
+        }
+
+        #numberD {
+            position: absolute;
+            top: 300px;
+            left: 43%;
+        }
+            
+        #numberS {
+            height: 20px;
+            width: 20px;
+            border: 1px solid #000000;
+            z-index: 10;
+            float: left;
+            list-style: none;
+            border-radius: 50%;
+            margin-left: 10px;
+            text-align: center;
+            cursor:pointer;
+        }       
+    </style>
+</head>
+
+<body>
+    <div id="picture">
+        <div id="pRatation">
+            <img src="images/house1.png" width="1200px" height="350px"/>
+            <img src="images/house2.png" width="1200px" height="350px"/>
+            <img src="images/house3.png" width="1200px" height="350px"/>
+            <img src="images/house4.png" width="1200px" height="350px"/>
+        </div>
+        <div id="numberD">
+            <ul>
+                <li id="numberS" onclick="changeColor1A(this)" onmouseleave="changeColor1B(this)">1</li>
+                <li id="numberS" onclick="changeColor2A(this)" onmouseleave="changeColor2B(this)">2</li>
+                <li id="numberS" onclick="changeColor3A(this)" onmouseleave="changeColor3B(this)">3</li>
+                <li id="numberS" onclick="changeColor4A(this)" onmouseleave="changeColor4B(this)">4</li>
+            </ul>
+        </div>
+    </div> 
+</body>
+<script type="text/javascript">
+    var pictureRotation = document.getElementById("pRatation");
+    var numberColor=document.getElementsByTagName("li");
+    console.log(numberColor);
+    var i =0;
+    auto();
+    numberColor[0].style.cssText="background:#ff6700;color:#fff;";
+    function auto(){
+        time = setInterval(function(){
+            i++;
+            if(i <= 3) {
+                pictureRotation.style.left = pictureRotation.offsetLeft - 1200 + "px";
+                numberColor[i].style.cssText="background:#ff6700;color:#fff;";
+                numberColor[i-1].style.cssText="background:none;color:#000;";
+            } 
+            else {
+                pictureRotation.style.left ="0px";
+                numberColor[3].style.cssText="background:none;color:#000;";
+                numberColor[0].style.cssText="background:#ff6700;color:#fff;";
+                i=0;
+            }
+            console.log(i);
+        }, 5000)
+    }
+    function changeColor1A(obj){
+        pictureRotation.style.left ="0px";
+        numberColor[0].style.cssText="background:#ff6700;color:#fff;";
+        numberColor[1].style.cssText="background:none;color:#000;";
+        numberColor[2].style.cssText="background:none;color:#000;";
+        numberColor[3].style.cssText="background:none;color:#000;";
+    }
+    function changeColor1B(obj){
+        numberColor[0].style.cssText="background:none;color:#000;";
+    }
+    function changeColor2A(obj){
+        pictureRotation.style.left ="-1200px";
+        numberColor[1].style.cssText="background:#ff6700;color:#fff;";
+        numberColor[0].style.cssText="background:none;color:#000;";
+        numberColor[2].style.cssText="background:none;color:#000;";
+        numberColor[3].style.cssText="background:none;color:#000;";
+    }
+    function changeColor2B(obj){
+        numberColor[1].style.cssText="background:none;color:#000;";
+    }
+    function changeColor3A(obj){
+        pictureRotation.style.left ="-2400px";
+        numberColor[2].style.cssText="background:#ff6700;color:#fff;";
+        numberColor[0].style.cssText="background:none;color:#000;";
+        numberColor[1].style.cssText="background:none;color:#000;";
+        numberColor[3].style.cssText="background:none;color:#000;";
+    }
+    function changeColor3B(obj){
+        numberColor[2].style.cssText="background:none;color:#000;";  
+    }
+    function changeColor4A(obj){
+        pictureRotation.style.left ="-3600px";
+        numberColor[3].style.cssText="background:#ff6700;color:#fff;";
+        numberColor[0].style.cssText="background:none;color:#000;";
+        numberColor[1].style.cssText="background:none;color:#000;";
+        numberColor[2].style.cssText="background:none;color:#000;";
+    }
+    function changeColor4B(obj){
+        numberColor[3].style.cssText="background:none;color:#000;";
+        
+    }
+</script>
+</html>
