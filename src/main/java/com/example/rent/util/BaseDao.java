@@ -27,7 +27,7 @@ public class BaseDao {
             Properties properties = new Properties();
             // 读取druid.properties 属性配置文件
             InputStream inputStream =
-                    ClassLoader.getSystemClassLoader().getResourceAsStream("druid.properties");
+                    JdbcUtils.class.getClassLoader().getResourceAsStream("druid.properties");
             // 从流中加载数据
             properties.load(inputStream);
             // 创建数据库连接池
