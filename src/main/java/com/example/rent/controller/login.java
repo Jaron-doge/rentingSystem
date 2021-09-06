@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import com.example.rent.entity.User;
 import com.example.rent.dao.UserDao;
@@ -32,6 +33,10 @@ public class login extends HttpServlet {
 
         System.out.println("----us的信息----");
         System.out.println(us);
+         //设置一个
+        HttpSession session = request.getSession();
+        session.setAttribute("user", user);
+        session.setAttribute("password", password);
 
 
         if (us != null ) {
