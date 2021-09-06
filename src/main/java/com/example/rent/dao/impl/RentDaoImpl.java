@@ -20,7 +20,7 @@ public class RentDaoImpl implements RentDao {
             // 1.连接数据库
             con = BaseDao.getConnection();
             // 2.预编译
-            String sql = "select * from Rent where userid=?";
+            String sql = "select * from Rent where userId=?";
             ps = con.prepareStatement(sql);
             if(userid != null){
                 // 传入sql的参数

@@ -167,8 +167,8 @@ public class HouseDaoImpl implements HouseDao {
      */
     @Override
     public boolean updateHouse(House house) {
-        String sql = "update house set userId=?,managerid=?,city=?,district=?,village=?,address=?,floor=?,floor_sum=?,floor_lift=?,price=?,type_bedroom=?,type_livingroom=?," +
-                "type_bathroom=?,area=?,description=?,houseToward=?,facilities=?,requirement=?,personnum=?,houseImg=?,payMethod=?where houseid=?";
+        String sql = "update house set userId=?,managerId=?,city=?,district=?,village=?,address=?,floor=?,floor_sum=?,floor_lift=?,price=?,type_bedroom=?,type_livingroom=?," +
+                "type_bathroom=?,area=?,description=?,houseToward=?,facilities=?,requirement=?,personnum=?,houseImg=?,payMethod=?where houseId=?";
         List<Object> list = new ArrayList<Object>();
         list.add(house.getHouseId());
         list.add(house.getUserId());

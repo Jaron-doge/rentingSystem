@@ -80,7 +80,7 @@ public class UserDaoImpl implements UserDao {
             // 1.连接数据库
             con = BaseDao.getConnection();
             // 2.预编译
-            String sql = "select * from User where userid = ?";
+            String sql = "select * from User where userId = ?";
             ps = con.prepareStatement(sql);
             ps.setInt(1,userid);
             // 3.执行sql
@@ -130,7 +130,7 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public boolean updateUser(User user) {
-        String sql = "update User set userPwd=?,userName=?where userid=?";
+        String sql = "update User set userPwd=?,userName=?where userId=?";
         List<Object> list = new ArrayList<Object>();
         list.add(user.getUserPwd());
         list.add(user.getUserName());
@@ -149,7 +149,7 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public boolean deleteUser(Integer userid) {
-        String sql = "delete from User where userid=?";
+        String sql = "delete from User where userId=?";
         List<Object> list = new ArrayList<Object>();
         list.add(userid);
 
