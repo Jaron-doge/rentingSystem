@@ -15,7 +15,7 @@ public class HouseServiceImpl implements HouseService {
             StringBuffer sql = new StringBuffer("select * from House where 1 = 1 ");
             List<Object> list = new ArrayList<Object>();
             if(houseid != null){
-                sql.append(" and houseid = ?");
+                sql.append(" and houseId = ?");
                 list.add(houseid);
 
             }

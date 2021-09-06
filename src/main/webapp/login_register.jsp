@@ -51,7 +51,7 @@
             <h1>欢迎登录</h1>
 
             <!-- <form> 标签用于为用户输入创建 HTML 表单 -->
-            <form action="/rentingSystem/login" method="post" class="form">
+            <form action="/rentingSystem/user_login" method="post" class="form">
                 <div>
                     <input type="text" name="userid" id="userid" placeholder="请输入手机号">
                 </div>
@@ -80,7 +80,7 @@
 
             <h1>开始安居</h1>
             <!-- <form> 标签用于为用户输入创建 HTML 表单 -->
-            <form action="/rentingSystem/register" class="Form" method="post" name="registerForm">
+            <form action="/rentingSystem/user_register" class="Form" method="post" name="registerForm">
 
                 <div><input type="text" name="id" id="id" placeholder="请输入您的手机号"></div>
                 <div>

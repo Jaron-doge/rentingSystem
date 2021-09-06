@@ -80,7 +80,7 @@ public class HouseDaoImpl implements HouseDao {
             // 1.连接数据库
             con = BaseDao.getConnection();
             // 2.预编译
-            String sql = "select * from House where houseid = ?";
+            String sql = "select * from House where houseId = ?";
             ps = con.prepareStatement(sql);
             ps.setInt(1,houseid);
             // 3.执行sql
@@ -206,7 +206,7 @@ public class HouseDaoImpl implements HouseDao {
      */
     @Override
     public boolean deleteHouse(Integer houseid) {
-        String sql = "delete from House where houseid=?";
+        String sql = "delete from House where houseId=?";
         List<Object> list = new ArrayList<Object>();
         list.add(houseid);
 

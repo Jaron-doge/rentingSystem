@@ -13,7 +13,7 @@ import com.example.rent.service.UserService;
 import java.util.List;
 import com.example.rent.dao.impl.UserDaoImpl;
 import com.example.rent.service.impl.UserServiceImpl;
-@WebServlet("/login")
+@WebServlet("/user_login")
 public class user_login extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,8 +35,8 @@ public class user_login extends HttpServlet {
         System.out.println(us);
          //…Ë÷√“ª∏ˆsession
         HttpSession session = request.getSession();
-        session.setAttribute("user", user);
-        session.setAttribute("password", password);
+        session.setAttribute("user", us);
+
 
 
         if (us != null ) {

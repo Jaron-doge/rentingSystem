@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
             // 1.获取数据库连接
             con = BaseDao.getConnection();
             // 2.写sql
-            String sql = "select * from User where userid = ? and userPwd = ?";
+            String sql = "select * from User where userId = ? and userPwd = ?";
             // 3.预编译
             ps = con.prepareStatement(sql);
             // 4.设置值
