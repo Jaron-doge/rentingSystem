@@ -57,10 +57,10 @@
     </div>
     <div id="numberD">
         <ul>
-            <i id="numberS">1</i>
-            <i id="numberS">2</i>
-            <i id="numberS">3</i>
-            <i id="numberS">4</i>
+            <i id="numberS1">1</i>
+            <i id="numberS2">2</i>
+            <i id="numberS3">3</i>
+            <i id="numberS4">4</i>
         </ul>
     </div>
 </div>
