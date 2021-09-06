@@ -22,10 +22,10 @@ public class user_login extends HttpServlet {
         User user = new User();
         UserService service =new UserServiceImpl();
 
-        String username = request.getParameter("userid");
+        String userid = request.getParameter("userid");
         String password = request.getParameter("userpassword");
 
-        user.setUserName(username);
+        user.setUserId(Integer.valueOf(userid));
         user.setUserPwd(password);
 
         // 获取用户登录信息

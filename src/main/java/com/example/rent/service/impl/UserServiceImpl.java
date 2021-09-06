@@ -39,9 +39,9 @@ public class UserServiceImpl implements UserService {
             if(rs.next()){
                 users = new User();
                 // 从数据库中获取值到实体类的setter方法中
-                users.setUserId(rs.getInt("userid"));
-                users.setUserName(rs.getString("username"));
+                users.setUserId(rs.getInt("userId"));
                 users.setUserPwd(rs.getString("userPwd"));
+                users.setUserName(rs.getString("userName"));
                 users.setIcon(rs.getString("userIcon"));
 
                 // 返回的是你查询出来的完整的对象
