@@ -21,8 +21,25 @@ public class House {
     private String facilities;
     private String requirement;
     private Integer personnum;
+    private String houseImg;
+    private String payMethod;
 
 
+    public String getHouseImg() {
+        return houseImg;
+    }
+
+    public void setHouseImg(String houseImg) {
+        this.houseImg = houseImg;
+    }
+
+    public String getPayMethod() {
+        return payMethod;
+    }
+
+    public void setPayMethod(String payMethod) {
+        this.payMethod = payMethod;
+    }
 
     public Integer getHouseId() {
         return houseId;
@@ -208,6 +225,8 @@ public class House {
                 ", facilities=" +facilities+ '\'' +
                 ", requirement=" +requirement+ '\'' +
                 ", personnum=" +personnum+ '\'' +
+                ", hosueImg=" +houseImg+ '\'' +
+                ", payMethod=" +payMethod+ '\'' +
                 '}';
     }
 

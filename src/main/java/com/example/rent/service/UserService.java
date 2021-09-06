@@ -7,6 +7,15 @@ import com.example.rent.entity.User;
 import java.util.List;
 
 public interface UserService {
+    /**
+     * 用户登录
+     */
+    public User login(User user);
+
+    /**
+     * 用户注册
+     */
+    public boolean register(User user);
 
     /**
      * 查询用户信息

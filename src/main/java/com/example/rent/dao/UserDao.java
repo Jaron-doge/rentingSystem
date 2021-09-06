@@ -9,15 +9,7 @@ import java.util.List;
 
 public interface UserDao {
 
-    /**
-     * 用户登录
-     */
-    public User login(User user);
 
-    /**
-     * 用户注册
-     */
-    public boolean register(User user);
 
     /**
      * 查询用户信息

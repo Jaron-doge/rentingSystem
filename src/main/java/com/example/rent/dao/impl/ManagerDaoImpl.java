@@ -53,8 +53,6 @@ public class ManagerDaoImpl implements ManagerDao {
                 return managers;
 
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
@@ -134,8 +132,6 @@ public class ManagerDaoImpl implements ManagerDao {
                 list.add(manager);
             }
             return list;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
@@ -173,8 +169,6 @@ public class ManagerDaoImpl implements ManagerDao {
                 manager.setSum(rs.getInt("hosueSum"));
                 return manager;
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {

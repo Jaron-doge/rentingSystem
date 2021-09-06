@@ -19,7 +19,7 @@ public class login extends HttpServlet {
         // 设置接收的编码为UTF-8
         request.setCharacterEncoding("utf-8");
         User user = new User();
-        UserDao dao = new UserDaoImpl();
+        UserService service =new UserServiceImpl();
 
         String username = request.getParameter("userid");
         String password = request.getParameter("userpassword");
@@ -28,7 +28,7 @@ public class login extends HttpServlet {
         user.setUserPwd(password);
 
         // 获取用户登录信息
-        User us = dao.login(user);
+        User us = service.login(user);
 
         System.out.println("----us的信息----");
         System.out.println(us);

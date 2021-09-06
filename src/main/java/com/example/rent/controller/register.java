@@ -3,6 +3,8 @@ package com.example.rent.controller;
 import com.example.rent.dao.UserDao;
 import com.example.rent.dao.impl.UserDaoImpl;
 import com.example.rent.entity.User;
+import com.example.rent.service.UserService;
+import com.example.rent.service.impl.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,8 +36,8 @@ public class register extends HttpServlet {
 
 
         //引入数据交互层
-        UserDao dao=new UserDaoImpl();
-        boolean flag=dao.register(user);
+        UserService service=new UserServiceImpl();
+        boolean flag=service.register(user);
 
         if(flag){
             response.sendRedirect("login_register.jsp");

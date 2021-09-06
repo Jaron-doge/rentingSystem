@@ -43,8 +43,6 @@ public class RentDaoImpl implements RentDao {
                 list.add(rent);
             }
             return list;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {

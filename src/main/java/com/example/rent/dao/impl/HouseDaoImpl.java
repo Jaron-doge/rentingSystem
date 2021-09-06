@@ -54,14 +54,14 @@ public class HouseDaoImpl implements HouseDao {
                 house .setFacilities(rs.getString("Facilities"));
                 house.setRequirement(rs.getString("requirement"));
                 house.setPersonnum(rs.getInt("personnum"));
+                house.setHouseImg(rs.getString("houseImag"));
+                house.setPayMethod(rs.getString("PayMethod"));
 
 
 
                 list.add(house );
             }
             return list;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
@@ -109,11 +109,11 @@ public class HouseDaoImpl implements HouseDao {
                     house .setFacilities(rs.getString("Facilities"));
                     house.setRequirement(rs.getString("requirement"));
                     house.setPersonnum(rs.getInt("personnum"));
+                    house.setHouseImg(rs.getString("houseImag"));
+                    house.setPayMethod(rs.getString("PayMethod"));
 
                 return house;
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
@@ -129,7 +129,7 @@ public class HouseDaoImpl implements HouseDao {
      */
     @Override
     public boolean addHouse(House house) {
-        String sql = "insert into House values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into House values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(house.getHouseId());
         list.add(house.getUserId());
@@ -151,6 +151,8 @@ public class HouseDaoImpl implements HouseDao {
         list.add(house.getFacilities());
         list.add(house.getRequirement());
         list.add(house.getPersonnum());
+        list.add(house.getHouseImg());
+        list.add(house.getPayMethod());
 
         boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());
         if(flag){
@@ -166,7 +168,7 @@ public class HouseDaoImpl implements HouseDao {
     @Override
     public boolean updateHouse(House house) {
         String sql = "update house set userId=?,managerid=?,city=?,district=?,village=?,address=?,floor=?,floor_sum=?,floor_lift=?,price=?,type_bedroom=?,type_livingroom=?," +
-                "type_bathroom=?,area=?,description=?,houseToward=?,facilities=?,requirement=?,personnum=? where houseid=?";
+                "type_bathroom=?,area=?,description=?,houseToward=?,facilities=?,requirement=?,personnum=?,houseImg=?,payMethod=?where houseid=?";
         List<Object> list = new ArrayList<Object>();
         list.add(house.getHouseId());
         list.add(house.getUserId());
@@ -188,6 +190,8 @@ public class HouseDaoImpl implements HouseDao {
         list.add(house.getFacilities());
         list.add(house.getRequirement());
         list.add(house.getPersonnum());
+        list.add(house.getHouseImg());
+        list.add(house.getPayMethod());
 
         boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());
         if(flag){

@@ -1,6 +1,12 @@
 package com.example.rent.util;
 
+import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.pool.DruidDataSourceFactory;
+import com.alibaba.druid.util.JdbcUtils;
+
+import java.io.InputStream;
 import java.sql.*;
+import java.util.Properties;
 
 
 public class BaseDao {
@@ -102,8 +108,6 @@ public class BaseDao {
             }else{
                 return false;
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -111,13 +115,7 @@ public class BaseDao {
     }
 
     public static void main(String[] args){
-        try {
-            BaseDao.getConnection();
-            System.out.println("---测试数据库链接成功---");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        BaseDao.getConnection();
+        System.out.println("---测试数据库链接成功---");
     }
 }

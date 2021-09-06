@@ -16,67 +16,7 @@ import java.util.List;
 
 public class UserDaoImpl implements UserDao {
 
-    /**
-     * 用户登录
-     */
-    @Override
-    public User login(User user) {
-        Connection con = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        try {
-            // 1.获取数据库连接
-            con = BaseDao.getConnection();
-            // 2.写sql
-            String sql = "select * from User where userid = ? and userPwd = ?";
-            // 3.预编译
-            ps = con.prepareStatement(sql);
-            // 4.设置值
-            ps.setObject(1,user.getUserName());
-            ps.setObject(2,user.getUserPwd());
-            rs = ps.executeQuery();
-            User users = null;
-            if(rs.next()){
-                users = new User();
-                // 从数据库中获取值到实体类的setter方法中
-                users.setUserId(rs.getInt("userid"));
-                users.setUserName(rs.getString("username"));
-                users.setUserPwd(rs.getString("userPwd"));
-                user.setIcon(rs.getInt("userIcon"));
 
-                // 返回的是你查询出来的完整的对象
-                return users;
-
-            }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally {
-            // 关闭资源，避免出现异常
-            BaseDao.close(con,ps,rs);
-        }
-        return null;
-    }
-    /**
-     * 用户注册
-     */
-    @Override
-    public boolean register(User user) {
-        String sql = "insert into User values (?,?,?,?)";
-        List<Object> list = new ArrayList<Object>();
-        list.add(user.getUserId());
-        list.add(user.getUserPwd());
-        list.add(user.getUserName());
-        list.add(user.getIcon());
-
-        boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());
-        if(flag){
-            return true;
-        }else {
-            return false;
-        }
-    }
 
     /**
      * 查询用户信息
@@ -119,8 +59,6 @@ public class UserDaoImpl implements UserDao {
                 list.add(user);
             }
             return list;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
@@ -156,8 +94,6 @@ public class UserDaoImpl implements UserDao {
 
                 return user;
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
