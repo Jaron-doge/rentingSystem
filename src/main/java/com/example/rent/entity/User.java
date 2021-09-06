@@ -7,7 +7,7 @@ public class User {
     private  Integer userId;
     private  String userName;
     private  String  userPwd;
-    private  Integer icon;
+    private  String icon;
 
     public Integer getUserId() {
         return userId;
@@ -35,13 +35,14 @@ public class User {
         this.userPwd = userPwd;
     }
 
-    public Integer getIcon() {
+    public String getIcon() {
         return icon;
     }
 
-    public void setIcon(Integer icon) {
+    public void setIcon(String icon) {
         this.icon = icon;
     }
+
     @Override
     public String toString() {
         return "User{" +

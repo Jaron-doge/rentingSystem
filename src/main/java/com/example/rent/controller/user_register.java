@@ -25,7 +25,7 @@ public class user_register extends HttpServlet {
         Integer id =Integer.parseInt(request.getParameter("id").trim());
         String password=request.getParameter("password");
         String name = "user";
-        Integer icon =1;
+        String icon ="";
 
         //获取register.jsp页面提交的账号和密码设置到实体类User中
 

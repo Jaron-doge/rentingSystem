@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
             // 3.预编译
             ps = con.prepareStatement(sql);
             // 4.设置值
-            ps.setObject(1,user.getUserName());
+            ps.setObject(1,user.getUserId());
             ps.setObject(2,user.getUserPwd());
             rs = ps.executeQuery();
             User users = null;
@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
                 users.setUserId(rs.getInt("userid"));
                 users.setUserName(rs.getString("username"));
                 users.setUserPwd(rs.getString("userPwd"));
-                user.setIcon(rs.getInt("userIcon"));
+                users.setIcon(rs.getString("userIcon"));
 
                 // 返回的是你查询出来的完整的对象
                 return users;
@@ -88,7 +88,7 @@ public class UserServiceImpl implements UserService {
         List<Object> list = new ArrayList<Object>();
         if(username != null){
 
-            sql.append(" and userid = ?");
+            sql.append(" and userId = ?");
             list.add(username);
         }
         // 交给dao层处理逻辑
