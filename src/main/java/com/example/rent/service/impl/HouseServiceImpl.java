@@ -25,7 +25,7 @@ public class HouseServiceImpl implements HouseService {
 
 
     @Override
-    public House getHouse(String area) {
+    public House getHouse(Integer houseId) {
         return null;
     }
 

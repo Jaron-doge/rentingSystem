@@ -9,16 +9,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.text.html.HTMLEditorKit;
 import java.io.IOException;
 
-@WebServlet("/add_house")
-public class add_house extends HttpServlet {
+@WebServlet("/update_house")
+public class house_update extends HttpServlet {
+
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         // 设置获取注册时的编码为UTF-8
         request.setCharacterEncoding("UTF-8");
-        House house = new House();
 
         //获取页面提交的数据
         Integer houseId = Integer.valueOf(request.getParameter("houseId"));
@@ -44,8 +44,11 @@ public class add_house extends HttpServlet {
         String houseImg = request.getParameter("houseImg");
         String payMethod = request.getParameter("payMethod");
 
+        //引入数据交互层
+        HouseService bookService = new HouseServiceImpl();
+        House house = new House();
+        house = bookService.getHouse(houseId);
 
-        //获取页面提交的账号和密码设置到实体类house中
         house .setHouseId(houseId);
         house .setUserId(userId);
         house.setManagerId(managerId);
@@ -69,14 +72,14 @@ public class add_house extends HttpServlet {
         house.setHouseImg(houseImg);
         house.setPayMethod(payMethod);
 
+        System.out.println("修改的house信息");
+        System.out.println(house);
 
-        //引入数据交互层
-        HouseService houseservice = new HouseServiceImpl();
-        boolean flag = houseservice.addHouse(house);
+        boolean flag = bookService.updateHouse(house);
 
 
         if (flag) {
-            response.sendRedirect("manager.jsp");
+            response.sendRedirect("admin-book-manager.jsp");
         } else {
             response.sendRedirect("error.jsp");
         }

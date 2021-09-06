@@ -155,7 +155,7 @@ public class ManagerDaoImpl implements ManagerDao {
             // 1.连接数据库
             con = BaseDao.getConnection();
             // 2.预编译
-            String sql = "select * from Manager where userid = ?";
+            String sql = "select * from Manager where managerid = ?";
             ps = con.prepareStatement(sql);
             ps.setInt(1,managerid);
             // 3.执行sql

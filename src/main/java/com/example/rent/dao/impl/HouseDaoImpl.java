@@ -72,7 +72,7 @@ public class HouseDaoImpl implements HouseDao {
     }
 
     @Override
-    public House getHouse(Integer bookid) {
+    public House getHouse(Integer houseid) {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -80,16 +80,16 @@ public class HouseDaoImpl implements HouseDao {
             // 1.连接数据库
             con = BaseDao.getConnection();
             // 2.预编译
-            String sql = "select * from House where hosueid = ?";
+            String sql = "select * from House where houseid = ?";
             ps = con.prepareStatement(sql);
-            ps.setInt(1,bookid);
+            ps.setInt(1,houseid);
             // 3.执行sql
             rs = ps.executeQuery();
             while (rs.next()){
 
 
                     House house = new House();
-                    house .setHouseId(rs.getInt("hosueId"));
+                    house .setHouseId(rs.getInt("houseId"));
                     house .setUserId(rs.getInt("userId"));
                     house.setManagerId(rs.getInt("managerId"));
                     house .setCity(rs.getString("city"));
@@ -205,10 +205,10 @@ public class HouseDaoImpl implements HouseDao {
      * 删除房屋
      */
     @Override
-    public boolean deleteHouse(Integer bookid) {
+    public boolean deleteHouse(Integer houseid) {
         String sql = "delete from House where houseid=?";
         List<Object> list = new ArrayList<Object>();
-        list.add(bookid);
+        list.add(houseid);
 
         boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());
         if(flag){

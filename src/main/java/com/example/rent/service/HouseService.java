@@ -14,10 +14,10 @@ public interface HouseService {
 
     /**
      * 根据房屋地址进行查询
-     * @param area
+     * @param houseId
      * @return
      */
-    public House getHouse(String area);
+    public House getHouse(Integer houseId);
 
 
     /**

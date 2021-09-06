@@ -14,7 +14,7 @@ import java.util.List;
 import com.example.rent.dao.impl.UserDaoImpl;
 import com.example.rent.service.impl.UserServiceImpl;
 @WebServlet("/login")
-public class login extends HttpServlet {
+public class user_login extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 设置接收的编码为UTF-8
@@ -33,7 +33,7 @@ public class login extends HttpServlet {
 
         System.out.println("----us的信息----");
         System.out.println(us);
-         //设置一个
+         //设置一个session
         HttpSession session = request.getSession();
         session.setAttribute("user", user);
         session.setAttribute("password", password);

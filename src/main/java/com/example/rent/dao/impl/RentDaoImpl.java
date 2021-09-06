@@ -53,7 +53,7 @@ public class RentDaoImpl implements RentDao {
     }
 
     @Override
-    public boolean addRent(Rent bookShelf) {
+    public boolean addRent(Rent rent1) {
         String sql = "insert into Rent values (?,?,?,?,?,now())";
         Rent rent =new Rent();
         List<Object> list = new ArrayList<Object>();
