@@ -6,18 +6,22 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a0c8423-0181-4afe-98f4-3720b379c90f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/saveactions_settings.xml" beforeDir="false" />
+    <list default="true" id="0a0c8423-0181-4afe-98f4-3720b379c90f" name="Changes" comment="develop版本，忽略掉">
+      <change afterPath="$PROJECT_DIR$/webapp/css/personal_center.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/di.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/di1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/icon/shutdown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/logo.ico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/logo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/que.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/img/touxiang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/personal_center.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/商品详情/product-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/商品详情/product-details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +39,15 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1xkSGVLmmYMYoVuZT1L3dK8tIVZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -168,8 +175,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630897499774</updated>
-      <workItem from="1630897504442" duration="475000" />
+      <workItem from="1630897504442" duration="594000" />
     </task>
+    <task id="LOCAL-00001" summary="develop版本，忽略掉">
+      <created>1630898001149</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630898001149</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,5 +200,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="develop版本，忽略掉" />
+    <option name="LAST_COMMIT_MESSAGE" value="develop版本，忽略掉" />
   </component>
 </project>

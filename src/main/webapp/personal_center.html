@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="icon" href="./img/logo.ico.png" type="image/ico" />
+    <link rel="stylesheet" rev="stylesheet" href="css/personal_center.css" type="text/css" />
+    <!-- <link rel="stylesheet" rev="stylesheet" href="css/index.css" type="text/css" /> -->
+    <title>个人中心界面</title>
+</head>
+
+<body>
+
+    <!-- 个人界面顶部栏定义区域 -->
+    <div class="header-mod">
+        <div class="header clearfix">
+            <!-- 插入项目logo -->
+            <img src="./img/top.png" width="350" alt="">
+            <!-- 定义退出按钮 -->
+            <a href="" class="quit"><img src="./img/icon/shutdown.png" alt=""> <span> 退出</span></a>
+        </div>
+    </div>
+
+    <!-- 个人界面次顶部栏定义区域 -->
+    <div class="headerSub-mod">
+        <div class="headerSub clearfix">
+            <!-- 插入用户头像 -->
+            <img src="./img/touxiang.jpg" class="user-photo" alt="用户头像">
+
+            <div class="user-info">
+                <div class="info-sup clearfix">
+                    <!-- 定义打招呼信息 -->
+                    <span class="hello">
+            <span>欢迎登录，亲~</span>
+                    </span>
+
+                    <!-- <ul class="log-way">
+                    <li>
+            <div class="dialog">
+              <div class="text">您已通过<span>198****6897</span>认证</div>
+              <div class="corner"></div>
+              <div class="border"></div>
+              <div class="masker"></div>
+            </div>
+          </li>
+        </ul> -->
+                </div>
+
+                <div class="info-sub clearfix">
+                    <ul>
+                        <li class="user-account">账户名：<span>贺龙柱</span> </li>
+                        <li style="color: gray;">&nbsp;&nbsp; | &nbsp;&nbsp;</li>
+                        <li class="user-type"><span>用户</span></li>
+                        <li style="color: gray;">&nbsp;&nbsp; | &nbsp;&nbsp;</li>
+                        <li class="last-time">上次登录：<span class="day">2021-09-02 17:31:33</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a class="info-modify" href="#"><button>修改资料</button></a>
+        </div>
+    </div>
+
+    <!-- 个人界面主内容区域定义部分 -->
+    <div class="container">
+        <div class="content clearfix">
+            <!-- 侧边栏 -->
+            <div class="side-menu">
+                <ul class="menu-list">
+                    <li> <a href="#" class="cur">消息一览</a> </li>
+                    <li> <a href="#" class="">个人资料</a> </li>
+                    <li> <a href="#" class="">发布租房</a> </li>
+                    <li> <a href="#" class="">问答社区</a> </li>
+                    <li> <a href="#" class="">看房记录</a> </li>
+                </ul>
+
+                <div class="tool-list">
+                    <h4 class="t-title"><i class="iconfont">&#xE143;</i>小工具</h4>
+                    <p>
+                        <a href="#" target="_blank">估房价</a>
+                        <a href="#" target="_blank">房贷计算器</a>
+                    </p>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="right-cont">
+                    <ul class="tab-list clearfix">
+                        <li><a href="#" class="cur">系统消息</a></li>
+
+                    </ul>
+
+                    <div class="qie">
+                        <!-- "消息一览界面" -->
+                        <div class="no-msg item">
+                            <span class="no-msg-content">
+      <span class="no-msg-img"></span>
+                            <br>
+                            <span class="no-msg-text"><img src="./img/que.png" style="width: 80px;" ><br>您还没有消息哟~</span>
+                            </span>
+
+                        </div>
+                        <!-- "个人资料"界面 -->
+                        <div class="profile item">
+                            <div class="profile-title">
+                                <span>基本账号资料</span>
+                            </div>
+                            <ul class="profile-list">
+                                <li class="photo">
+                                    <span class="key">头像</span>
+                                    <img src="./img/touxiang.jpg" alt="你的头像">
+                                    <a href="#" class="operate-btn">修改</a>
+                                </li>
+                                <li class="account">
+                                    <span class="key">帐号</span>
+                                    <span class="value">PlC7lOV</span>
+                                </li>
+                                <li class="name">
+                                    <span class="key">昵称</span>
+                                    <span class="value">暂无提供</span>
+                                    <button class="operate-btn">修改</button>
+                                </li>
+                                <li class="email">
+                                    <span class="key">邮箱</span>
+                                    <span class="value">暂无提供</span>
+                                    <a class="operate-btn" href="#">绑定</a>
+                                </li>
+                                <li class="phone">
+                                    <span class="key">手机</span>
+                                    <span class="value">19800306897</span>
+                                    <a class="operate-btn" href="#">修改</a>
+                                </li>
+                                <li class="password">
+                                    <span class="key">密码</span>
+                                    <span class="value">暂无提供</span>
+                                    <a class="operate-btn" href="#">修改</a>
+                                </li>
+                                <li class="bound">
+                                    <span class="key">微信</span>
+                                    <span class="value"></span><button class="operate-btn" href="#">绑定</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- "发布租房"界面 -->
+                        <div class="item">
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="recommend-house">
+                    <!-- 推荐 -->
+                    <div class="rh-area">
+                        <p class="rh-title">您可能感兴趣的房源</p>
+                        <ul class="rh-items">
+                            <li class="rh-item">
+                                <a href="#" class="rh-item-content" target="_blank">
+                                    <img src="https://pic1.ajkimg.com/display/hj/27f051cfc840c62a8ff592b130478062/240x180c.jpg?t=1" width="182" height="135">
+                                    <span class="community-area"></span>
+                                    <span class="community-text">绿苑二邨</span>
+                                    <p class="item-title">房东急售 近11号线300米 价格可谈 20万精装送家电</p>
+                                    <p class="item-info"><span class="item-price">76万</span><span class="item-info-sub">2室2厅，56平米</span></p>
+                                </a>
+                            </li>
+                            <li class="rh-item">
+                                <a href="#" class="rh-item-content" target="_blank">
+                                    <img src="https://pic1.ajkimg.com/display/hj/ae042353eff864004c3d55a6ff0f3d6c/240x180c.jpg?t=1" width="182" height="135">
+                                    <span class="community-area"></span>
+                                    <span class="community-text">塘东小区</span>
+                                    <p class="item-title">中秋节特惠 塘桥蓝村地铁口 电梯精装两房 居家装修 业主诚售</p>
+                                    <p class="item-info"><span class="item-price">345万</span><span class="item-info-sub">1室2厅，56平米</span></p>
+                                </a>
+                            </li>
+                            <li class="rh-item">
+                                <a href="#" class="rh-item-content" target="_blank">
+                                    <img src="https://pic1.ajkimg.com/display/hj/86eb8a5cb5f728ccd948100197d161b2/240x180c.jpg?t=1" width="182" height="135">
+                                    <span class="community-area"></span>
+                                    <span class="community-text">复地爱伦坡(二期)</span>
+                                    <p class="item-title">爱伦坡 双拼255平 大花园 精装 价格实惠 随时好看 急急</p>
+                                    <p class="item-info"><span class="item-price">998万</span><span class="item-info-sub">2室5厅，255平米</span></p>
+                                </a>
+                            </li>
+                            <li class="rh-item">
+                                <a href="#" class="rh-item-content" target="_blank">
+                                    <img src="https://pic1.ajkimg.com/display/hj/51dc65ebeab90a263988f0e9f7e727b4/240x180c.jpg?t=1" width="182" height="135">
+                                    <span class="community-area"></span>
+                                    <span class="community-text">虹桥乐庭</span>
+                                    <p class="item-title">交大附小學区全南大两房，中央空调带地暖，刷卡到户，紧邻学校</p>
+                                    <p class="item-info"><span class="item-price">1190万</span><span class="item-info-sub">2室2厅，123.22平米</span></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 顶部栏定义部分 -->
+    <div id="footer" class="footer" style="text-align: center;">
+        <img src="./img/di1.png" width="100" />
+        <br>
+        <img src="./img/di.png" width="300" />
+        <ul class="links">
+            <li><a rel="nofollow" href="#">关于我们</a></li>
+            <li><a rel="nofollow" href="#">联系我们</a></li>
+            <li><a rel="nofollow" href="#">用户协议</a></li>
+            <li><a rel="nofollow" href="#">友情链接</a></li>
+            <li><a href="#">最新问答</a></li>
+        </ul>
+    </div>
+
+
+    <div class="dialog">
+        <!-- 退出登录对话框 -->
+        <div class="quit-content">是否要退出小邮熊帐号？</div>
+        <div class="dialog-btn quit-btn">
+            <a href="#"><button class="sure">确定</button></a>
+            <button class="cancel">取消</button>
+        </div>
+
+        <!-- 修改昵称 -->
+        <div class="modify-name">
+            <p class="error-tip name-error">只能包含中文、英文字母、数字，不包含符号</p>
+            <div class="input-box name-box cur">
+                <i class="iconfont left-Icon">&#xe019;</i>
+                <input class="input-content name" type="text" placeholder="只能包含中文、英文字母、数字，不包含符号" maxlength="12">
+                <i class="iconfont ok-tip name-ok">&#xe144;</i>
+            </div>
+        </div>
+        <div class="dialog-btn modify-name-btn">
+            <button class="sure">确定</button>
+            <button class="cancel">取消</button>
+        </div>
+
+        <!--  -->
+        <div class="protect-mobile-modal-body">
+            <div class="tips-head">确定开始保护？</div>
+            <div class="tips-body">您设置的号码将被保护</div>
+        </div>
+        <div class="dialog-btn protect-mobile-modal-footer">
+            <button class="sure btn-confirm">确定</button>
+            <button class="cancel btn-cancel">取消</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://pages.anjukestatic.com/usersite/site/js/jquery/1.11.3/jquery-underscore.min.js"></script>
+    <script type="text/javascript" src="https://pages.anjukestatic.com/usersite/site/js/bbv10.js"></script>
+    <script type="text/javascript" src="https://pages.anjukestatic.com/usersite/site/passport/challenge_pop_20190903.js"></script>
+    <script type="text/javascript" src="https://pages.anjukestatic.com/usersite/site/passport/sdk_pc_20190903.js"></script>
+    <script type="text/javascript" src="https://include.anjukestatic.com/anjuke-member/res/20210709.9761.0/b/Member_Web_User_Message.js"></script>
+
+    <!-- jquery代码实现侧边栏切换 -->
+    <script>
+        $(function() {
+            $(".menu-list li").click(function() {
+                // 链式编程
+                $(this).children("a").addClass("cur").parent("li").siblings("li").children().removeClass("cur");
+                // 得到当前li的索引号
+                var index = $(this).index();
+                // 让下面相应索引号的item显示，其它隐藏
+                $(".qie .item").eq(index).show().siblings().hide();
+            });
+        })
+    </script>
+
+</body>
+
+</html>
