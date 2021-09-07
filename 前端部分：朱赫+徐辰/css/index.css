@@ -313,11 +313,6 @@
 
 .page ul li a {
     font-size: 18px;
-    border: 2px solid #666666;
-}
-
-.page ul li a:hover{
-    border: 2px solid #f59a23;
 }
 
 .blogroll {

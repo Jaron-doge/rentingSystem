@@ -1,33 +1,52 @@
-#picture{/*轮播框样式*/
-    border: none;
-    width: 1100px;
+#picture {
+    width: 1200px;
     height: 350px;
-    margin: auto;
-    text-align: center;
+    overflow: hidden;
     position: relative;
-    overflow: hidden;/*隐藏溢出的图片*/
+    margin: 0px auto;  
 }
-#pRotation{/*图片样式（4张图片在一排）*/
-    position: absolute;
-    width: 4400px;
+  
+#pRatation {
     height: 350px;
-    transition: 2s;
+    width: 4800px;
+    position: absolute;
+    transition: 1s;
+    left: 0px;
 }
-#numberD {/*数字的位置*/
+
+#pRatation img {
+    float: left;
+}
+
+#numberD {
     position: absolute;
     top: 320px;
     left: 43%;
 }
-#numberS {/*数字的样式*/
-    height: 13px;
-    width: 13px;
-    border: 1px solid #000;
+    
+#numberS {
+    height: 20px;
+    width: 20px;
+    border: 1px solid #000000;
     z-index: 10;
     float: left;
     list-style: none;
-    border-radius: 50%;/*圆形*/
-    margin-left: 8px;
+    border-radius: 50%;
+    margin-left: 10px;
     text-align: center;
     cursor:pointer;
-    font-size: 3px; 
+}
+.buttonP{
+    height: 12px;
+    width: 24px;
+    border: none;
+    float: left;
+    border: 1px solid #000000;
+    list-style: none;
+    border-radius: 30%;
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #e7dcdc;
+
 }
