@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
+
 @WebServlet("/manager_login")
 public class manager_login extends HttpServlet {
     @Override
@@ -32,12 +34,17 @@ public class manager_login extends HttpServlet {
 
         // 获取用户登录信息
         Manager us = service.login(manager);
+        // 把数据库里面的User获取出来
+        List<Manager> list = service.selectManager(managerId);
+        for (int i = 0; i < list.size(); i++) {
+            manager = list.get(i);
+        }
 
         System.out.println("----us的信息----");
         System.out.println(us);
         //设置一个session
         HttpSession session = request.getSession();
-        session.setAttribute("manager", us);
+        session.setAttribute("manager", manager);
 
 
 

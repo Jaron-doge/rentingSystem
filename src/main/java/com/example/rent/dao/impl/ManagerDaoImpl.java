@@ -166,7 +166,7 @@ public class ManagerDaoImpl implements ManagerDao {
                 manager.setName(rs.getString("managerName"));
                manager.setPwd(rs.getString("managerPwd"));
                 manager.setManagerIcon(rs.getString("managerIcon"));
-                manager.setSum(rs.getInt("hosueSum"));
+                manager.setSum(rs.getInt("houseSum"));
                 return manager;
             }
         } catch (SQLException e) {

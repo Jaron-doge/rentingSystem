@@ -47,11 +47,11 @@
             <div class="avtar">
                 <div class="pic"><img src="./img/1.jpg" alt=""></div>
             </div>
-
-            <h1>欢迎登录</h1>
-
             <!-- <form> 标签用于为用户输入创建 HTML 表单 -->
             <form action="/rentingSystem/user_login" method="post" class="form">
+            <h1>欢迎登录</h1>
+
+
                 <div>
                     <input type="text" name="userid" id="userid" placeholder="请输入手机号">
                 </div>

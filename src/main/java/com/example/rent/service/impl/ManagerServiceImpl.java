@@ -68,7 +68,7 @@ public class ManagerServiceImpl implements ManagerService {
         return null;
     }
     @Override
-    public List<User> selectManager(String username) {
+    public List<Manager> selectManager(Integer managerId) {
         return null;
     }
 

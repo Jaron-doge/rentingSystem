@@ -33,11 +33,10 @@ public class user_login extends HttpServlet {
 
         System.out.println("----us的信息----");
         System.out.println(us);
+
          //设置一个session
         HttpSession session = request.getSession();
         session.setAttribute("user", us);
-
-
 
         if (us != null ) {
             response.sendRedirect("index.jsp");

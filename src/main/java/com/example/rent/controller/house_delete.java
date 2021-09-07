@@ -27,7 +27,7 @@ public class house_delete extends HttpServlet {
         HouseService houseService = new HouseServiceImpl();
         House house= new House();
         house = houseService.getHouse(houseId);
-        System.out.println("删除的图书信息：");
+        System.out.println("删除的房屋信息：");
         System.out.println(house);
         boolean flag = houseService.deleteHouse(houseId);
 

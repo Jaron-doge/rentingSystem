@@ -18,7 +18,7 @@ public interface ManagerService {
     /**
      * 查询用户信息
      */
-    public List<User> selectManager(String username);
+    public List<Manager> selectManager(Integer managerId);
 
 
 
