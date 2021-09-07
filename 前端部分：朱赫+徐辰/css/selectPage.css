@@ -1,0 +1,110 @@
+.selectPage {
+    position: relative;
+    min-height: 1000px;
+    width: 1200px;
+    height: auto;
+    border: 0px none;
+    box-sizing: border-box;
+}
+/* 选择页面的导航栏 */
+.selectPage nav {
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    overflow: hidden;
+    background-color: #9e9ea0;
+    display: flex;
+}
+/* 导航栏链接相关 */
+.selectPage nav a {
+    display: block;
+    width: 150px;
+    border-right: 1px solid #eee;
+    color: #fff;
+    text-decoration: none;
+}
+.selectPage nav a:hover {
+    color: #080808;
+    text-decoration: none;
+}
+.selectPage nav a:last-child {
+    border-right: 0 none;
+}
+.selectPage nav a.buttonClick {
+    background: #e47e0a;
+    color: #fff;
+    text-decoration: none;
+}
+/* 选择页面相关 */
+.cont {
+    overflow: hidden;
+    display: none;
+}
+section ul li {
+    list-style: none;
+
+}
+.cont ol li {
+    list-style: none;
+    line-height: 50px;
+}
+/* 表格样式 */
+.tableFont {
+    border: 1px solid black;
+    width: 1200px;
+    margin-top: 10px;
+    border-collapse: collapse;
+/*设置边框样式*/
+}
+.tableFont td {
+    border: 1px solid black;
+    height: 30px;
+}
+.tableFont th {
+    border: 1px solid black;
+    height: 50px;
+    background: #e1e1e6;
+}
+/* 字体样式 */
+.pageFont2 {
+    margin-top: 50px;
+    text-align: center;
+}
+.detailinfo ul li {
+    position: relative;
+    height: 160px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #ffffff;
+}
+.detailinfo a {
+    text-decoration: none;
+    /*链接去下划线*/
+    color: #f59a23;
+}
+.detailinfo ul li img {
+    float: left;
+}
+.detailinfo ul li dl {
+    margin: 0 180px;
+    height: 20px;
+}
+.detailinfo ul li dl dt {
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+}
+.detailinfo ul li span {
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    font-size: 20px;
+    color: #f59a23;
+}
+.title {
+    color: #333333;
+    font-size: 15px;
+}
+.title:hover {
+    color: #f59a23;
+}

@@ -355,6 +355,7 @@
 
 .footerr ul li {
     float: right;
+    position: relative;
     height: 50px;
     width: 50px;
     margin: 20px 10px;
@@ -376,4 +377,54 @@
 
 .footerr ul li img {
     margin: 9px;
+}
+
+.weixin {
+    position: absolute;
+    bottom: 50px;
+    left: -26px;
+    width: 100px;
+    height: 120px;
+    /* background-color: pink; */
+    border: 1px solid #666666;
+    background-color: #ffffff;
+    display: none;
+    transition: all .5s;
+}
+
+.wx:hover .weixin {
+    display: inline-block;
+}
+
+.weixin p {
+    text-align: center;
+}
+
+.weixin img {
+    margin: 0;
+}
+
+.sina {
+    position: absolute;
+    bottom: 50px;
+    left: -26px;
+    width: 100px;
+    height: 120px;
+    /* background-color: pink; */
+    border: 1px solid #666666;
+    background-color: #ffffff;
+    display: none;
+    transition: all .56;
+}
+
+.si:hover .sina {
+    display: inline-block;
+}
+
+.sina p {
+    text-align: center;
+}
+
+.sina img {
+    margin: 0;
 }
