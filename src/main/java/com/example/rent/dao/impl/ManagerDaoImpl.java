@@ -95,7 +95,7 @@ public class ManagerDaoImpl implements ManagerDao {
      * @return
      */
     @Override
-    public List<Manager> selectUser(String sql, Object[] arr) {
+    public List<Manager> selectManager(String sql, Object[] arr) {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -147,7 +147,7 @@ public class ManagerDaoImpl implements ManagerDao {
      * @return
      */
     @Override
-    public Manager getUser(Integer managerid) {
+    public Manager getManager(Integer managerid) {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;

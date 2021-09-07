@@ -2,7 +2,9 @@ package com.example.rent.controller;
 
 import com.example.rent.entity.House;
 import com.example.rent.service.HouseService;
+import com.example.rent.service.UserService;
 import com.example.rent.service.impl.HouseServiceImpl;
+import com.example.rent.service.impl.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,24 +14,23 @@ import javax.servlet.http.HttpServletResponse;
 import javax.swing.text.html.HTMLEditorKit;
 import java.io.IOException;
 
-@WebServlet("/add_house")
+@WebServlet("/house_add")
 public class house_add extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 设置获取注册时的编码为UTF-8
         request.setCharacterEncoding("UTF-8");
         House house = new House();
-
+        HouseService service =new HouseServiceImpl();
         //获取页面提交的数据
-        Integer houseId = Integer.valueOf(request.getParameter("houseId"));
-        Integer userId  = Integer.valueOf(request.getParameter("userId"));
-        Integer managerId = Integer.valueOf(request.getParameter("managerId"));
-        String city = request.getParameter("city");
-        String district = request.getParameter("district");
-        String village = request.getParameter("vilage");
-        String address = request.getParameter("address");
+        Integer houseId = 1;
+        Integer userId  =1;
+        String village = request.getParameter("village");
         Integer floor = Integer.valueOf(request.getParameter("floor"));
         Integer floor_sum = Integer.valueOf(request.getParameter("floor_sum"));
+        String city = request.getParameter("city");
+        String district = request.getParameter("district");
+        String address = request.getParameter("address");
         Integer floor_lift = Integer.valueOf(request.getParameter("floor_lift"));
         Integer price = Integer.valueOf(request.getParameter("price"));
         Integer type_bedroom = Integer.valueOf(request.getParameter("type_room"));
@@ -43,7 +44,7 @@ public class house_add extends HttpServlet {
         Integer personnum = Integer.valueOf(request.getParameter("personnum"));
         String houseImg = request.getParameter("houseImg");
         String payMethod = request.getParameter("payMethod");
-
+        Integer managerId = Integer.valueOf(request.getParameter("managerId"));
 
         //获取页面提交的数据设置到实体类house中
         house .setHouseId(houseId);
@@ -78,7 +79,7 @@ public class house_add extends HttpServlet {
         if (flag) {
             response.sendRedirect("manager.jsp");
         } else {
-            response.sendRedirect("error.jsp");
+            response.sendRedirect("index.jsp");
         }
     }
 }

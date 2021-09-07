@@ -19,12 +19,12 @@ public interface ManagerDao  {
     /**
      * 查询用户信息
      */
-    public List<Manager> selectUser(String sql, Object arr[]);
+    public List<Manager> selectManager(String sql, Object arr[]);
 
     /**
      * 根据用户编号进行查询
      */
-    public Manager getUser(Integer managerid);
+    public Manager getManager(Integer managerid);
 
 
     /**

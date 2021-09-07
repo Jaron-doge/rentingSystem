@@ -383,7 +383,7 @@
 <!-- footer开始 -->
 <div class="footer w">
     <div class="footerl">
-        <img src="images/footer_logo.png" alt="">
+        <img src="images/footerlogo.png" alt="">
         <ul>
             <li><a href="#">网站首页</a></li>
             <li><a href="#">帮助中心</a></li>
@@ -399,7 +399,7 @@
     <span><img src="images/call.png">24小时客服热线400-000-0000</span>
     <div class="footerr">
         <ul>
-            <li><img src="images/wei_xin.png" alt=""></li>
+            <li><img src="images/weixin.png" alt=""></li>
             <li><img src="images/sina.png" alt=""></li>
             <li><img src="images/mail.png" alt=""></li>
         </ul>
