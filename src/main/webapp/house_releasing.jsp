@@ -23,7 +23,7 @@
   <title>发布租房</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/housereleasing.css">
+  <link rel="stylesheet" href="css/house_releasing.css">
 </head>
 
 <body>
@@ -36,20 +36,20 @@
       <li class="city"><a href="#">城市</a></li> -->
       <div class="search">
         <input type="search" name=""  placeholder="请输入搜索内容">
-        <img src="images/搜索 (1).png"></img>
+        <img src="images/search.png"></img>
       </div>
     </ul>
   </div>
   <div class="fr">
     <ul>
       <li class="release"><a>发布租房</a></li>
-      <li class="login"><a><img src="images/登陆.png">登录</a></li>
-      <li class="register"><a><img src="images/注册 (选中).png">注册</a></li>
+      <li class="login"><a><img src="images/login.png">登录</a></li>
+      <li class="register"><a><img src="images/register_2.png">注册</a></li>
     </ul>
   </div>
 </header>
 <!-- 基本信息开始 -->
-<div class="jiben w">
+<div class="ji_ben w">
   <p>基本信息</p>
 </div>
 <div class="basic w">
@@ -102,7 +102,7 @@
 </div>
 <!-- 基本信息结束 -->
 <!-- 租金信息开始 -->
-<div class="zujin w">
+<div class="zu_jin w">
   租金信息
 </div>
 <div class="rent w">
@@ -121,7 +121,7 @@
 </div>
 <!-- 租金信息结束 -->
 <!-- 详细信息开始 -->
-<div class="xiangxi w">
+<div class="xi_ang_xi w">
   详细介绍
 </div>
 <div class="detail w">
@@ -165,24 +165,24 @@
 </div>
 <!-- 详细信息结束 -->
 <!-- 房源图片开始 -->
-<div class="fangyuan w">
+<div class="fang_yuan w">
   房源图片
 </div>
-<div class="housesource w">
+<div class="house_source w">
   <div>
     <p class="word">上传图片</p>
     <p class="ess">请上传清晰、实拍的室内图片，请不要在图片上添加文字、数字、网址等内容，切勿上传名片、
       二维码、自拍照、风景照等与房源无关的图片，最多上传12张，每张最大10M</p>
   </div>
   <div class="uploading">
-    <img src="images/uploadimg.png" alt="">
+    <img src="images/upload_img.png" alt="">
     <h1>本地上传</h1>
     <p>图片拖拽到这里或点击上传</p>
   </div>
 </div>
 <!-- 房源图片结束 -->
 <!-- 联系信息开始 -->
-<div class="lianxi w">
+<div class="lian_xi w">
   联系信息
 </div>
 <div class="contact w">
@@ -209,7 +209,7 @@
 <!-- footer开始 -->
 <div class="footer w">
   <div class="footerl">
-    <img src="images/footerlogo.png" alt="">
+    <img src="images/footer_logo.png" alt="">
     <ul>
       <li><a href="#">网站首页</a></li>
       <li><a href="#">帮助中心</a></li>
@@ -225,7 +225,7 @@
   <span><img src="images/call.png">24小时客服热线400-000-0000</span>
   <div class="footerr">
     <ul>
-      <li><img src="images/weixin.png" alt=""></li>
+      <li><img src="images/wei_xin.png" alt=""></li>
       <li><img src="images/sina.png" alt=""></li>
       <li><img src="images/mail.png" alt=""></li>
     </ul>

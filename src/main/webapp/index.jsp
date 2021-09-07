@@ -12,9 +12,10 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":"
             + request.getServerPort() + path + "/";
 %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <base href="<%=basePath %>"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,8 +23,9 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/rotation.css">
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
 </head>
+
 <body>
 <header class="nav w">
     <div class="fl">
@@ -49,46 +51,86 @@
 <!-- 导航栏模块结束 -->
 <!-- 轮播图开始 -->
 <div id="picture">
-    <div id="pRotation">
-        <img src="./images/house1.png" height="100%">
-        <img src="./images/house2.png" height="100%">
-        <img src="./images/house3.png" height="100%">
-        <img src="./images/house4.png" height="100%">
+    <div id="pRatation">
+        <img src="images/大+1.png" width="1200px" height="350px" />
+        <img src="images/大+2.png" width="1200px" height="350px" />
+        <img src="images/大+3.png" width="1200px" height="350px" />
+        <img src="images/大+4.png" width="1200px" height="350px" />
     </div>
     <div id="numberD">
         <ul>
-            <i id="numberS">1</i>
-            <i id="numberS">2</i>
-            <i id="numberS">3</i>
-            <i id="numberS">4</i>
+            <button class="buttonP" onclick="changeColor1A(this)" onmouseleave="changeColor1B(this)"></button>
+            <button class="buttonP" onclick="changeColor2A(this)" onmouseleave="changeColor2B(this)"></button>
+            <button class="buttonP" onclick="changeColor3A(this)" onmouseleave="changeColor3B(this)"></button>
+            <button class="buttonP" onclick="changeColor4A(this)" onmouseleave="changeColor4B(this)"></button>
         </ul>
     </div>
 </div>
 <script type="text/javascript">
-    var pictureRotation = document.getElementById("pRotation");
-    var numberColor = document.getElementsByTagName("i")
-    var i = 0;
+    var pictureRotation = document.getElementById("pRatation");
+    var numberColor = document.getElementsByClassName("buttonP");
     console.log(numberColor);
-    auto();/*自动播放*/
-    numberColor[0].style.cssText = "background:#ff6700;color:#fff;";
+    var i = 0;
+    auto();
+    numberColor[0].style.backgroundColor = "#969393";
     function auto() {
         time = setInterval(function () {
             i++;
             if (i <= 3) {
-                pictureRotation.style.left = pictureRotation.offsetLeft - 1100 + "px";/*图片向左滚动一个图片的单位*/
-                numberColor[i].style.cssText = "background:#ff6700;color:#fff;";
-                numberColor[i - 1].style.cssText = "background:none;color:#000;";
+                pictureRotation.style.left = pictureRotation.offsetLeft - 1200 + "px";
+                numberColor[i].style.backgroundColor = "#969393";
+                numberColor[i - 1].style.backgroundColor = "#e7dcdc";
             }
             else {
-                pictureRotation.style.left = "0px";/*归位*/
-                numberColor[3].style.cssText = "background:none;color:#000;";
-                numberColor[0].style.cssText = "background:#ff6700;color:#fff;";
+                pictureRotation.style.left = "0px";
+                numberColor[3].style.backgroundColor = "#e7dcdc";
+                numberColor[0].style.backgroundColor = "#969393";
                 i = 0;
             }
             console.log(i);
         }, 5000)
     }
+    function changeColor1A(obj) {
+        pictureRotation.style.left = "0px";
+        numberColor[0].style.backgroundColor = "#969393";
+        numberColor[1].style.backgroundColor = "#e7dcdc";
+        numberColor[2].style.backgroundColor = "#e7dcdc";
+        numberColor[3].style.backgroundColor = "#e7dcdc";
+    }
+    function changeColor1B(obj) {
+        numberColor[0].style.backgroundColor = "#e7dcdc";
+    }
+    function changeColor2A(obj) {
+        pictureRotation.style.left = "-1200px";
+        numberColor[1].style.backgroundColor = "#969393";
+        numberColor[0].style.backgroundColor = "#e7dcdc";
+        numberColor[2].style.backgroundColor = "#e7dcdc";
+        numberColor[3].style.backgroundColor = "#e7dcdc";
+    }
+    function changeColor2B(obj) {
+        numberColor[1].style.backgroundColor = "#e7dcdc";
+    }
+    function changeColor3A(obj) {
+        pictureRotation.style.left = "-2400px";
+        numberColor[2].style.backgroundColor = "#969393";
+        numberColor[0].style.backgroundColor = "#e7dcdc";
+        numberColor[1].style.backgroundColor = "#e7dcdc";
+        numberColor[3].style.backgroundColor = "#e7dcdc";
+    }
+    function changeColor3B(obj) {
+        numberColor[2].style.backgroundColor = "#e7dcdc";
+    }
+    function changeColor4A(obj) {
+        pictureRotation.style.left = "-3600px";
+        numberColor[3].style.backgroundColor = "#969393";
+        numberColor[0].style.backgroundColor = "#e7dcdc";
+        numberColor[1].style.backgroundColor = "#e7dcdc";
+        numberColor[2].style.backgroundColor = "#e7dcdc";
+    }
+    function changeColor4B(obj) {
+        numberColor[3].style.backgroundColor = "#e7dcdc";
 
+    }
 </script>
 <!-- 轮播图结束 -->
 <!-- 服务模块开始 -->
@@ -155,7 +197,7 @@
         <div class="detailinfo">
             <ul>
                 <li>
-                    <img src="./images/房源.png">
+                    <img src="images/小1.png">
                     <dl>
                         <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
                         <dt>2室 54平方米</dt>
@@ -165,7 +207,7 @@
                     <span>3600元/月</span>
                 </li>
                 <li>
-                    <img src="./images/房源.png">
+                    <img src="images/小2.png">
                     <dl>
                         <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
                         <dt>2室 54平方米</dt>
@@ -175,7 +217,7 @@
                     <span>3600元/月</span>
                 </li>
                 <li>
-                    <img src="./images/房源.png">
+                    <img src="images/小3.png">
                     <dl>
                         <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
                         <dt>2室 54平方米</dt>
@@ -185,7 +227,7 @@
                     <span>3600元/月</span>
                 </li>
                 <li>
-                    <img src="./images/房源.png">
+                    <img src="images/小1.png">
                     <dl>
                         <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
                         <dt>2室 54平方米</dt>
@@ -195,7 +237,7 @@
                     <span>3600元/月</span>
                 </li>
                 <li>
-                    <img src="./images/房源.png">
+                    <img src="images/小3.png">
                     <dl>
                         <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
                         <dt>2室 54平方米</dt>
@@ -205,7 +247,7 @@
                     <span>3600元/月</span>
                 </li>
                 <li>
-                    <img src="./images/房源.png">
+                    <img src="images/小1.png">
                     <dl>
                         <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
                         <dt>2室 54平方米</dt>
@@ -215,7 +257,7 @@
                     <span>3600元/月</span>
                 </li>
                 <li>
-                    <img src="./images/房源.png">
+                    <img src="images/小2.png">
                     <dl>
                         <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
                         <dt>2室 54平方米</dt>
@@ -225,7 +267,7 @@
                     <span>3600元/月</span>
                 </li>
                 <li>
-                    <img src="./images/房源.png">
+                    <img src="images/小2.png">
                     <dl>
                         <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
                         <dt>2室 54平方米</dt>
@@ -235,7 +277,7 @@
                     <span>3600元/月</span>
                 </li>
                 <li>
-                    <img src="./images/房源.png">
+                    <img src="images/小1.png">
                     <dl>
                         <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
                         <dt>2室 54平方米</dt>
@@ -245,7 +287,7 @@
                     <span>3600元/月</span>
                 </li>
                 <li>
-                    <img src="./images/房源.png">
+                    <img src="images/小2.png">
                     <dl>
                         <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
                         <dt>2室 54平方米</dt>
@@ -259,12 +301,12 @@
         <!-- 尾部页码开始 -->
         <div class="page">
             <ul>
-                <li><a>1</a></li>
-                <li><a>2</a></li>
-                <li><a>3</a></li>
-                <li><a>...</a></li>
-                <li><a>70</a></li>
-                <li><a>下一页</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">70</a></li>
+                <li><a href="#">下一页</a></li>
 
             </ul>
         </div>
@@ -279,7 +321,7 @@
         <div class="retuiinfo">
             <ul>
                 <li>
-                    <img src="./images/retui.png">
+                    <img src="images/大2.png">
                     <dl>
                         <dt class="retuidetail">金桥开发区/金桥路/金桥开发区/金桥路</dt>
                         <dt class="retuidetail">3室 136.5平</dt>
@@ -287,7 +329,7 @@
                     </dl>
                 </li>
                 <li>
-                    <img src="./images/retui.png">
+                    <img src="images/大2.png">
                     <dl>
                         <dt class="retuidetail">金桥开发区/金桥路/金桥开发区/金桥路</dt>
                         <dt class="retuidetail">3室 136.5平</dt>
@@ -295,7 +337,7 @@
                     </dl>
                 </li>
                 <li>
-                    <img src="./images/retui.png">
+                    <img src="images/大3.png">
                     <dl>
                         <dt class="retuidetail">金桥开发区/金桥路/金桥开发区/金桥路</dt>
                         <dt class="retuidetail">3室 136.5平</dt>
@@ -303,7 +345,7 @@
                     </dl>
                 </li>
                 <li>
-                    <img src="./images/retui.png">
+                    <img src="images/大2.png">
                     <dl>
                         <dt class="retuidetail">金桥开发区/金桥路/金桥开发区/金桥路</dt>
                         <dt class="retuidetail">3室 136.5平</dt>
@@ -311,7 +353,7 @@
                     </dl>
                 </li>
                 <li>
-                    <img src="./images/retui.png">
+                    <img src="images/大3.png">
                     <dl>
                         <dt class="retuidetail">金桥开发区/金桥路/金桥开发区/金桥路</dt>
                         <dt class="retuidetail">3室 136.5平</dt>
@@ -339,26 +381,27 @@
 </div>
 <!-- 友情链接结束 -->
 <!-- footer开始 -->
-<div class="footer">
+<div class="footer w">
     <div class="footerl">
-        <img src="" alt="">
+        <img src="images/footer_logo.png" alt="">
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">招聘信息</a></li>
+            <li><a href="#">客户服务</a></li>
+            <li><a href="#">隐私政策</a></li>
+            <li><a href="#">广告服务</a></li>
+            <li><a href="#">网站地图</a></li>
+            <li><a href="#">意见反馈</a> </li>
         </ul>
     </div>
+    <span><img src="images/call.png">24小时客服热线400-000-0000</span>
     <div class="footerr">
         <ul>
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
+            <li><img src="images/wei_xin.png" alt=""></li>
+            <li><img src="images/sina.png" alt=""></li>
+            <li><img src="images/mail.png" alt=""></li>
         </ul>
     </div>
 </div>
@@ -374,4 +417,5 @@
 </div>
 <!-- 固定定位结束 -->
 </body>
+
 </html>
