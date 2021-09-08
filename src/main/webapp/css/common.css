@@ -1,10 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .w {
     width: 1200px;
     margin: 0 auto;
 }
 
 body {
-    background: url(../images/bg_ssss.jpg) no-repeat top;
+    background: url(../images/bg-ssss.jpg) no-repeat top;
 }
 
 .nav {
@@ -82,7 +88,8 @@ body {
     width: 414px;
     height: 46px;
     padding-left: 20px;
-    border-right: 2px solid #f59a23;
+    border-right: 2
+    px solid #f59a23;
     font-size: 18px;
 }
 .search img {
@@ -177,4 +184,54 @@ body {
 
 .footerr ul li img {
     margin: 9px;
+}
+
+.weixin {
+    position: absolute;
+    bottom: 50px;
+    left: -26px;
+    width: 100px;
+    height: 120px;
+    /* background-color: pink; */
+    border: 1px solid #666666;
+    background-color: #ffffff;
+    display: none;
+    transition: all .5s;
+}
+
+.wx:hover .weixin {
+    display: inline-block;
+}
+
+.weixin p {
+    text-align: center;
+}
+
+.weixin img {
+    margin: 0;
+}
+
+.sina {
+    position: absolute;
+    bottom: 50px;
+    left: -26px;
+    width: 100px;
+    height: 120px;
+    /* background-color: pink; */
+    border: 1px solid #666666;
+    background-color: #ffffff;
+    display: none;
+    transition: all .56;
+}
+
+.si:hover .sina {
+    display: inline-block;
+}
+
+.sina p {
+    text-align: center;
+}
+
+.sina img {
+    margin: 0;
 }

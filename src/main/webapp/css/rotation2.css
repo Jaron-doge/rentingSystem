@@ -1,14 +1,14 @@
 #picture {
-    width: 1200px;
-    height: 350px;
+    width: 400px;
+    height: 300px;
     overflow: hidden;
     position: relative;
     margin: 0px auto;  
 }
   
 #pRatation {
-    height: 350px;
-    width: 4800px;
+    height: 300px;
+    width: 1600px;
     position: absolute;
     transition: 1s;
     left: 0px;
@@ -20,8 +20,8 @@
 
 #numberD {
     position: absolute;
-    top: 320px;
-    left: 43%;
+    top: 280px;
+    left: 30%;
 }
     
 #numberS {

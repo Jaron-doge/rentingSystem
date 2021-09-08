@@ -26,21 +26,21 @@ public class HouseServiceImpl implements HouseService {
 
     @Override
     public House getHouse(Integer houseId) {
-        return null;
+        return houseDao.getHouse(houseId);
     }
 
     @Override
     public boolean addHouse(House house) {
-        return false;
+        return houseDao.addHouse(house);
     }
 
     @Override
-    public boolean updateHouse(House book) {
-        return false;
+    public boolean updateHouse(House house) {
+        return houseDao.updateHouse(house);
     }
 
     @Override
     public boolean deleteHouse(Integer houseid) {
-        return false;
+        return houseDao.deleteHouse(houseid);
     }
 }

@@ -1,5 +1,7 @@
 package com.example.rent.controller;
 
+import com.example.rent.dao.HouseDao;
+import com.example.rent.dao.impl.HouseDaoImpl;
 import com.example.rent.entity.House;
 import com.example.rent.service.HouseService;
 import com.example.rent.service.UserService;
@@ -23,29 +25,36 @@ public class house_add extends HttpServlet {
         House house = new House();
         HouseService service =new HouseServiceImpl();
         //获取页面提交的数据
-        Integer houseId = 1;
-        Integer userId  =1;
+        Integer houseId = 2;
+        Integer userId  =123;
+        Integer Personnum =0;
+        String  houseimg = "https://pic1.58cdn.com.cn/anjuke_58/e993825c39fe99ced3954af70bd4dd4b?w=696&h=522&crop=1&t=1&srotate=1";
+        Integer house_lift = 1;
         String village = request.getParameter("village");
         Integer floor = Integer.valueOf(request.getParameter("floor"));
         Integer floor_sum = Integer.valueOf(request.getParameter("floor_sum"));
         String city = request.getParameter("city");
         String district = request.getParameter("district");
-        String address = request.getParameter("address");
-        Integer floor_lift = Integer.valueOf(request.getParameter("floor_lift"));
-        Integer price = Integer.valueOf(request.getParameter("price"));
-        Integer type_bedroom = Integer.valueOf(request.getParameter("type_room"));
+        Integer type_bedroom = Integer.valueOf(request.getParameter("type_bedroom"));
         Integer type_livingroom = Integer.valueOf(request.getParameter("type_livingroom"));
         Integer type_bathroom = Integer.valueOf(request.getParameter("type_bathroom"));
         String area = request.getParameter("area");
-        String description = request.getParameter("description");
+        String address = request.getParameter("address");
         String houseToward = request.getParameter("houseToward");
-        String facilities = request.getParameter("facilities");
-        String requirement = request.getParameter("requirement");
-        Integer personnum = Integer.valueOf(request.getParameter("personnum"));
-        String houseImg = request.getParameter("houseImg");
+        Integer price = Integer.valueOf(request.getParameter("price"));
         String payMethod = request.getParameter("payMethod");
+        String description = request.getParameter("description");
+        String[] facilities = request.getParameterValues("facilities");
+        String[] requirement = request.getParameterValues("requirement");
         Integer managerId = Integer.valueOf(request.getParameter("managerId"));
-
+        String facilitie=null;
+        String requirements=null;
+        for(int i =0;i<facilities.length;i++){
+             facilitie = facilitie+";" + facilities[i];
+        }
+        for(int i =0;i<requirement.length;i++){
+            requirements = requirements+";" + requirement[i];
+        }
         //获取页面提交的数据设置到实体类house中
         house .setHouseId(houseId);
         house .setUserId(userId);
@@ -56,7 +65,6 @@ public class house_add extends HttpServlet {
         house .setAddress(address);
         house .setFloor(floor);
         house .setFloor_sum(floor_sum);
-        house .setFloor_lift(floor_lift);
         house .setPrice(price);
         house .setType_bedroom(type_bedroom);
         house .setType_livingroom(type_livingroom);
@@ -64,17 +72,16 @@ public class house_add extends HttpServlet {
         house .setArea(area);
         house .setDescription(description);
         house .setHouseToward(houseToward);
-        house .setFacilities(facilities);
-        house.setRequirement(requirement);
-        house.setPersonnum(personnum);
-        house.setHouseImg(houseImg);
+        house .setFacilities(facilitie);
+        house.setRequirement(requirements);
+        house.setPersonnum(Personnum);
         house.setPayMethod(payMethod);
-
+        house.setHouseImg(houseimg);
+        house.setFloor_lift(house_lift);
 
         //引入数据交互层
-        HouseService houseservice = new HouseServiceImpl();
-        boolean flag = houseservice.addHouse(house);
-
+        HouseService service1 = new HouseServiceImpl();
+        Boolean flag = service1.addHouse(house);
 
         if (flag) {
             response.sendRedirect("manager.jsp");

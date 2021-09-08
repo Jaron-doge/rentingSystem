@@ -100,8 +100,8 @@ public class HouseDaoImpl implements HouseDao {
                     house .setFloor_sum(rs.getInt("floor_sum"));
                     house .setFloor_lift(rs.getInt("floor_lift"));
                     house .setPrice(rs.getInt("price"));
-                    house .setType_bedroom(rs.getInt("Type_bedroom"));
-                    house .setType_livingroom(rs.getInt("Type_livingroom"));
+                    house .setType_bedroom(rs.getInt("type_bedroom"));
+                    house .setType_livingroom(rs.getInt("type_livingroom"));
                     house .setType_bathroom(rs.getInt("Type_bathroom"));
                     house .setArea(rs.getString("area"));
                     house .setDescription(rs.getString("Description"));
@@ -110,7 +110,7 @@ public class HouseDaoImpl implements HouseDao {
                     //house.setRequirement(rs.getString("requirement"));
                     house.setPersonnum(rs.getInt("personnum"));
                     house.setHouseImg(rs.getString("houseImag"));
-                    house.setPayMethod(rs.getString("PayMethod"));
+                    house.setPayMethod(rs.getString("payMethod"));
 
                 return house;
             }
@@ -153,7 +153,7 @@ public class HouseDaoImpl implements HouseDao {
         list.add(house.getPersonnum());
         list.add(house.getHouseImg());
         list.add(house.getPayMethod());
-
+        System.out.println(list);
         boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());
         if(flag){
             return true;
@@ -192,7 +192,7 @@ public class HouseDaoImpl implements HouseDao {
         list.add(house.getPersonnum());
         list.add(house.getHouseImg());
         list.add(house.getPayMethod());
-
+        System.out.println(list);
         boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());
         if(flag){
             return true;

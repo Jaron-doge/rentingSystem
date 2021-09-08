@@ -23,7 +23,7 @@
     <title>发布租房</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/house_releasing.css">
+    <link rel="stylesheet" href="css/housereleasing.css">
 </head>
 
 <body>
@@ -53,7 +53,7 @@
     </div>
 </header>
 <!-- 基本信息开始 -->
-<form action="/rentingSystem/house_add" method="post">
+<form action="/rentingSystem/house_add" method="post" name="houseForm">
 <div class="jiben w">
     <p>基本信息</p>
 </div>
@@ -65,7 +65,7 @@
         <li class="b1">
             <p>小区名称</p>
 
-            <input type="text"name="village" id ="village"placeholder="请输入小区">
+            <input type="text" name="village" id ="village"placeholder="请输入小区">
         </li>
         <li class="b2">
             <p>楼层信息</p>
@@ -93,18 +93,18 @@
         </li>
         <li class="b6">
             <p>房屋朝向</p>
-            <select name="houseToward" id="houseToward">
-                <option value="朝向不限">朝向不限</option>
-                <option value="东">东</option>
-                <option value="南">南</option>
-                <option value="西">西</option>
-                <option value="北">北</option>
-                <option value="南北">南北</option>
-                <option value="东西">东西</option>
-                <option value="东南">东南</option>
-                <option value="西南">西南</option>
-                <option value="东北">东北</option>
-                <option value="西北">西北</option>
+            <select type="text"name="houseToward" id="houseToward">
+                <option type="text" value="朝向不限">朝向不限</option>
+                <option type="text" value="东">东</option>
+                <option type="text" value="南">南</option>
+                <option type="text" value="西">西</option>
+                <option type="text" value="北">北</option>
+                <option type="text" value="南北">南北</option>
+                <option type="text" value="东西">东西</option>
+                <option type="text" value="东南">东南</option>
+                <option type="text" value="西南">西南</option>
+                <option type="text" value="东北">东北</option>
+                <option type="text" value="西北">西北</option>
             </select>
         </li>
     </ul>
@@ -120,12 +120,12 @@
         <input class="clearfix" type="number" name="price" id="price">
         <span class="clearfix">元/月</span>
     </div>
-    <select name="payMethod" id="payMethod">
-        <option value="">请选择付款方式</option>
-        <option value="">付1押1</option>
-        <option value="">付3押1</option>
-        <option value="">半年付</option>
-        <option value="">年付</option>
+    <select type="text" name="payMethod"  id="payMethod">
+        <option type="text" value="请选择付款方式" id="请选择付款方式">请选择付款方式</option>
+        <option type="text" value="付1押1" id="付1押1">付1押1</option>
+        <option type="text" value="付3押1" id="付3押1">付3押1</option>
+        <option type="text" value="半年付" id="半年付">半年付</option>
+        <option type="text" value="年付" id="年付">年付</option>
     </select>
 </div>
 <!-- 租金信息结束 -->
@@ -167,7 +167,7 @@
         </li>
         <li>
             <p>房源描述</p>
-            <textarea name="" cols="30" rows="10" placeholder="可以介绍一下房源亮点，交通，周边环境，可以入住的时间和对租客的要求等等" draggable="false"></textarea>
+            <textarea  cols="30" rows="10" name="description" id="description"placeholder="可以介绍一下房源亮点，交通，周边环境，可以入住的时间和对租客的要求等等" draggable="false"></textarea>
         </li>
     </ul>
 </div>
@@ -214,7 +214,7 @@
 <!-- 联系信息结束 -->
     <!-- 发布按钮开始 -->
     <div class="release w">
-        <button type="submit" >发布</button>
+        <button type="submit" onclick="return checkForm()">发布</button>
     </div>
 </form>
 
@@ -248,7 +248,85 @@
 <!-- footer结束 -->
 
 
+<script type="text/javascript"src="js/jquery-3.4.1.js"></script>
+<script>
 
+    function checkForm() {
+        var village = houseForm.village.value;
+        var floor = houseForm.floor.value;
+        var floor_sum =houseForm.floor_sum.value;
+        var city =houseForm.city.value;
+        var district = houseForm.district.value;
+        var type_bedroom=houseForm.type_bedroom.value;
+        var type_livingroom=houseForm.type_livingroom.value;
+        var type_bathroom =houseForm.type_bathroom.value;
+        var area=houseForm.area.value;
+        var address=houseForm.address.value;
+        var houseToward=houseForm.houseToward.value;
+        var price=houseForm.price.value;
+        var payMethod=houseForm.payMethod.value;
+        var description=houseForm.description.value;
+        if (village == "" || village == null) {
+            alert("请输入小区名");
+            houseForm.village.focus();
+            return false;
+        } else if (floor == "" || floor == null) {
+            alert("请输入楼层");
+            houseForm.floor.focus();
+            return false;
+        }else if (floor_sum == "" || floor_sum == null) {
+            alert("请输入总楼层");
+            houseForm.floor_sum.focus();
+            return false;
+        }else if (city == "" || city == null) {
+            alert("请输入小区所在区");
+            houseForm.city.focus();
+            return false;
+        }else if (district == "" || district == null) {
+            alert("请输入街道");
+            houseForm.district.focus();
+            return false;
+        }else if (type_bedroom == "" || type_bedroom == null) {
+            alert("请输入有几个卧室");
+            houseForm.type_bedroom.focus();
+            return false;
+        }else if (type_livingroom == "" || type_livingroom == null) {
+            alert("请输入有几个客厅");
+            houseForm.type_livingroom.focus();
+            return false;
+        }else if (type_bathroom == "" || type_bathroom == null) {
+            alert("请输入卫生间");
+            houseForm.type_bathroom.focus();
+            return false;
+        }else if (area == "" || area == null) {
+            alert("请输入房屋大小");
+            houseForm.area.focus();
+            return false;
+        }else if (address == "" || address == null) {
+            alert("请输入地址");
+            houseForm.address.focus();
+            return false;
+        }else if (houseToward == "朝向不限" || houseToward == null) {
+            alert("请选择房屋朝向");
+            houseForm.houseToward.focus();
+            return false;
+        }else if (price == "" || price == null) {
+            alert("请输入房屋价格");
+            houseForm.price.focus();
+            return false;
+        }else if (payMethod == "请选择付款方式" || payMethod == null) {
+            alert("请输入付款方式");
+            houseForm.payMethod.focus();
+            return false;
+        }else if (description == "" || description == null) {
+            alert("请输入描述");
+            houseForm.description.focus();
+            return false;
+        }
+        alert('发布成功！');
+        return true;
+    }
+</script>
 </body>
 
 </html>
