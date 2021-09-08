@@ -48,7 +48,7 @@
                 <div class="pic"><img src="./img/1.jpg" alt=""></div>
             </div>
             <!-- <form> 标签用于为用户输入创建 HTML 表单 -->
-            <form action="/rentingSystem/user_login" method="post" class="form">
+            <form action="/rentingSystem/login_do" method="post" class="form">
             <h1>欢迎登录</h1>
 
 
@@ -61,8 +61,13 @@
                 <div class="btn">
                     <button type="submit">登录</button>
                 </div>
-            </form>
 
+            <div>
+                <label for="radio1"><input type="radio" name="radio" id="radio1" value="1"><span style = "font-size: 15px;" >管理员</span></label>
+                <label for="radio2"><input type="radio" name="radio" id="radio2" value="0"><span style = "font-size:15px;" >普通用户</span></label>
+
+            </div>
+            </form>
             <p class="btn-something">
                 Don't have an account ? <span class="signupbtn">signup</span>
             </p>

@@ -22,8 +22,9 @@ public class user_login extends HttpServlet {
         User user = new User();
         UserService service =new UserServiceImpl();
 
-        String userid = request.getParameter("userid");
-        String password = request.getParameter("userpassword");
+
+       Integer userid = (Integer) request.getAttribute("userid");
+        String password = (String) request.getAttribute("userpassword");
 
         user.setUserId(Integer.valueOf(userid));
         user.setUserPwd(password);

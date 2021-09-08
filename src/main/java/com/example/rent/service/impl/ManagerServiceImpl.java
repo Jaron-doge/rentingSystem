@@ -39,7 +39,7 @@ public class ManagerServiceImpl implements ManagerService {
             // 1.获取数据库连接
             con = BaseDao.getConnection();
             // 2.写sql
-            String sql = "select * from Manager where managerId = ? and Pwd = ?";
+            String sql = "select * from Manager where managerId = ? and managerPwd = ?";
             // 3.预编译
             ps = con.prepareStatement(sql);
             // 4.设置值
@@ -51,7 +51,7 @@ public class ManagerServiceImpl implements ManagerService {
                 Manager manager1= new Manager();
                 // 从数据库中获取值到实体类的setter方法中
                 manager.setManagerId(rs.getInt("managerId"));
-                manager.setPwd(rs.getString("Pwd"));
+                manager.setPwd(rs.getString("managerPwd"));
                 manager.setName(rs.getString("managerName"));
                 manager.setSum(rs.getInt("houseSum"));
 
@@ -73,7 +73,7 @@ public class ManagerServiceImpl implements ManagerService {
     }
 
     @Override
-    public User getManager(Integer userid) {
+    public Manager getManager(Integer userid) {
         return null;
     }
 

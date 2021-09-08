@@ -26,25 +26,21 @@ public class manager_login extends HttpServlet {
         Manager manager = new Manager();
         ManagerService service = new ManagerServiceImpl();
 
-        Integer managerId = Integer.valueOf(request.getParameter("managerId"));
-        String password = request.getParameter("Pwd");
+        Integer managerId = (Integer) request.getAttribute("managerid");
+        String password = (String) request.getAttribute("managerpassword");
 
         manager.setManagerId(managerId);
         manager.setPwd(password);
 
         // 获取用户登录信息
         Manager us = service.login(manager);
-        // 把数据库里面的User获取出来
-        List<Manager> list = service.selectManager(managerId);
-        for (int i = 0; i < list.size(); i++) {
-            manager = list.get(i);
-        }
 
-        System.out.println("----us的信息----");
+
+        System.out.println("----manager的信息----");
         System.out.println(us);
         //设置一个session
         HttpSession session = request.getSession();
-        session.setAttribute("manager", manager);
+        session.setAttribute("manager", us);
 
 
 

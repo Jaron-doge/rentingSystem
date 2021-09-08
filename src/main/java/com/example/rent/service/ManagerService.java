@@ -25,7 +25,7 @@ public interface ManagerService {
     /**
      * 根据用户编号进行查询
      */
-    public User getManager(Integer userid);
+    public Manager getManager(Integer userid);
 
 
     /**

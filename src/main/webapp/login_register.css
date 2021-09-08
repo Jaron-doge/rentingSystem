@@ -102,7 +102,7 @@ h1 {
     flex-direction: column;
 }
 
-.container .form input {
+.container .form input:nth-child(-n+2) {
     width: 16rem;
     padding: 0.8rem;
     padding-left: 3rem;
@@ -178,6 +178,12 @@ svg {
     user-select: none;  /* 文字规定不能被选取 */
     text-align: center;
 }
+.inputDiv {
+    font-size: 0;
+  }
+
+
+
 
 
 
