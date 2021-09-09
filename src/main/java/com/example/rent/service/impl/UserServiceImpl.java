@@ -43,6 +43,7 @@ public class UserServiceImpl implements UserService {
                 users.setUserPwd(rs.getString("userPwd"));
                 users.setUserName(rs.getString("userName"));
                 users.setIcon(rs.getString("userIcon"));
+                users.setTelephone(rs.getString("telNo"));
 
                 // 返回的是你查询出来的完整的对象
                 return users;
@@ -61,12 +62,13 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public boolean register(User user) {
-        String sql = "insert into User values (?,?,?,?)";
+        String sql = "insert into User values (?,?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(user.getUserId());
         list.add(user.getUserPwd());
         list.add(user.getUserName());
         list.add(user.getIcon());
+        list.add(user.getTelephone());
 
         boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());
         if(flag){

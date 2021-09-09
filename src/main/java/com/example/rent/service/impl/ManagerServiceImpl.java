@@ -1,5 +1,9 @@
 package com.example.rent.service.impl;
 
+import com.example.rent.dao.ManagerDao;
+import com.example.rent.dao.UserDao;
+import com.example.rent.dao.impl.ManagerDaoImpl;
+import com.example.rent.dao.impl.UserDaoImpl;
 import com.example.rent.entity.Manager;
 import com.example.rent.entity.User;
 import com.example.rent.service.ManagerService;
@@ -15,12 +19,13 @@ import java.util.List;
 public class ManagerServiceImpl implements ManagerService {
     @Override
     public boolean register(Manager manager) {
-        String sql = "insert into Manager values (?,?,?,?)";
+        String sql = "insert into Manager values (?,?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(manager.getManagerId());
         list.add(manager.getPwd());
         list.add(manager.getName());
         list.add(manager.getSum());
+        list.add(manager.getTelephone());
 
         boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());
         if(flag){
@@ -54,6 +59,7 @@ public class ManagerServiceImpl implements ManagerService {
                 manager.setPwd(rs.getString("managerPwd"));
                 manager.setName(rs.getString("managerName"));
                 manager.setSum(rs.getInt("houseSum"));
+                manager.setTelephone(rs.getString("telNo"));
 
                 // 返回的是你查询出来的完整的对象
                 return manager;
@@ -82,9 +88,11 @@ public class ManagerServiceImpl implements ManagerService {
         return false;
     }
 
+    private ManagerDao managerDao = new ManagerDaoImpl();
     @Override
-    public boolean updateManager(User user) {
-        return false;
+    public boolean updateManager(Manager manager) {
+
+        return managerDao.updateManager(manager);
     }
 
     @Override

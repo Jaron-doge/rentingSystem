@@ -53,7 +53,7 @@
     </div>
 </header>
 <!-- 基本信息开始 -->
-<form action="/rentingSystem/house_add" method="post" name="houseForm">
+<form method="post" name="houseForm">
 <div class="jiben w">
     <p>基本信息</p>
 </div>
@@ -179,14 +179,15 @@
 <div class="housesource w">
     <div>
         <p class="word">上传图片</p>
-        <p class="ess">请上传清晰、实拍的室内图片，请不要在图片上添加文字、数字、网址等内容，切勿上传名片、 二维码、自拍照、风景照等与房源无关的图片，最多上传12张，每张最大10M
+
+        <p class="ess">请上传清晰、实拍的室内图片，请不要在图片上添加文字、数字、网址等内容，切勿上传名片、 二维码、自拍照、风景照等与房源无关的图片，每次只能上传一张，最多上传12张，每张最大10M
         </p>
     </div>
     <div class="uploading">
         <img src="./images/uploadimg.png" alt="">
         <h1>本地上传</h1>
-        <p>图片拖拽到这里或点击上传</p>
-        <input type="file" name="houseImg" id="houseImg"
+        <p> </p>
+        <input type="file" name="houseImg" id="fileSelector"
         accept="image/gif,image/png,image/jpeg,image.bmp"/>
     </div>
 </div>
@@ -214,7 +215,7 @@
 <!-- 联系信息结束 -->
     <!-- 发布按钮开始 -->
     <div class="release w">
-        <button type="submit" onclick="return checkForm()">发布</button>
+        <button action="/rentingSystem/house_add" type="submit" onclick="return checkForm()">发布</button>
     </div>
 </form>
 
@@ -247,9 +248,15 @@
 </div>
 <!-- footer结束 -->
 
-
+<script src="https://unpkg.com/cos-js-sdk-v5/dist/cos-js-sdk-v5.min.js"></script>
 <script type="text/javascript"src="js/jquery-3.4.1.js"></script>
 <script>
+    var selectedFile;
+    var filename = [];
+    $("#fileSelector").change(function() {
+        selectedFile = document.getElementById('fileSelector').files[0];
+        filename.push(selectedFile.name);
+    });
 
     function checkForm() {
         var village = houseForm.village.value;
@@ -266,6 +273,9 @@
         var price=houseForm.price.value;
         var payMethod=houseForm.payMethod.value;
         var description=houseForm.description.value;
+
+
+
         if (village == "" || village == null) {
             alert("请输入小区名");
             houseForm.village.focus();
@@ -323,8 +333,31 @@
             houseForm.description.focus();
             return false;
         }
+
+        // 然后进行图片的上传
+        var cos = new COS({
+            SecretId: 'AKIDsZ1GSO31Su6D6k9uCLp19IBpGk0nJQSc',
+            SecretKey: 'EDuNccQ3g8UjtxqCLNTN8gzHJAnBNpZM',
+        })
+        console.log(filename);
+        var houseImg = [];
+        for(var i = 0; i < filename.length; i++) {
+            cos.putObject({
+                Bucket: 'jaron-doge-1305669952',
+                Region: 'ap-beijing',
+                Key: "rentingSystem/houseImg/" + filename[i],
+                StorageClass: 'STANDARD',
+                Body: selectedFile, // 上传文件对象
+                onProgress: function(progressData) {
+                    console.log(JSON.stringify(progressData));
+                }
+            }, function(err, data) {
+                console.log(data.Location);
+                houseImg.push(data.Location);
+            });
+        }
         alert('发布成功！');
-        return true;
+         return true;
     }
 </script>
 </body>

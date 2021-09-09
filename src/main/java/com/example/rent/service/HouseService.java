@@ -20,6 +20,12 @@ public interface HouseService {
 
 
     /**
+     * 根据用户id进行查询
+     * @return
+     */
+    public List<House> getHouseByUserId(Integer userId);
+
+    /**
      * 房屋新增
      * @param house
      * @return

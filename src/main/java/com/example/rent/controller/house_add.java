@@ -33,7 +33,6 @@ public class house_add extends HttpServlet {
         User user1  = (User) session.getAttribute("user");
         Integer userId = user1.getUserId();
         Integer Personnum =0;
-        String  houseimg = "https://pic1.58cdn.com.cn/anjuke_58/e993825c39fe99ced3954af70bd4dd4b?w=696&h=522&crop=1&t=1&srotate=1";
         Integer house_lift = 1;
         String village = request.getParameter("village");
         Integer floor = Integer.valueOf(request.getParameter("floor"));
@@ -51,14 +50,19 @@ public class house_add extends HttpServlet {
         String description = request.getParameter("description");
         String[] facilities = request.getParameterValues("facilities");
         String[] requirement = request.getParameterValues("requirement");
+        String[]  houseimg = request.getParameterValues("houseImg");
         Integer managerId = Integer.valueOf(request.getParameter("managerId"));
-        String facilitie=null;
-        String requirements=null;
+        String facilitie="";
+        String requirements="";
+        String houseimage="";
         for(int i =0;i<facilities.length;i++){
              facilitie = facilitie+";" + facilities[i];
         }
         for(int i =0;i<requirement.length;i++){
             requirements = requirements+";" + requirement[i];
+        }
+        for(int i =0;i<houseimg.length;i++){
+            houseimage =  houseimage+";" +  houseimg[i];
         }
         //获取页面提交的数据设置到实体类house中
         house .setHouseId(houseId);
@@ -81,7 +85,7 @@ public class house_add extends HttpServlet {
         house.setRequirement(requirements);
         house.setPersonnum(Personnum);
         house.setPayMethod(payMethod);
-        house.setHouseImg(houseimg);
+        house.setHouseImg(houseimage);
         house.setFloor_lift(house_lift);
 
         //引入数据交互层

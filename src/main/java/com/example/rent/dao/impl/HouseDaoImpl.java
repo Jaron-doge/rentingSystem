@@ -104,14 +104,14 @@ public class HouseDaoImpl implements HouseDao {
                     house .setPrice(rs.getInt("price"));
                     house .setType_bedroom(rs.getInt("type_bedroom"));
                     house .setType_livingroom(rs.getInt("type_livingroom"));
-                    house .setType_bathroom(rs.getInt("Type_bathroom"));
+                    house .setType_bathroom(rs.getInt("type_bathroom"));
                     house .setArea(rs.getString("area"));
                     house .setDescription(rs.getString("Description"));
                     house .setHouseToward(rs.getString("HouseToward"));
                     //house .setFacilities(rs.getString("Facilities"));
                     //house.setRequirement(rs.getString("requirement"));
                     house.setPersonnum(rs.getInt("personnum"));
-                    house.setHouseImg(rs.getString("houseImag"));
+                    house.setHouseImg(rs.getString("houseImg"));
                     house.setPayMethod(rs.getString("payMethod"));
 
                 return house;

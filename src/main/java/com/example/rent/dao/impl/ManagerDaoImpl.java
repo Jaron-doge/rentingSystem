@@ -47,6 +47,7 @@ public class ManagerDaoImpl implements ManagerDao {
                 managers.setPwd(rs.getString("managerPwd"));
                 managers.setManagerIcon("managerIcon");
                 managers.setSum(rs.getInt("houseSum"));
+                manager.setTelephone(rs.getString("telNo"));
 
 
                 // 返回的是你查询出来的完整的对象
@@ -70,7 +71,7 @@ public class ManagerDaoImpl implements ManagerDao {
     @Override
     public boolean register(Manager manager) {
 
-        String sql = "insert into Manager values (?,?,?,?,?)";
+        String sql = "insert into Manager values (?,?,?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(manager.getManagerId());
         list.add(manager.getName());
@@ -78,6 +79,7 @@ public class ManagerDaoImpl implements ManagerDao {
         list.add(manager.getManagerIcon());
 
         list.add(manager.getSum());
+        list.add(manager.getTelephone());
 
         boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());
         if(flag){
@@ -123,6 +125,7 @@ public class ManagerDaoImpl implements ManagerDao {
                 manager.setManagerIcon(rs.getString("managerIcon"));
 
                 manager.setSum(rs.getInt("houseSum"));
+                manager.setTelephone(rs.getString("telNo"));
 
 
                 // 测试数据
@@ -167,6 +170,7 @@ public class ManagerDaoImpl implements ManagerDao {
                manager.setPwd(rs.getString("managerPwd"));
                 manager.setManagerIcon(rs.getString("managerIcon"));
                 manager.setSum(rs.getInt("houseSum"));
+                manager.setTelephone(rs.getString("telNo"));
                 return manager;
             }
         } catch (SQLException e) {
@@ -185,13 +189,14 @@ public class ManagerDaoImpl implements ManagerDao {
      */
     @Override
     public boolean addUManager(Manager manager) {
-        String sql = "insert into Manager values (?,?,?,?,?)";
+        String sql = "insert into Manager values (?,?,?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(manager.getManagerId());
         list.add(manager.getName());
         list.add(manager.getPwd());
         list.add(manager.getManagerIcon());
         list.add(manager.getSum());
+        list.add(manager.getTelephone());
 
 
 
@@ -211,11 +216,14 @@ public class ManagerDaoImpl implements ManagerDao {
      */
     @Override
     public boolean updateManager(Manager manager) {
-        String sql = "update Manager set managerPwd=?,managerName=?,managerIcon=?,where managerId=?";
+        String sql = "update Manager set managerPwd=?,managerName=?,managerIcon=?,managerSum=?,telNo=?where managerId=?";
         List<Object> list = new ArrayList<Object>();
         list.add(manager.getPwd());
         list.add(manager.getName());
         list.add(manager.getManagerIcon());
+        list.add(manager.getSum());
+        list.add(manager.getTelephone());
+
 
 
         boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());

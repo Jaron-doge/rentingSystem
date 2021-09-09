@@ -16,14 +16,20 @@ import java.util.List;
 @WebServlet("/login_do")
 public class login_do_choice extends HttpServlet {
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer admin = Integer.valueOf(request.getParameter("radio"));
-        Integer userid = Integer.valueOf(request.getParameter("userid"));
-        String userpassword = request.getParameter("userpassword");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+
+        Integer admin = Integer.valueOf(request.getParameter("admin"));
+
+
+        Integer userid = Integer.valueOf(request.getParameter("userId"));
+
+        String userpassword = request.getParameter("userPassword");
+
         if(admin==1){
             request.setAttribute("managerid",userid);
             request.setAttribute("managerpassword",userpassword);
-           request.getRequestDispatcher("/manager_login").forward(request,response);
+            request.getRequestDispatcher("/manager_login").forward(request,response);
 
         }else{
             request.setAttribute("userid",userid);

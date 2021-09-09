@@ -28,7 +28,6 @@ public class user_login extends HttpServlet {
 
         user.setUserId(Integer.valueOf(userid));
         user.setUserPwd(password);
-
         // 获取用户登录信息
         User us = service.login(user);
 

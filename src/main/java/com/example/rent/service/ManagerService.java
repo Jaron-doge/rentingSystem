@@ -36,7 +36,7 @@ public interface ManagerService {
     /**
      * 用户修改
      */
-    public boolean updateManager(User user);
+    public boolean updateManager(Manager manager);
 
     /**
      * 删除用户

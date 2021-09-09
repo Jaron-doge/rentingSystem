@@ -6,6 +6,7 @@ public class Manager {
     private String  name;
     private String managerIcon;
     private Integer sum;
+    private String telephone;
 
 
     public Integer getManagerId() {
@@ -48,6 +49,15 @@ public class Manager {
     public void setSum(Integer sum) {
         this.sum = sum;
     }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
     @Override
     public String toString() {
         return "Manager{" +
@@ -56,6 +66,7 @@ public class Manager {
                 ", name='" + name + '\'' +
                 ", managerIcon='" + managerIcon + '\'' +
                 ", sum='" + sum + '\'' +
+                ",telephone='" + telephone+ '\'' +
                 '}';
     }
 

@@ -8,6 +8,7 @@ public class User {
     private  String userName;
     private  String  userPwd;
     private  String icon;
+    private  String telephone;
 
     public Integer getUserId() {
         return userId;
@@ -43,6 +44,14 @@ public class User {
         this.icon = icon;
     }
 
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -50,6 +59,7 @@ public class User {
                 ", username='" + userName + '\'' +
                 ", password='" + userPwd + '\'' +
                 ", icon='" + icon + '\'' +
+                ", telephone='" + telephone + '\'' +
                 '}';
     }
 }

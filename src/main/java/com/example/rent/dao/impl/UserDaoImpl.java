@@ -50,6 +50,7 @@ public class UserDaoImpl implements UserDao {
 
 
                 user.setIcon(rs.getString("userIcon"));
+                user.setTelephone(rs.getString("telNo"));
 
 
                 // 测试数据
@@ -91,6 +92,7 @@ public class UserDaoImpl implements UserDao {
                 user.setUserName(rs.getString("userName"));
                 user.setUserPwd(rs.getString("userPwd"));
                 user.setIcon(rs.getString("userIcon"));
+                user.setTelephone(rs.getString("telNo"));
 
                 return user;
             }
@@ -108,12 +110,13 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public boolean addUser(User user) {
-        String sql = "insert into User values (?,?,?,?)";
+        String sql = "insert into User values (?,?,?,?,?)";
         List<Object> list = new ArrayList<Object>();
         list.add(user.getUserId());
         list.add(user.getUserName());
         list.add(user.getUserPwd());
         list.add(user.getIcon());
+        list.add(user.getTelephone());
 
 
 
@@ -130,10 +133,12 @@ public class UserDaoImpl implements UserDao {
      */
     @Override
     public boolean updateUser(User user) {
-        String sql = "update User set userPwd=?,userName=?where userId=?";
+        String sql = "update User set userPwd=?,userName=?,userIcon=?,telNo=?where userId=?";
         List<Object> list = new ArrayList<Object>();
         list.add(user.getUserPwd());
         list.add(user.getUserName());
+        list.add(user.getIcon());
+        list.add(user.getTelephone());
 
 
         boolean flag = BaseDao.addUpdateDelete(sql,list.toArray());
