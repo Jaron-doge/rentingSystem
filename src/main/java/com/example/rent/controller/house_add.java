@@ -3,16 +3,19 @@ package com.example.rent.controller;
 import com.example.rent.dao.HouseDao;
 import com.example.rent.dao.impl.HouseDaoImpl;
 import com.example.rent.entity.House;
+import com.example.rent.entity.User;
 import com.example.rent.service.HouseService;
 import com.example.rent.service.UserService;
 import com.example.rent.service.impl.HouseServiceImpl;
 import com.example.rent.service.impl.UserServiceImpl;
+import org.apache.catalina.Session;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.swing.text.html.HTMLEditorKit;
 import java.io.IOException;
 
@@ -24,9 +27,11 @@ public class house_add extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         House house = new House();
         HouseService service =new HouseServiceImpl();
+        HttpSession session = request.getSession();
         //获取页面提交的数据
-        Integer houseId = 2;
-        Integer userId  =123;
+        Integer houseId =(service.select().size()+1);
+        User user1  = (User) session.getAttribute("user");
+        Integer userId = user1.getUserId();
         Integer Personnum =0;
         String  houseimg = "https://pic1.58cdn.com.cn/anjuke_58/e993825c39fe99ced3954af70bd4dd4b?w=696&h=522&crop=1&t=1&srotate=1";
         Integer house_lift = 1;

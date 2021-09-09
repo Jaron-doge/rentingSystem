@@ -7,28 +7,28 @@ public interface HouseDao {
 
 
         /**
-         * 查询图书信息
+         * 查询房屋信息
          */
         public List<House> select(String sql, Object[] arr);
 
         /**
-         * 根据图书编号进行查询
+         * 根据房屋编号进行查询
          */
         public House getHouse(Integer houseid);
 
 
         /**
-         * 图书新增
+         * 房屋新增
          */
         public boolean addHouse(House house);
 
         /**
-         * 图书修改
+         * 房屋修改
          */
         public boolean updateHouse(House house);
 
         /**
-         * 删除图书
+         * 房屋图书
          */
         public boolean deleteHouse(Integer hosueid);
 }

@@ -33,10 +33,9 @@ public class RentDaoImpl implements RentDao {
             List<Rent> list = new ArrayList<>();
             while (rs.next()){
                 Rent rent= new Rent();
-                rent.setRentId(rs.getInt("id"));
-                rent.setUserrentId(rs.getInt("userid"));
-                rent.setManagerId(rs.getInt("managerid"));
-                rent.setHouseId(rs.getInt("houseid"));
+                rent.setRentId(rs.getInt("rentId"));
+                rent.setUserrentId(rs.getInt("userrentId"));
+                rent.setHouseId(rs.getInt("houseId"));
                 rent.setTenancy(rs.getInt("tenancy"));
                 rent.setStartDate(rs.getDate("date"));
 

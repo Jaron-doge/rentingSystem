@@ -27,15 +27,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jc</title>
-    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./login-register.css">
+    <link rel="stylesheet" href="./loginregister.css">
 </head>
 
 <body>
 <!-- svg图案 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#b83f0f" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 
-<div class="head"><br><br>安居租房管理系统</div>
+<div class="head"><br><br>小邮熊租房管理系统</div>
 
 <div class="container">
 
@@ -45,7 +44,7 @@
 
             <!-- 头像 -->
             <div class="avtar">
-                <div class="pic"><img src="./img/1.jpg" alt=""></div>
+                <div class="pic"><img src="./img/logo_3.png" alt=""></div>
             </div>
             <!-- <form> 标签用于为用户输入创建 HTML 表单 -->
             <form action="/rentingSystem/login_do" method="post" class="form">
@@ -61,12 +60,11 @@
                 <div class="btn">
                     <button type="submit">登录</button>
                 </div>
+                <div style="margin-top: 5px ">
 
-            <div>
-                <label for="radio1"><input type="radio" name="radio" id="radio1" value="1"><span style = "font-size: 15px;" >管理员</span></label>
-                <label for="radio2"><input type="radio" name="radio" id="radio2" value="0"><span style = "font-size:15px;" >普通用户</span></label>
-
-            </div>
+                </div>
+                <label for="radio1"><input style="width: 20px " type="radio" name="radio" id="radio1" value="1"><span style = "font-size:15px;" >管理员</span></label>
+                <label for="radio2"><input style="width: 20px" type="radio" name="radio" id="radio2" value="0"><span style = "font-size:15px;" >普通用户</span></label>
             </form>
             <p class="btn-something">
                 Don't have an account ? <span class="signupbtn">signup</span>
@@ -80,7 +78,7 @@
         <div class="form-content">
 
             <div class="avtar">
-                <div class="pic"><img src="./img/2.jpg" alt=""></div>
+                <div class="pic"><img src="./img/logo_3.png" alt=""></div>
             </div>
 
             <h1>开始安居</h1>

@@ -44,9 +44,9 @@ public class UserDaoImpl implements UserDao {
             while(rs.next()){
                 User user = new User();
                 // 从数据库中获取值到实体类的setter方法中
-                user.setUserId(rs.getInt("userid"));
+                user.setUserId(rs.getInt("userId"));
                 user.setUserPwd(rs.getString("userPwd"));
-                user.setUserName(rs.getString("username"));
+                user.setUserName(rs.getString("userName"));
 
 
                 user.setIcon(rs.getString("userIcon"));
@@ -87,7 +87,7 @@ public class UserDaoImpl implements UserDao {
             rs = ps.executeQuery();
             while (rs.next()){
                 User user = new User();
-                user.setUserId(rs.getInt("userid"));
+                user.setUserId(rs.getInt("userId"));
                 user.setUserName(rs.getString("userName"));
                 user.setUserPwd(rs.getString("userPwd"));
                 user.setIcon(rs.getString("userIcon"));

@@ -31,7 +31,7 @@ public class ManagerDaoImpl implements ManagerDao {
             // 1.获取数据库连接
             con = BaseDao.getConnection();
             // 2.写sql
-            String sql = "select * from Manager where managername = ? and managerPwd = ?";
+            String sql = "select * from Manager where managerId = ? and managerPwd = ?";
             // 3.预编译
             ps = con.prepareStatement(sql);
             // 4.设置值
@@ -43,7 +43,7 @@ public class ManagerDaoImpl implements ManagerDao {
                 managers = new Manager();
                 // 从数据库中获取值到实体类的setter方法中
                 managers.setManagerId(rs.getInt("managerId"));
-                managers.setName(rs.getString("managername"));
+                managers.setName(rs.getString("managerName"));
                 managers.setPwd(rs.getString("managerPwd"));
                 managers.setManagerIcon("managerIcon");
                 managers.setSum(rs.getInt("houseSum"));
@@ -117,8 +117,8 @@ public class ManagerDaoImpl implements ManagerDao {
             while(rs.next()){
               Manager manager = new Manager();
                 // 从数据库中获取值到实体类的setter方法中
-                manager.setManagerId(rs.getInt("managerid"));
-                manager.setName(rs.getString("managername"));
+                manager.setManagerId(rs.getInt("managerId"));
+                manager.setName(rs.getString("managerName"));
                 manager.setPwd(rs.getString("mangerPwd"));
                 manager.setManagerIcon(rs.getString("managerIcon"));
 

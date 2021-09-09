@@ -11,14 +11,10 @@ import java.util.List;
 public class HouseServiceImpl implements HouseService {
     private HouseDao houseDao = new HouseDaoImpl();
         @Override
-        public List<House> select(Integer houseid) {
+        public List<House> select() {
             StringBuffer sql = new StringBuffer("select * from House where 1 = 1 ");
             List<Object> list = new ArrayList<Object>();
-            if(houseid != null){
-                sql.append(" and houseId = ?");
-                list.add(houseid);
 
-            }
             return houseDao.select(sql.toString(),list.toArray());
         }
 

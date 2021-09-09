@@ -7,10 +7,9 @@ import java.util.List;
 public interface HouseService {
     /**
      * 查询房屋信息
-     * @param houseid
      * @return
      */
-    public List<House> select(Integer houseid);
+    public List<House> select();
 
     /**
      * 根据房屋地址进行查询

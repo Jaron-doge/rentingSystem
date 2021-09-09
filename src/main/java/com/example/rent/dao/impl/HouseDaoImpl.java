@@ -12,7 +12,9 @@ import com.example.rent.entity.House;
 import  com.example.rent.util.BaseDao;
 
 public class HouseDaoImpl implements HouseDao {
-   @Override
+
+
+    @Override
     public List<House> select(String sql, Object[] arr) {
         Connection con = null;
         PreparedStatement ps = null;
@@ -34,7 +36,7 @@ public class HouseDaoImpl implements HouseDao {
             List<House> list = new ArrayList<House>();
             while (rs.next()){
                 House house = new House();
-                house .setHouseId(rs.getInt("hosueId"));
+                house .setHouseId(rs.getInt("houseId"));
                 house .setUserId(rs.getInt("userId"));
                 house.setManagerId(rs.getInt("managerId"));
                 house .setCity(rs.getString("city"));
@@ -45,17 +47,17 @@ public class HouseDaoImpl implements HouseDao {
                 house .setFloor_sum(rs.getInt("floor_sum"));
                 house .setFloor_lift(rs.getInt("floor_lift"));
                 house .setPrice(rs.getInt("price"));
-                house .setType_bedroom(rs.getInt("Type_bedroom"));
-                house .setType_livingroom(rs.getInt("Type_livingroom"));
-                house .setType_bathroom(rs.getInt("Type_bathroom"));
+                house .setType_bedroom(rs.getInt("type_bedroom"));
+                house .setType_livingroom(rs.getInt("type_livingroom"));
+                house .setType_bathroom(rs.getInt("type_bathroom"));
                 house .setArea(rs.getString("area"));
-                house .setDescription(rs.getString("Description"));
-                house .setHouseToward(rs.getString("HouseToward"));
+                house .setDescription(rs.getString("description"));
+                house .setHouseToward(rs.getString("houseToward"));
                 house .setFacilities(rs.getString("facilities"));
                 house.setRequirement(rs.getString("requirement"));
                 house.setPersonnum(rs.getInt("personnum"));
-                house.setHouseImg(rs.getString("houseImag"));
-                house.setPayMethod(rs.getString("PayMethod"));
+                house.setHouseImg(rs.getString("houseImg"));
+                house.setPayMethod(rs.getString("payMethod"));
 
 
 
