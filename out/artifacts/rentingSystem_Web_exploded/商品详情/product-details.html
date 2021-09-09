@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情</title>
+    <style>
+        a {
+            text-decoration:none;/*链接去下划线*/
+            color: #000000;
+        }
+        /*板块分布*/
+        .divS1 {
+            position: relative;
+            width: 1200px;
+            height: 80px;
+            left: 180px;
+        }
+        .divS2-1 {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            left: 180px;
+            float: left;/*向左浮动*/
+        }
+        .divS2-2 {
+            position: relative;
+            width: 500px;
+            height: 400px;
+            float: left;
+            overflow: hidden;
+        }
+        .divS2-3 {
+            position: relative;
+            width: 150px;
+            height: 400px;
+            float: left;
+        }
+        .divS3-1 {
+            position: relative;
+            width: 300px;
+            height: 550px;
+            left: 180px;
+            float: left;
+        }
+        .divS3-2{
+            position: relative;
+            width: 600px;
+            height: 550px;
+            float: left;
+        }
+        .divS3-3 {  
+            position: relative; 
+            width: 300px;
+            height: 550px;
+            float: left;
+        }
+        .divS4 {
+            height: 150px;
+            width: 100%;
+            background-color: #f0d7d7;
+        }
+        .divS4-1 {
+            position: relative;
+            width: 280px;
+            height: 150px;
+            left: 180px;
+            float: left;
+            background-color: #f0d7d7;
+        }
+        .divS4-2 {
+            position: relative;
+            width: 800px;
+            height: 150px;
+            float: left;
+            background-color: #f0d7d7;
+        }
+        .divS4-3 {
+            position: relative;
+            width:200px;
+            height: 150px;
+            float: left;
+            background-color: #f0d7d7;
+        }
+        .fontS1 {/*第一行字体样式*/
+            text-align: left;
+            font: 700 14px "MiscroftYahei";
+            float: left;
+        }
+        .fontS2-1{
+            font: 16px "MiscroftYahei";
+            color: #8d8d8d;
+        }
+        .fontS2-2{
+            font: 26px "MiscroftYahei";
+            color:#e0832c;
+        }
+        .fontS2-3{
+            font: 10px "MiscroftYahei";
+            color:#000000;
+        }
+        .fonts3-1{
+            font: 15px "MiscroftYahei";
+            color:#000000;
+        }
+        .fontS3-2{
+            font: 700 30px "MiscroftYahei";
+            color:#000000;
+        }
+        .fontS3-3{
+            font: 20px/40px "MiscroftYahei";
+            color: #000000;
+        }
+        .fontS4{
+            font: 14px "MiscroftYahei";
+            color:#e0832c;
+        }
+        .user-photoS-1 {
+            width: 100px;
+            height: 100px;
+            margin-top: 15px;
+            border-radius: 50%;/*圆形*/
+        }
+        .user-photoS-2 {
+            width: 30px;
+            height: 30px;
+        }
+        .user-photoS-3{
+            width: 100px;
+            height: 100px;
+        }
+        .logoS{
+            width: 50px;
+            height: 50px;
+        }
+        .logoS-2{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+        .logoS-3{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        .logoS-4{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            display: none;
+        }
+        #productRotation-1 {
+            border: none;
+            width: 600px;
+            height: 400px;
+            margin: auto;
+            overflow: hidden;
+        }
+        #productRotation-2 {
+            width: 2500px;
+            height: 400px;
+            transition: 1s;
+            overflow: hidden;
+        }
+        .buttonS2 {
+            width: 100px;
+            height: 30px;
+            font-size: 10px;
+            top:0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="divS1">
+        <div class="fontS1">
+            海洋石油天野小区 天野佳园 元和国际 拎包入住 好停
+        </div>
+        <div style="text-align:right">
+            <a href="#"><img src="images/collect1.png" title="加入收藏"></a>
+        </div>
+    </div>
+    <div>
+        <hr style="width:1200PX;">
+            <div class="divS2-1" id="productRotation-1">
+                <div id="productRotation-2">
+                    <img src="images/house5.png" height="100%">
+                    <img src="images/house6.png" height="100%">
+                    <img src="images/house7.png" height="100%">
+                    <img src="images/house8.png" height="100%">
+                </div>
+            </div>
+        </div>
+        <div class="divS2-2 fontS2-1">
+            <p class="fontS2-2">2680元/月</p>
+            <p>租赁方式：合租</p>
+            <p>房屋类型：3室1厅1卫 朝南 20平 精装修</p>
+            <p>房屋类型：中层/25层</p>
+            <p>所在小区：首科花园（D区）</p>
+            <p>所属区域：丰台 六里桥距离地铁9号线六里桥东站1511米</p>
+            <p>详细地址：西局东街</p>
+            </div>
+        <div class="divS2-3 fontS2-3">
+            <img src="images/user.png" class="user-photoS-1"><br/>
+            <p>XXXXXXX有限公司</p>
+            
+                <p><img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">电话</button></p>
+                <p><img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">管理房屋</button></p>
+                <p><img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">企业信息及投诉记录</button></p>
+            
+        </div>
+    </div>
+    <div>
+        <hr style="width:1200PX;">
+        <div class="divS3-1 fontS3-3">
+            <p class="fontS3-2">房源详情</p>
+            <p>卧室设置</p>
+            <p>公共设施</p>
+            <p>出租要求</p>
+            <p>房源描述</p>           
+        </div>
+        <div class="divS3-2 fonts3-1">
+            <br/><br/><br/><br/><br/>
+            <img src="images/logo-chuang.png" class="logoS"><img src="images/logo-kongtiao.png" class="logoS"><img src="images/logo-yigui.png" class="logoS">
+            <img src="images/logo-dianshi.png" class="logoS"><img src="images/logo-nuanqi.png" class="logoS"><img src="images/logo-yangtai.png" class="logoS">
+            <img src="images/logo-weishengjian.png" class="logoS"><img src="images/logo-zhinengmensuo.png" class="logoS"><br/>
+            <img src="images/logo-bingxiang.png" class="logoS"><img src="images/logo-xiyiji.png" class="logoS"><img src="images/logo-shafa.png" class="logoS">
+            <img src="images/logo-youyanji.png" class="logoS"><img src="images/logo-kezuofan.png" class="logoS"><img src="images/logo-kuandai.png" class="logoS">
+            <img src="images/logo-reshuiqi.png" class="logoS"><img src="images/logo-ranqizao.png" class="logoS"><img src="images/logo-dianti.png" class="logoS"><br/>
+            <p class="fontS3-3">租户稳定 作息正常 禁养宠物</p>
+            <p>装修：北欧风格精装修，精装大主卧，干净卫生，南向采光</p>
+            <p>家配套：配备品牌家具家电、配套床垫、抱枕、台灯、壁灯、减轻疲劳桌椅、衣柜、空调、洗衣机、冰箱和厨房，高速宽带。</p>
+            <p>环境：小区环境优美，安静祥和</p>
+            <p>该房源真实，良心价格，可月付室内配置：配备品牌家具家电、配套床垫、抱枕、台灯、桌椅、衣柜、空调、洗衣机、冰箱和宽带。</p>
+            <p>定期保洁阿姨上门清理卫生，拒绝脏乱差。</p>
+        </div>
+        <div class="divS3-3 fonts3-1">
+            <div>
+                <p class="fontS3-2">小区详情</p>
+                <img src="images/user.png" class="user-photoS-3">
+                <p>小区：林肯公园C区</p>
+                <p>小区地址：西环北路</p>
+                <a href="#"><p>在租房源：111</p></a>
+                <p>建筑年代： 2008</p>
+                <p>建筑类型： 高层</p>
+                <p>物业公司： 北京晟邦物业管理有限公司</p>
+                <p>物业费用： 3.60元/平米/月</p>
+                <p>所属商圈： 大兴 /  亦庄</p>
+            </div>
+        </div>
+    </div>    
+    <div>
+        <hr style="width:1200PX;">
+        <div class="divS4">
+            <div class="divS4-1">
+                <br/><br/>
+                <img src="images/user.png" class="logoS-2">
+            </div>
+            <div class="divS4-2 fontS4">
+                <br/><br/><br/><br/>
+                <a href="#">网站首页</a>
+                <a href="#">帮助中心</a>
+                <a href="#">联系我们</a>
+                <a href="#">招聘信息</a>
+                <a href="#">客户服务</a>
+                <a href="#">隐私政策</a>
+                <a href="#">广告服务</a>
+                <a href="#">网站地图</a>
+                <a href="#">隐私反馈</a>
+                24小时客服热线400-000-0000
+            </div>
+            <div class="divS4-3">
+                <img src="images/user.png" class="logoS-3" onmouseover="changeSrc(this)" onmouseleave="changeSrc2(this)">
+                <img src="images/user.png" class="logoS-3" onmouseover="changeSrc3(this)" onmouseleave="changeSrc4(this)"">
+                <img src="images/user.png" class="logoS-3">
+                <br/>
+                <img src="images/二维码.png" class="logoS-4" id="EWM1">
+                <img src="images/二维码2.png" class="logoS-4" id="EWM2">
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script  type="text/javascript">
+    var productRotation=document.getElementById("productRotation-2");
+    var imgWX=document.getElementById("EWM1");
+    var imgXL=document.getElementById("EWM2");
+    var i=0;
+    function changeSrc(obj) {
+        imgWX.style.display="block";
+    }
+    function changeSrc2(obj) {
+        imgWX.style.display="none";
+    }
+    function changeSrc3(obj) {
+        imgXL.style.display="block";
+    }
+    function changeSrc4(obj) {
+        imgXL.style.display="none";
+    }
+    /*auto2();
+    function auto2(){
+        time = setInterval(function(){
+            i++;
+            if(i<=3){
+                productRotation.style.left = productRotation.offsetLeft - 600 + "px";
+            }
+            else{
+                productRotation.style.left ="0px";
+                i=0;
+            }
+        },1000)
+    };*/
+    
+    
+</script>
+</html>

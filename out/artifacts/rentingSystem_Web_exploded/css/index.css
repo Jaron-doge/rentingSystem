@@ -1,0 +1,430 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.nav {
+    position: relative;
+    height: 100px;
+    width: 1200px;
+    line-height: 80px;
+    font-size: 12px;
+}
+
+.fl {
+    float: left;
+}
+
+.fl ul li {
+    float: left;
+}
+
+.logo {
+    height: 50px;
+    width: 171px;
+    margin: 15px 0;
+    line-height: 50px;
+    background-color: #cccccc;
+    border-radius: 25px;
+}
+
+.cc {
+    padding: 0 30px;
+    color: #f59a23;
+}
+
+.province a {
+    display: inline-block;
+    width: 70px;
+    height: 38px;
+    margin: 20px 0;
+    line-height: 38px;
+    text-align: center;
+    padding: 0 20px;
+    border: 1px solid #333333;
+}
+
+.province a:hover {
+    border: 1px solid #f59a23;
+}
+
+.city a {
+    display: inline-block;
+    width: 70px;
+    height: 38px;
+    margin: 20px 0;
+    line-height: 38px;
+    text-align: center;
+    padding: 0 20px;
+    border: 1px solid #333333;
+    border-left: 0;
+}
+
+.city a:hover {
+    border: 1px solid #f59a23;
+}
+
+.search {
+    position: absolute;
+    display: inline-block;
+    left: 415px;
+    top: 15px;
+    width: 500px;
+    height: 50px;
+    border: 2px solid #f59a23;
+}
+.search input {
+    float: left;
+    width: 414px;
+    height: 46px;
+    padding-left: 20px;
+    border-right: 2px solid #f59a23;
+    font-size: 18px;
+}
+.search img {
+    position: absolute;
+    top: 8px;
+    left: 440px;
+    display: inline-block;
+}
+
+.fr {
+    float: right;
+}
+
+.fr ul li {
+    float: left;
+    padding: 0 20px;
+}
+
+.release a {
+    display: inline-block;
+    width: 70px;
+    height: 50px;
+    margin: 15px 0;
+    line-height: 48px;
+    text-align: center;
+    border: 2px solid #cccccc;
+}
+
+.release a:hover {
+    border: 2px solid #f59a23;
+}
+
+.login {
+    font-size: 14px;
+}
+
+.login img {
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+}
+
+.register {
+    font-size: 14px;
+}
+
+.register img {
+    vertical-align: text-top;
+    width: 18px;
+    height: 18px;
+}
+
+.service {
+    height: 80px;
+}
+
+.service ul li {
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 25px;
+    font-size: 20px;
+    /* border-bottom: 4px solid #f59a23; */
+}
+
+.service ul li:hover {
+    color: #f59a23;
+    border-bottom: 4px solid #f59a23;
+}
+
+.area {
+    height: 100px;
+}
+
+.area ul li {
+    height: 25px;
+    line-height: 25px;
+}
+
+.area ul li span {
+    padding: 0 10px;
+}
+
+.kefu {
+    height:40px;
+    line-height: 40px;
+    border-bottom: 3px solid #f59a23;
+}
+
+.kefu a {
+    height: 100%;
+    line-height: 100%;
+    margin-right: 15px;
+    float: right;
+    font-size: 14px;
+}
+
+.house {
+    height: 1780px;
+}
+
+.houseleft {
+    float: left;
+    width: 870px;
+}
+
+.reco {
+    height: 80px;
+}
+
+.reco ul li {
+    float: left;
+    height: 40px;
+    line-height: 36px;
+    margin: 20px 10px;
+    padding: 0 40px;
+    font-size: 14px;
+    border: 2px solid #f59a23;
+    border-radius: 20px;
+}
+
+.reco ul li a {
+    color: #f59a23;
+}
+
+.detailinfo ul li {
+    position: relative;
+    height: 160px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.detailinfo ul li img {
+    float: left;
+}
+
+.detailinfo ul li dl {
+    margin: 0 180px;
+    height: 20px;
+}
+
+.detailinfo ul li dl dt {
+    height: 30px;
+    line-height: 30px;
+}
+
+.detailinfo ul li span {
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    font-size: 20px;
+    color: #f59a23;
+}
+
+.title {
+    color: #333333;
+    font-size: 18px;
+}
+
+.title:hover {
+    color: #f59a23;
+}
+
+.houseright {
+    float: right;
+    width: 300px;
+}
+
+.retui {
+    height: 40px;
+    line-height: 40px;
+    margin: 20px 0;
+    color: #f59a23;
+    font-size: 14px;
+}
+
+.retuiinfo ul li {
+    height: 260px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.retuiinfo ul li dl {
+    float: left;
+    margin-left: 10px;
+}
+
+.retuiinfo ul li dl dt {
+    height: 30px;
+    line-height: 30px;
+}
+
+.retuidetail {
+    font-size: 14px;
+}
+
+.retuiprice {
+    font-size: 20px;
+    color: #ff552e;
+}
+
+.fix {
+    position: fixed;
+    bottom: 0.5%;
+    right: 0.5%;
+}
+
+.fix ul li {
+    width: 60px;
+    height: 60px;
+    margin: 5px 0;
+    background-color: skyblue;
+}
+
+.page {
+    position: relative;
+    height: 100px;
+}
+
+.page ul {
+    position: absolute;
+    left: 255px;
+    top: 20px;
+}
+
+.page ul li {
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+    float: left;
+}
+
+.page ul li a {
+    font-size: 18px;
+}
+
+.blogroll {
+    margin-top: 10px;
+    height: 80px;
+    border-bottom: 1px solid #666666;
+}
+
+.blogroll h1 {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+}
+
+.blogroll ul li {
+    float: left;
+    width: 300px;
+    padding-left: 50px;
+    font-size: 14px;
+}
+
+.footer {
+    position: relative;
+    height: 150px;
+    padding: 30px 0;
+}
+
+.footerl img {
+    float: left;
+    margin: 5px 0;
+}
+
+.footerl ul li {
+    float: left;
+    height: 90px;
+    line-height: 90px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.footerr ul li {
+    float: right;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin: 20px 10px;
+    border-radius: 25px;
+    background-color: #e4e4e4;
+    transition: all .5s;
+}
+
+.footer span {
+    position: absolute;
+    top: 59px;
+    left: 774px;
+    font-size: 13px;
+}
+
+.footerr ul li:hover {
+    background-color: #0079fe;
+}
+
+.footerr ul li img {
+    margin: 9px;
+}
+
+.weixin {
+    position: absolute;
+    bottom: 50px;
+    left: -26px;
+    width: 100px;
+    height: 120px;
+    /* background-color: pink; */
+    border: 1px solid #666666;
+    background-color: #ffffff;
+    display: none;
+    transition: all .5s;
+}
+
+.wx:hover .weixin {
+    display: inline-block;
+}
+
+.weixin p {
+    text-align: center;
+}
+
+.weixin img {
+    margin: 0;
+}
+
+.sina {
+    position: absolute;
+    bottom: 50px;
+    left: -26px;
+    width: 100px;
+    height: 120px;
+    /* background-color: pink; */
+    border: 1px solid #666666;
+    background-color: #ffffff;
+    display: none;
+    transition: all .56;
+}
+
+.si:hover .sina {
+    display: inline-block;
+}
+
+.sina p {
+    text-align: center;
+}
+
+.sina img {
+    margin: 0;
+}

@@ -1,0 +1,991 @@
+
+/******************************* 顶部栏定义样式 ********************************/
+.header-mod {
+  width: 100%;
+  background: #c04309;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  margin: 0 auto;
+  padding: 10px 0 9px;
+  width: 1180px;
+  height: 45px;
+}
+
+.quit {
+    position: relative;
+  float: right;
+  font-size: 14px;
+  line-height: 36px;
+  color: #fff;
+  background-image: url("../img/icon/shutdown.png");
+  background: no-repeat 0 0;
+
+}
+
+.quit img {
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    width: 16px;
+}
+.quit span {
+  color:#fff;
+  margin-left:2px;
+  display: inline-block;
+  vertical-align: 0\9;
+  *vertical-align: sub;
+}
+
+
+
+
+
+
+
+
+
+
+/******************************* 次顶部栏定义样式 ********************************/
+.headerSub-mod {
+  width: 100%;
+  height: 100px;
+  background: url("../img/bd.png") center center;
+}
+.headerSub {
+  margin: 0 auto;
+  width: 1180px;
+}
+
+/* 用户头像定义 */
+.user-photo {
+  float: left;
+  width: 70px;
+  height: 70px;
+  /* 设置头像的上外边距 */
+  margin-top: 15px;
+  border-radius: 50%;
+  /* 图片居中不平铺 */
+  background: center no-repeat; 
+}
+
+/*用户信息*/
+.user-info{
+  float: left;
+  margin-left: 16px;
+}
+/*用户信息上行*/
+.info-sup {
+  margin-top: 26px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 16px;
+  color: rgb(39, 26, 26);
+}
+
+/* 定义打招呼信息 */
+.hello {
+  float: left;
+  padding-right: 5px;
+}
+
+/*次顶部栏的个人信息下行文字 */
+.info-sub {
+  margin-top: 8px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+}
+.info-sub li {
+  float: left;
+}
+
+/* 用户账号名字 */
+.user-account {
+  color: #333;
+}
+
+.user-type {
+  color:#666;
+}
+
+.last-time {
+  color: rgb(41, 30, 30);
+}
+
+.info-sub .split-icon {
+  margin: 2px 13px 0;
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background-color: #e6e6e6;
+  vertical-align: top;
+}
+
+/* 下面是修改资料按钮的定义样式 */
+.info-modify {
+  float: right;
+  margin-top: 32px;
+}
+.info-modify button {
+  background-color: #c25522;
+  width: 110px;
+  height: 38px;
+  border-style: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+.info-modify button:hover {
+  background-color: #820000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/******************** 侧边栏修改资料 ***************************/
+.side-menu{
+ 	width: 200px;
+ 	overflow: hidden;
+ 	float: left;
+ 	margin-right: 20px;
+}
+
+.side-menu .menu-list a{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #666;
+	background: #fff;
+	padding-left: 22px;
+}
+.side-menu .menu-list li a{
+    position: relative;
+}
+.side-menu .menu-list li a img{
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    width: 16px;
+} 
+.side-menu .menu-list a:hover{
+	color: #ab2800;
+}
+.side-menu .menu-list a.cur{
+	background: #f2f6ed;
+	border-left: 3px solid #ab2800;
+	color: #ab2800;
+	padding-left: 19px;
+}
+.side-menu .menu-list a:hover i,.side-menu .menu-list a.cur i{
+	color: #ab2800;
+}
+
+.qie .item:nth-child(n+2) {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/************************************* 小邮熊小工具栏 **************************************/
+.tool-list{
+	background: #fff;
+	padding: 10px 16px;
+	margin-top: 20px;
+	color: #666;
+}
+.tool-list .t-title{
+	height: 36px;
+	line-height: 36px;
+	border-bottom: 1px solid #e6e6e6;
+	font-size: 16px;
+	color: #333333;
+}
+.tool-list p{
+	padding: 17px 0 23px;
+}
+.tool-list a{
+	display: inline-block;
+	height: 14px;
+	font-size: 14px;
+	line-height: 14px;
+	padding: 0 7px 0 10px;
+	border-left: 1px solid #e6e6e6;
+}
+.tool-list a:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+.tool-list a:hover{
+	color: #f80;
+}
+
+
+
+
+
+
+/************************ TOB栏样式 ***************************/
+.tab-list{
+    border-bottom: 2px solid #f57ea2;
+    height: 38px;
+    background: #F8F8F8;
+    font-size: 16px;
+    color: #666;
+}
+.tab-list li{
+    float: left;
+}
+.tab-list li a{
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 32px;
+}
+
+
+
+
+
+
+/************************ 消息列表界面 ***************************/
+.no-msg {
+	text-align: center;
+}
+.no-msg-content {
+	display: inline-block;
+}
+.no-msg-text {
+	margin-top: 8px;
+	display: inline-block;
+	color: #999;
+}
+
+
+
+
+
+
+
+
+
+/**************************** 发布租房界面设计 *****************************/
+.detailinfo ul li {
+    position: relative;
+    height: 125px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.detailinfo ul li img {
+    float: left;
+    margin-left: 5px;
+}
+
+.detailinfo ul li dl {
+    margin: 0 180px;
+    height: 20px;
+}
+
+.detailinfo ul li dl dt {
+    height: 30px;
+    line-height: 30px;
+    margin-left: 30px;
+}
+
+.detailinfo ul li span {
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #ac091e;
+}
+
+li dl .title {
+    color: #1a0404;
+    font-size:21px;
+    font-family: "weiruanyahei";
+    font-weight: bolder;
+}
+
+li dl .title:hover {
+    font-size: 20px;
+    background-color: chocolate;
+}
+
+
+
+
+
+
+
+
+
+/******************************* 修改个人资料部分的CSS ************************************/
+
+/* 个人资料部分大框设计 */
+.profile{
+  width: 900px;
+  /* 上外边距和下外边距是0px,右外边距和左外边距是 14px */
+  margin: 0px 30px;
+  font-size: 14px;
+  position: relative;
+}
+
+/* 个人资料部分标题设计 */
+.profile-title{
+  height: 76px;
+  line-height: 76px;
+}
+
+/* 标题字设计 */
+.profile-title span {
+  color: #666;
+  font-size: large;
+  font-weight: bolder;
+}
+
+/* 个人资料-资料列表设计 */
+.profile-list {
+    /* 设置元素的底部外边距 */
+  margin-bottom: 10px;
+}
+
+/* 个人资料-资料列表-li设计 */
+.profile-list li{
+  height: 75px;
+  line-height: 64px;
+  position: relative;
+}
+
+/* 个人资料-资料列表-img设计 */
+.profile-list img{
+  width: 54px;
+  height: 54px;
+  margin-left: 51px;
+  border:none;
+  border-radius: 50%;
+}
+
+/* 每一栏前面提示字设计 */
+.profile-list .key{
+  color: #999;
+}
+
+/* 个人资料-资料列表-保存字设计 */
+.profile-list .value{
+  color: #333;
+  display: inline-block;
+  margin-left: 46px;
+}
+
+/* 个人资料-资料列表-按钮设计 */
+/* .operate-btn和.profile-list并列，其button同样式 */
+.operate-btn, .profile-list button{
+  position: absolute;
+  top: 16px;
+  left: 490px;
+  background: #f2f6ed;
+  color: #ab7500;
+  width: 84px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+}
+.operate-btn:hover {
+  background-color: #ab0009;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/******************************************** 推荐房源 *********************************************/
+
+.recommend-house {
+    background: #fff;
+    position: relative;
+    margin-top: 18px;
+}
+.rh-item {
+	display: inline;
+}
+.rh-area {
+    /* 上下填充为16px, 左右填充为30px */
+	padding: 16px 30px;
+}
+.rh-title {
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 29px;
+}
+.rh-items {
+	margin-top: 12px;
+	vertical-align: top;
+}
+.rh-item-content {
+	display: inline-block;
+	width: 182px;
+	height: 198px;
+	padding: 14px 11px 0 12px;
+	margin-right: 12px;
+	vertical-align: top;
+	position: relative;
+}
+.rh-item-content:hover {
+	background: #f8f8f8;
+}
+.community-area, .community-text {
+	display: inline-block;
+	position: absolute;
+	width: 174px;
+	height: 30px;
+	top: 119px;
+	left: 12px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #fff;
+	padding-left: 8px;	
+}
+.community-area {
+	opacity: 0.7;
+	filter:alpha(opacity=70);
+	background: #333;
+}
+.item-title {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 14px;
+	line-height: 19px;
+	margin-top: 7px;
+	color: #333;
+}
+.item-price {
+	color: #E54B00;
+	font-size: 14px;
+}
+.item-info-sub {
+	float: right;
+}
+.item-info {
+	margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/************************************ 底部栏定义样式 ************************************/
+.footer{
+    clear: both;
+    padding:30px 0 33px;
+    background: #1b0303;
+    font-size: 14px;
+    color: #CCCCCC;
+}
+.footer .links{
+    padding: 6px 0 10px;
+    text-align: center;
+}
+.footer .links li{
+    display: inline-block;
+    *display: inline;
+    border-left:1px solid #666;
+    padding:0 10px;
+    line-height: 12px;
+    height:14px;
+}
+.footer a{
+    color: #ccc;
+    text-decoration: none;
+}
+.footer a:hover{
+    color: rgb(199, 214, 58);
+}
+.footer .links li:first-child{
+    border-left:none;
+}
+
+
+
+
+/********************************** 弹出框设计 ***********************************/
+/* 推出 */
+#quit1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: #FFF;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+}
+
+#quit1 .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#quit1 .content .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quit1 .content .inputBox input {
+    width: 100%;
+    border: 5px solid rgba(20, 3, 3, 0.02);
+    padding: 15px;
+    outline: none;
+    font-size: 18px;  
+}
+
+
+/* 头像 */
+#photo {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: #FFF;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+
+}
+
+#photo .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#photo .content .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo .content .inputBox input {
+    width: 100%;
+    border: 5px solid rgba(20, 3, 3, 0.02);
+    padding: 15px;
+    outline: none;
+    font-size: 18px;  
+}
+
+/* 昵称 */
+#name{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: #FFF;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+}
+
+#name .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#name .content .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#name .content .inputBox input{
+    width: 100%;
+    border: 5px solid rgba(20, 3, 3, 0.02);
+    padding: 15px;
+    outline: none;
+    font-size: 18px;
+    
+}
+
+.btn1{
+    position: relative;
+    padding: 15px 20px;
+    background: rgb(184, 76, 76);
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(240, 219, 219);
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 15px;
+
+}
+.btn1:hover{
+    background-color: rgb(121, 22, 22);
+}
+.close{
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    width: 5px;
+    cursor: pointer;
+}
+
+
+/* 邮箱 */
+#email{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: #FFF;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+
+}
+
+#email .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#email .content .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#email .content .inputBox input{
+    width: 100%;
+    border: 5px solid rgba(20, 3, 3, 0.02);
+    padding: 15px;
+    outline: none;
+    font-size: 18px;
+    
+}
+
+/* 手机号码 */
+#phone {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: #FFF;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+
+}
+
+#phone .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#phone .content .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#phone .content .inputBox input {
+    width: 100%;
+    border: 5px solid rgba(20, 3, 3, 0.02);
+    padding: 15px;
+    outline: none;
+    font-size: 18px;  
+}
+
+/* 密码 */
+#password {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: #FFF;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+
+}
+
+#password .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#password .content .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#password .content .inputBox input {
+    width: 100%;
+    border: 5px solid rgba(20, 3, 3, 0.02);
+    padding: 15px;
+    outline: none;
+    font-size: 18px;  
+}
+
+
+/*删除*/
+#delete {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: #FFF;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+}
+
+#delete .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#delete .content .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#delete .content .inputBox input {
+    width: 100%;
+    border: 5px solid rgba(20, 3, 3, 0.02);
+    padding: 15px;
+    outline: none;
+    font-size: 18px;
+}
+
+.house-delete {
+    position: absolute;
+    top: 25px;
+    right: 70px;
+    background-color: #c25522;
+    width: 110px;
+    height: 38px;
+    border-style: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.releaseBtn {
+    position: absolute;
+    top: 12px;
+    right: 250px;
+    background-color: #c25522;
+    width: 110px;
+    height: 38px;
+    border-style: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, form ,button, input, textarea, fieldset, blockquote, img, iframe, pre, code, hr, legend{
+    padding:0;
+    margin:0;
+}
+body {
+    color:#333;
+    font:12px Arial, Helvetica, sans-serif, Simsun;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size:100%; 
+    font-weight:normal;
+}
+ol, ul {
+    list-style:none;
+}
+img {
+    border:none;
+    vertical-align:top;
+}
+input, select, input, textarea {
+    font-size:12px;
+    outline:none;
+}
+select, input {
+    vertical-align:middle;
+}
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {border:none;padding:0;  }
+textarea {resize:none;}
+fieldset {border:none;}
+table {border-collapse:collapse;border-spacing:0;}
+caption, th {text-align:left;}
+address, cite, code, em, th, i, strong {
+    font-style:normal;
+    font-weight:normal;
+}
+a{
+    text-decoration:none;
+    outline:none;
+}
+a:hover{
+    text-decoration:none;
+}
+
+body{
+    font-family: "Hiragino Sans GB","Microsoft YaHei", "微软雅黑", tahoma, arial, simhei;
+    color: #333;
+    background: #f1f1f1;
+}
+.none {
+    display: none;
+}
+a{
+    color: #666;
+}
+a:hover{
+    color: #666;
+}
+.clearfix:after{
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.container{
+    width: 100%;
+}
+.content{
+    width: 1180px;
+    margin: 20px auto;
+}
+.right-content, .right-cont, .recommend-house {
+    float: left;
+    width: 960px;
+}
+
+.right-cont {
+    min-height: 484px;
+    background: #fff;
+    position: relative;
+}
