@@ -117,7 +117,7 @@ public class House {
     public String getVillage() {
         return village;
     }
-
+吗
     public void setVillage(String village) {
         this.village = village;
     }

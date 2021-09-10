@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/rotation2.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>商品详情</title>
+    <style>
+        /* 去下划线 */
+        a {
+            text-decoration: none;
+            /*链接去下划线*/
+            color: #000000;
+        }
+
+        /* 整体布局 */
+        .detailsWidth {
+            width: 1200px;
+            margin: 0px auto;
+        }
+
+        /* 头部 */
+        .headerDetails {
+            position: relative;
+            width: 1200px;
+            height: 100px;
+            line-height: 80px;
+            font-size: 12px;
+        }
+
+        /* 中部 */
+        .divDetails {
+            position: relative;
+            width: 1200px;
+            height: 1000px;
+        }
+
+        /* 中部的上半部分 */
+        .divDetailsUp {
+            position: relative;
+            height: 400px;
+        }
+
+        /* 上左 */
+        .divU1 {
+            position: relative;
+            width: 450px;
+            height: 400px;
+            float: left;
+        }
+
+        /* 上中 */
+        .divU2 {
+            position: relative;
+            width: 450px;
+            height: 400px;
+            float: left;
+        }
+
+        /* 上右 */
+        .divU3 {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            float: left;
+        }
+
+        /* 中部的下半部分 */
+        .divDetailsDown {
+            position: relative;
+            height: 600px;
+        }
+
+        /* 下左 */
+        .divD1 {
+            position: relative;
+            width: 900px;
+            height: 600px;
+            float: left;
+        }
+
+        /* 下中 */
+        .divD2 {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            float: left;
+            left: 150px;
+        }
+
+        /* 下右 */
+        .divD3 {
+            position: relative;
+            width: 300px;
+            height: 600px;
+            float: left;
+        }
+
+        /* 尾部 */
+        .footerDetails {
+            position: relative;
+            width: 1200px;
+            height: 150px;
+            padding: 30px 0;
+        }
+
+
+        /* 字体样式 */
+        /* 上左 */
+        .fontSU1 {
+            font: 16px "MiscroftYahei";
+            color: #8d8d8d;
+        }
+
+        /* 上中 */
+        .fontSU2 {
+            font: 26px "MiscroftYahei";
+            color: #e0832c;
+        }
+
+        /* 上右 */
+        .fontSU3 {
+            font: 10px "MiscroftYahei";
+            color: #000000;
+        }
+
+        .fontSD1 {
+            font: 15px "MiscroftYahei";
+            color: #000000;
+        }
+
+        .fontSD2 {
+            font: 700 30px "MiscroftYahei";
+            text-indent: 0em;
+            color: #000000;
+        }
+
+        .fontSD3 {
+            font: 20px/50px "MiscroftYahei";
+            text-indent: 1em;
+            color: #000000;
+        }
+
+        .fontSD4 {
+            font: 20px / 35px "MiscroftYahei";
+            text-indent: 6em;
+            color: #000000;
+        }
+
+
+
+        /* 图片样式 */
+        .user-photoS-1 {
+            width: 100px;
+            height: 100px;
+            margin-top: 15px;
+            border-radius: 50%;
+            /*圆形*/
+        }
+
+        .user-photoS-2 {
+            width: 30px;
+            height: 30px;
+        }
+
+        .user-photoS-3 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .logoS {
+            width: 50px;
+            height: 50px;
+        }
+
+        .logoS-2 {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+
+        .logoS-3 {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .logoS-4 {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            display: none;
+        }
+
+
+        /* 按钮 */
+        .buttonS2 {
+            width: 100px;
+            height: 30px;
+            font-size: 10px;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 网页头部 -->
+    <header class="detailsWidth headerDetails">
+        <div class="fl">
+            <ul>
+                <li class="logo">Logo</li>
+                <!-- <li class="cc">选择城市</li> -->
+                <!-- <li class="province"><a href="#">省份</a></li>
+                <li class="city"><a href="#">城市</a></li> -->
+                <div class="search">
+                    <input type="search" name="" id="" placeholder="请输入搜索内容">
+                    <img src="images/搜索 (1).png"></img>
+                </div>
+            </ul>
+        </div>
+        <div class="fr">
+            <ul>
+                <li class="release"><a>发布租房</a></li>
+                <li class="login"><a><img src="images/登陆.png">登录</a></li>
+                <li class="register"><a><img src="images/注册 (选中).png">注册</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- 头部结束 -->
+
+    <!-- 网页主体 -->
+    <div class="detailsWidth divDetails">
+        <!-- 上半部分 -->
+        <div class="divDetailsUp">
+            <!-- 上左 -->
+            <div class="divU1">
+                <div id="picture">
+                    <div id="pRatation">
+                        <img src="images/rotationA1.png" width="400px" height="300px" id="imageimage" />
+
+                    </div>
+
+                    <button class="left"><img src="images/切换器左.png" width="32" height="32"></button>
+                    <button class="right"><img src="images/切换器右.png" width="32" height="32"></button>
+                </div>
+            </div>
+            <!-- 上中 -->
+            <div class="divU2 fontSU1">
+                <p class="fontSU2">2680元/月</p>
+                <p>租赁方式：合租</p>
+                <p>房屋类型：3室1厅1卫 朝南 20平 精装修</p>
+                <p>房屋类型：中层/25层</p>
+                <p>所在小区：首科花园（D区）</p>
+                <p>所属区域：丰台 六里桥距离地铁9号线六里桥东站1511米</p>
+                <p>详细地址：西局东街</p>
+            </div>
+            <!-- 上右 -->
+            <div class="divU3 fontSU3">
+                <img src="images/user.png" class="user-photoS-1"><br />
+                <p>XXXXXXX有限公司</p>
+                <p><img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">电话</button></p>
+                <p><img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">管理房屋</button></p>
+                <p><img src="images/user.png" class="user-photoS-2"> <button class="buttonS2">企业信息及投诉记录</button></p>
+            </div>
+        </div>
+
+        <!-- 下半部分 -->
+        <div class="divDetailsDown">
+            <!-- 下左 -->
+            <div class="divD1 fontSD3">
+                <li class="fontSD2">房源详情</li>
+                <li>&nbsp;卧室设置&nbsp;&nbsp;<img src="images/logo-chuang.png" class="logoS"><img
+                        src="images/logo-kongtiao.png" class="logoS"><img src="images/logo-yigui.png" class="logoS"><img
+                        src="images/logo-dianshi.png" class="logoS"><img src="images/logo-nuanqi.png" class="logoS"><img
+                        src="images/logo-yangtai.png" class="logoS"><img src="images/logo-weishengjian.png"
+                        class="logoS"><img src="images/logo-zhinengmensuo.png" class="logoS"><br /></li>
+
+                <li>&nbsp;公共设施&nbsp;&nbsp;<img src="images/logo-bingxiang.png" class="logoS"><img
+                        src="images/logo-xiyiji.png" class="logoS"><img src="images/logo-shafa.png" class="logoS"><img
+                        src="images/logo-youyanji.png" class="logoS"><img src="images/logo-kezuofan.png"
+                        class="logoS"><img src="images/logo-kuandai.png" class="logoS"><img
+                        src="images/logo-reshuiqi.png" class="logoS"><img src="images/logo-ranqizao.png"
+                        class="logoS"><img src="images/logo-dianti.png" class="logoS"></li>
+
+                <li>&nbsp;出租要求&nbsp;&nbsp;&nbsp;租户稳定 作息正常 禁养宠物</li>
+
+                <li class="description">&nbsp;房源描述</li>
+                <!-- <li class="fontSD4">家配套：配备品牌家具家电、配套床垫、抱枕、台灯、壁灯、减轻疲劳桌椅、</li>
+                <li class="fontSD4">衣柜、空调、洗衣机、冰箱和厨房，高速宽带</li>
+                <li class="fontSD4">该房源真实，良心价格，可月付</li>
+                <li class="fontSD4">室内配置：配备品牌家具家电、配套床垫、抱枕、台灯、桌椅、衣柜、空调、</li>
+                <li class="fontSD4">洗衣机、冰箱和宽带</li>
+                <li class="fontSD4">定期保洁阿姨上门清理卫生，拒绝脏乱差</li> -->
+
+                <!-- </div> -->
+                <!-- 下中 -->
+                <!-- <div class="divD2 fontSD1"> -->
+
+            </div>
+            <div class="miaoshu">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+                啊啊啊啊啊啊啊啊啊啊啊啊阿啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+                啊啊啊啊啊啊啊啊啊啊啊啊阿啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+            </div>
+            <!-- 下右 -->
+            <div class="divD3 fontSD1">
+                <p class="fontSD2">小区详情</p>
+                <img src="images/user.png" class="user-photoS-3">
+                <p>小区：林肯公园C区</p>
+                <p>小区地址：西环北路</p>
+                <a href="#">
+                    <p>在租房源：111</p>
+                </a>
+                <p>建筑年代： 2008</p>
+                <p>建筑类型： 高层</p>
+                <p>物业公司： 北京晟邦物业管理有限公司</p>
+                <p>物业费用： 3.60元/平米/月</p>
+                <p>所属商圈： 大兴 / 亦庄</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- 主体结束 -->
+
+    <!-- 网页底部 -->
+    <footer class="detailsWidth footerDetails">
+        <div class="footerl">
+            <img src="images/footerlogo.png" alt="">
+            <ul>
+                <li><a href="#">网站首页</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">招聘信息</a></li>
+                <li><a href="#">客户服务</a></li>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">广告服务</a></li>
+                <li><a href="#">网站地图</a></li>
+                <li><a href="#">意见反馈</a> </li>
+            </ul>
+        </div>
+        <span><img src="images/call.png">24小时客服热线400-000-0000</span>
+        <div class="footerr">
+            <ul>
+                <li><img src="images/weixin.png" alt=""></li>
+                <li><img src="images/sina.png" alt=""></li>
+                <li><img src="images/mail.png" alt=""></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- 底部结束 -->
+</body>
+<!-- 轮播图 -->
+<script type="text/javascript">
+    var btn1 = document.querySelector('.left');
+    var btn2 = document.querySelector('.right');
+    var img = document.getElementById('imageimage')
+    var imgs= ['images/rotationA1.png', 'images/rotationA2.png',
+        'images/rotationA3.png', 'images/rotationA4.png'];
+    var i = 0;
+    if (i == 0) {
+        btn1.className = 'leftnone';
+    } else {
+        btn1.className = 'left';
+    };
+    if (i == 3) {
+        btn2.className = 'rightnone';
+    } else {
+        btn2.className = 'right';
+    };
+    btn1.onclick = function () {
+        i--;
+        img.src = imgs[i]
+        if (i == 0) {
+            btn1.className = 'leftnone';
+        } else {
+            btn1.className = 'left';
+        };
+        if (i == 3) {
+            btn2.className = 'rightnone';
+        } else {
+            btn2.className = 'right';
+        };
+
+    }
+    btn2.onclick = function () {
+        i++
+        img.src = imgs[i]
+        if (i == 0) {
+            btn1.className = 'leftnone';
+        } else {
+            btn1.className = 'left';
+        };
+        if (i == 3) {
+            btn2.className = 'rightnone';
+        } else {
+            btn2.className = 'right';
+        };
+
+    }
+    // var pictureRotation = document.getElementById("pRatation");
+    // var numberColor = document.getElementsByClassName("buttonP");
+    // console.log(numberColor);
+    // var i = 0;
+    // auto();
+    // numberColor[0].style.backgroundColor = "#969393";
+    // function auto() {
+    //     time = setInterval(function () {
+    //         i++;
+    //         if (i <= 3) {
+    //             pictureRotation.style.left = pictureRotation.offsetLeft - 400 + "px";
+    //             numberColor[i].style.backgroundColor = "#969393";
+    //             numberColor[i - 1].style.backgroundColor = "#e7dcdc";
+    //         }
+    //         else {
+    //             pictureRotation.style.left = "0px";
+    //             numberColor[3].style.backgroundColor = "#e7dcdc";
+    //             numberColor[0].style.backgroundColor = "#969393";
+    //             i = 0;
+    //         }
+    //         console.log(i);
+    //     }, 5000)
+    // }
+    // function changeColor1A(obj) {
+    //     pictureRotation.style.left = "0px";
+    //     numberColor[0].style.backgroundColor = "#969393";
+    //     numberColor[1].style.backgroundColor = "#e7dcdc";
+    //     numberColor[2].style.backgroundColor = "#e7dcdc";
+    //     numberColor[3].style.backgroundColor = "#e7dcdc";
+    // }
+    // function changeColor1B(obj) {
+    //     numberColor[0].style.backgroundColor = "#e7dcdc";
+    // }
+    // function changeColor2A(obj) {
+    //     pictureRotation.style.left = "-1200px";
+    //     numberColor[1].style.backgroundColor = "#969393";
+    //     numberColor[0].style.backgroundColor = "#e7dcdc";
+    //     numberColor[2].style.backgroundColor = "#e7dcdc";
+    //     numberColor[3].style.backgroundColor = "#e7dcdc";
+    // }
+    // function changeColor2B(obj) {
+    //     numberColor[1].style.backgroundColor = "#e7dcdc";
+    // }
+    // function changeColor3A(obj) {
+    //     pictureRotation.style.left = "-2400px";
+    //     numberColor[2].style.backgroundColor = "#969393";
+    //     numberColor[0].style.backgroundColor = "#e7dcdc";
+    //     numberColor[1].style.backgroundColor = "#e7dcdc";
+    //     numberColor[3].style.backgroundColor = "#e7dcdc";
+    // }
+    // function changeColor3B(obj) {
+    //     numberColor[2].style.backgroundColor = "#e7dcdc";
+    // }
+    // function changeColor4A(obj) {
+    //     pictureRotation.style.left = "-3600px";
+    //     numberColor[3].style.backgroundColor = "#969393";
+    //     numberColor[0].style.backgroundColor = "#e7dcdc";
+    //     numberColor[1].style.backgroundColor = "#e7dcdc";
+    //     numberColor[2].style.backgroundColor = "#e7dcdc";
+    // }
+    // function changeColor4B(obj) {
+    //     numberColor[3].style.backgroundColor = "#e7dcdc";
+
+    // }
+</script>
+<!-- 轮播图结束 -->
+
+</html>

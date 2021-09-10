@@ -41,4 +41,13 @@ public interface ManagerDao  {
      * 删除用户
      */
     public boolean deleteManager(Integer managerid);
+
+    /**
+     * 查找管理人
+     */
+    public Manager getManagerByHouseId(Integer houseId);
+
+
+
+
 }

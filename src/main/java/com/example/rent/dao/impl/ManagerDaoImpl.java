@@ -252,5 +252,45 @@ public class ManagerDaoImpl implements ManagerDao {
             return false;
         }
     }
+
+    /**
+     * 得到manager信息
+     * @param
+     * @return
+     */
+    @Override
+    public Manager getManagerByHouseId(Integer houseId) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            // 1.连接数据库
+            con = BaseDao.getConnection();
+            // 2.预编译
+            String sql = "Select * from Manager m where managerId=(select managerId from House where houseId=?)";
+            ps = con.prepareStatement(sql);
+            ps.setInt(1,houseId);
+            // 3.执行sql
+            rs = ps.executeQuery();
+            if (rs.next()){
+                Manager manager = new Manager();
+                manager.setManagerId(rs.getInt("managerId"));
+                manager.setName(rs.getString("managerName"));
+                manager.setPwd(rs.getString("managerPwd"));
+                manager.setManagerIcon(rs.getString("managerIcon"));
+                manager.setTelephone(rs.getString("telNo"));
+                manager.setSum(rs.getInt("houseSum"));
+                return manager;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            // 关闭资源，避免出现异常
+            BaseDao.close(con,ps,rs);
+        }
+        return null;
+    }
+
+
     }
 

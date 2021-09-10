@@ -179,7 +179,7 @@
                                     <button class="house-delete" name="<%=house.getHouseId()%>">删除</button>
                                     <dl>
                                         <dt class="title"><a href="javascript:void(0);">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住</a></dt>
-                                        <dt>2室 54平方米</dt>
+                                          <dt>2室 54平方米</dt>
                                         <dt>金桥路 海洋石油天野小区</dt>
                                         <dt>来自经纪人：七点房产 海琳</dt>
                                     </dl>

@@ -24,34 +24,15 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/housereleasing.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
 </head>
 
 <body>
-<header class="nav w">
-    <div class="fl">
-        <ul>
-            <li class="logo">Logo</li>
-            <!-- <li class="cc">选择城市</li> -->
-            <!-- <li class="province"><a href="#">省份</a></li>
-            <li class="city"><a href="#">城市</a></li> -->
-            <div class="search">
-                <input type="search" name="" placeholder="请输入搜索内容">
-                <img src="images/搜索 (1).png"></img>
-            </div>
-        </ul>
-    </div>
-    <div class="fr">
-        <ul>
-            <li class="release"><a>发布租房</a></li>
-            <li class="login">
-                <a><img src="images/登录.png">登录</a>
-            </li>
-            <li class="register">
-                <a><img src="images/注册 (选中).png">注册</a>
-            </li>
-        </ul>
-    </div>
-</header>
+<div id="header"></div>
+<script>
+    $("#header").load("header.jsp");
+</script>
+
 <!-- 基本信息开始 -->
 <form method="post" name="houseForm">
 <div class="jiben w">
@@ -222,31 +203,10 @@
 
 <!-- 发布按钮结束 -->
 <!-- footer开始 -->
-<div class="footer w">
-    <div class="footerl">
-        <img src="images/footerlogo.png" alt="">
-        <ul>
-            <li><a href="#">网站首页</a></li>
-            <li><a href="#">帮助中心</a></li>
-            <li><a href="#">联系我们</a></li>
-            <li><a href="#">招聘信息</a></li>
-            <li><a href="#">客户服务</a></li>
-            <li><a href="#">隐私政策</a></li>
-            <li><a href="#">广告服务</a></li>
-            <li><a href="#">网站地图</a></li>
-            <li><a href="#">意见反馈</a> </li>
-        </ul>
-    </div>
-    <span><img src="images/call.png">24小时客服热线400-000-0000</span>
-    <div class="footerr">
-        <ul>
-            <li><img src="images/weixin.png" alt=""></li>
-            <li><img src="images/sina.png" alt=""></li>
-            <li><img src="images/mail.png" alt=""></li>
-        </ul>
-    </div>
-</div>
-<!-- footer结束 -->
+<div id="footer"></div>
+<script>
+    $("#footer").load("footer.jsp");
+</script>
 
 <script src="https://unpkg.com/cos-js-sdk-v5/dist/cos-js-sdk-v5.min.js"></script>
 <script type="text/javascript"src="js/jquery-3.4.1.js"></script>

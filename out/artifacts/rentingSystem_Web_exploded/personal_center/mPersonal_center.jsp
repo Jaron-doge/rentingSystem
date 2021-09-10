@@ -23,6 +23,8 @@ To change this template use File | Settings | File Templates.
 <body>
 <%
     Manager manager = (Manager) session.getAttribute("manager");
+    int managerid=manager.getManagerId();
+
 %>
 <!-- 个人界面顶部栏定义区域 -->
 <div class="header-mod">
@@ -30,7 +32,7 @@ To change this template use File | Settings | File Templates.
         <!-- 插入项目logo -->
         <img src="../img/top.png" width="350" alt="">
         <!--定义房源管理按钮-->
-        <button class="releaseBtn" onclick="$.get('https://www.baidu.com');">房源管理</button>
+        <button name=<%=managerid%> class="releaseBtn" id="managerid" onclick="javascript:window.location.href='../agent.jsp?managerid=' + $('#managerid').attr('name')">房源管理</button>
         <!-- 定义退出按钮 -->
         <a href="javascript:void(0)" class="quit"><img src="../img/icon/shutdown.png" alt=""> <span>退出</span></a>
     </div>

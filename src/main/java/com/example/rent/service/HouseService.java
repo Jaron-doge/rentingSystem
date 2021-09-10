@@ -1,6 +1,8 @@
 package com.example.rent.service;
 
 import com.example.rent.entity.House;
+import com.example.rent.entity.HouseBean;
+import com.example.rent.entity.PageBean;
 
 import java.util.List;
 
@@ -45,4 +47,11 @@ public interface HouseService {
      * @return
      */
     public boolean deleteHouse(Integer houseid);
+
+    public HouseBean houseDetailQuery(int houseId);
+
+    public PageBean<House> pageQueryBySearch(String searchContent, int currentPage, int pageSize);
+    public PageBean<House> pageQuery(int currentPage, int pageSize);
+
+
 }

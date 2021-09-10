@@ -219,4 +219,234 @@ public class HouseDaoImpl implements HouseDao {
             return false;
         }
     }
+
+
+    @Override
+    public List<House> findBySearch(String searchContent, int start, int pageSize) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        List<House> list = new ArrayList<>();
+        try {
+            // 1.连接数据库
+            con = BaseDao.getConnection();
+            // 2.预编译
+            String sql = "Select * from House where searchString like ? limit ?,?";
+            ps = con.prepareStatement(sql);
+            ps.setObject(1,"%"+searchContent+"%");
+            ps.setInt(2,start);
+            ps.setInt(3,pageSize);
+
+            // 3.执行sql
+            rs = ps.executeQuery();
+
+            while (rs.next()){
+                House house = new House();
+                house.setHouseId(rs.getInt("houseId"));
+                house.setUserId(rs.getInt("userId"));
+                house.setManagerId(rs.getInt("managerId"));
+                house .setCity(rs.getString("city"));
+                house .setDistrict(rs.getString("district"));
+                house .setVillage(rs.getString("village"));
+                house .setAddress(rs.getString("address"));
+                house .setFloor(rs.getInt("floor"));
+                house .setFloor_sum(rs.getInt("floor_sum"));
+                house .setFloor_lift(rs.getInt("floor_lift"));
+                house .setPrice(rs.getInt("price"));
+                house .setType_bedroom(rs.getInt("type_bedroom"));
+                house .setType_livingroom(rs.getInt("type_livingroom"));
+                house .setType_bathroom(rs.getInt("type_bathroom"));
+                house .setArea(rs.getString("area"));
+                house .setDescription(rs.getString("description"));
+                house .setHouseToward(rs.getString("houseToward"));
+                house .setFacilities(rs.getString("facilities"));
+                house.setRequirement(rs.getString("requirement"));
+                house.setPersonnum(rs.getInt("personnum"));
+                house.setHouseImg(rs.getString("houseImg"));
+                house.setPayMethod(rs.getString("payMethod"));
+                list.add(house);
+            }
+            return list;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            // 关闭资源，避免出现异常
+            BaseDao.close(con,ps,rs);
+        }
+        return null;
+    }
+
+    @Override
+    public int findTotalCountBySearch(String searchContent) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            // 1.连接数据库
+            con = BaseDao.getConnection();
+            // 2.预编译
+            String sql = "select count(*) from House where searchString like ?";
+            ps = con.prepareStatement(sql);
+            ps.setObject(1,"%"+searchContent+"%");
+            // 3.执行sql
+            rs = ps.executeQuery();
+
+            // 4.保存查询出来的数据
+            rs.next();
+            int count = rs.getInt(1);
+            //System.out.println(count);
+            return count;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            // 关闭资源，避免出现异常
+            BaseDao.close(con,ps,rs);
+        }
+        return 0;
+    }
+
+    @Override
+    public int findTotalCountByManager(int managerid) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            // 1.连接数据库
+            con = BaseDao.getConnection();
+            // 2.预编译
+            String sql = "select count(*) from House where managerid = ?";
+            ps = con.prepareStatement(sql);
+            ps.setInt(1,managerid);
+            // 3.执行sql
+            rs = ps.executeQuery();
+
+            // 4.保存查询出来的数据
+            rs.next();
+            int count = rs.getInt(1);
+            //System.out.println(count);
+            return count;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            // 关闭资源，避免出现异常
+            BaseDao.close(con,ps,rs);
+        }
+        return 0;
+    }
+
+    @Override
+    public List<House> findByPageByManager(int managerid, int start, int pageSize) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            // 1.连接数据库
+            con = BaseDao.getConnection();
+            // 2.预编译
+            String sql = "select * from House where managerId = ? ";
+            ps = con.prepareStatement(sql);
+            ps.setInt(1,managerid);
+            // 3.执行sql
+            rs = ps.executeQuery();
+            // 4.保存查询出来的数据到list
+            List<House> list = new ArrayList<>();
+            while (rs.next()) {
+                House house = new House();
+                house.setHouseId(rs.getInt("houseId"));
+                house.setUserId(rs.getInt("userId"));
+                house.setManagerId(rs.getInt("managerId"));
+                house .setCity(rs.getString("city"));
+                house .setDistrict(rs.getString("district"));
+                house .setVillage(rs.getString("village"));
+                house .setAddress(rs.getString("address"));
+                house .setFloor(rs.getInt("floor"));
+                house .setFloor_sum(rs.getInt("floor_sum"));
+                house .setFloor_lift(rs.getInt("floor_lift"));
+                house .setPrice(rs.getInt("price"));
+                house .setType_bedroom(rs.getInt("type_bedroom"));
+                house .setType_livingroom(rs.getInt("type_livingroom"));
+                house .setType_bathroom(rs.getInt("type_bathroom"));
+                house .setArea(rs.getString("area"));
+                house .setDescription(rs.getString("description"));
+                house .setHouseToward(rs.getString("houseToward"));
+                house .setFacilities(rs.getString("facilities"));
+                house.setRequirement(rs.getString("requirement"));
+                house.setPersonnum(rs.getInt("personnum"));
+                house.setHouseImg(rs.getString("houseImg"));
+                house.setPayMethod(rs.getString("payMethod"));
+                list.add(house);
+            }
+            return list;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // 关闭资源，避免出现异常
+            BaseDao.close(con, ps, rs);
+        }
+        return null;
+
+    }
+
+    @Override
+    public House selectHouse(String sql, Object[] arr) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            // 1.连接数据库
+            con = BaseDao.getConnection();
+            // 2.预编译
+            ps = con.prepareStatement(sql);
+            if(arr != null){
+                for (int i = 0; i < arr.length; i++) {
+                    // 传入sql的参数
+                    ps.setObject(i+1,arr[i]);
+                }
+            }
+            // 3.执行sql
+            rs = ps.executeQuery();
+            // 4.保存查询出来的数据到list
+            if (rs.next()){
+                House house = new House();
+                house.setHouseId(rs.getInt("houseid"));
+                house.setUserId(rs.getInt("userid"));
+                house.setManagerId(rs.getInt("managerid"));
+                house .setCity(rs.getString("city"));
+                house .setDistrict(rs.getString("district"));
+                house .setVillage(rs.getString("village"));
+                house .setAddress(rs.getString("address"));
+                house .setFloor(rs.getInt("floor"));
+                house .setFloor_sum(rs.getInt("floor_sum"));
+                house .setFloor_lift(rs.getInt("floor_lift"));
+                house .setPrice(rs.getInt("price"));
+                house .setType_bedroom(rs.getInt("type_bedroom"));
+                house .setType_livingroom(rs.getInt("type_livingroom"));
+                house .setType_bathroom(rs.getInt("type_bathroom"));
+                house .setArea(rs.getString("area"));
+                house .setDescription(rs.getString("description"));
+                house .setHouseToward(rs.getString("houseToward"));
+                house .setFacilities(rs.getString("facilities"));
+                house.setRequirement(rs.getString("requirement"));
+                house.setPersonnum(rs.getInt("personnum"));
+                house.setHouseImg(rs.getString("houseImg"));
+                house.setPayMethod(rs.getString("payMethod"));
+                return house;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            // 关闭资源，避免出现异常
+            BaseDao.close(con,ps,rs);
+        }
+        return null;
+    }
+
+
+
+
+
+
 }

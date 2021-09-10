@@ -1,17 +1,12 @@
 <%--
   Created by IntelliJ IDEA.
-  User: YYH
-  Date: 2021/9/3
-  Time: 16:23
+  User: LY
+  Date: 2021/9/7
+  Time: 15:28
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    // 获取绝对路径路径 ,开发项目一定要使用绝对路径，不然肯定出错
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":"
-            + request.getServerPort() + path + "/";
-%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>\
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,31 +19,20 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/rotation.css">
     <link rel="stylesheet" href="css/common.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
 </head>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 
 <body>
-<header class="nav w">
-    <div class="fl">
-        <ul>
-            <li class="logo">Logo</li>
-            <!-- <li class="cc">选择城市</li> -->
-            <!-- <li class="province"><a href="#">省份</a></li>
-            <li class="city"><a href="#">城市</a></li> -->
-            <div class="search">
-                <input type="search" name="" id="" placeholder="请输入搜索内容">
-                <img src="images/搜索 (1).png"></img>
-            </div>
-        </ul>
-    </div>
-    <div class="fr">
-        <ul>
-            <li class="release"><a>发布租房</a></li>
-            <li class="login"><a><img src="images/登陆.png">登录</a></li>
-            <li class="register"><a><img src="images/注册 (选中).png">注册</a></li>
-        </ul>
-    </div>
-</header>
-<!-- 导航栏模块结束 -->
+
+<div id="header"></div>
+<script>
+    $("#header").load("header.jsp");
+</script>
+
 <!-- 轮播图开始 -->
 <div id="picture">
     <div id="pRatation">
@@ -133,289 +117,223 @@
     }
 </script>
 <!-- 轮播图结束 -->
-<!-- 服务模块开始 -->
-<div class="service w">
-    <ul>
-        <li><a>公寓</a></li>
-        <li><a>商铺</a></li>
-        <li><a>写字楼</a></li>
-        <li><a>厂房</a></li>
-        <li><a>仓库</a></li>
-    </ul>
-</div>
-<!-- 服务模块结束 -->
+
+
 <!-- 范围选择开始 -->
-<div class="area w">
+<div class="area w" style="margin-top: 25px">
     <ul>
-        <li>
-            <span>租金：</span>
-            <span><a href="#">600</a></span>
-            <span><a href="#">600-1000</a></span>
-            <span><a href="#">1000-2000</a></span>
-            <span><a href="#">2000-3000</a></span>
-            <span><a href="#">3000-5000</a></span>
-            <span><a href="#">5000-8000</a></span>
-            <span><a href="#">8000以上</a></span>
-        </li>
-        <li>
-            <span>厅室：</span>
-            <span><a href="#">一室</a></span>
-            <span><a href="#">两室</a></span>
-            <span><a href="#">三室</a></span>
-            <span><a href="#">四室</a></span>
-            <span><a href="#">四室以上</a></span>
-        </li>
-        <li>
-            <span>方式：</span>
-            <span><a href="#">整套出租</a></span>
-            <span><a href="#">单间出租</a></span>
-        </li>
-        <li>
-            <span>其他：</span>
-            <span><a href="#">朝向不限</a></span>
-            <span><a href="#">装修不限</a></span>
-            <span><a href="#">只看有图</a></span>
-        </li>
+        <li id="city_item"></li>
+        <li id="price_item"></li>
+        <li id="type_bedroom_item"></li>
+        <li id="houseToward_item"></li>
     </ul>
 </div>
 <!-- 范围选择结束 -->
+
 <!-- 联系客服分割线开始 -->
-<div class="kefu w">
-    <a href="#">联系客服</a>
+<div class="kefu w" style="height: 30px">
 </div>
 <!-- 联系客服分割线结束 -->
+
 <!-- 房源开始 -->
-<div class="house w">
+<div class="house w" style="height: 1480px">
     <!-- 左侧列开始 -->
     <div class="houseleft">
-        <div class="reco">
-            <ul>
-                <li><a href="#">推荐房源</a></li>
-                <li><a href="#">最新房源</a></li>
-            </ul>
+<%--        <div class="reco">--%>
+<%--            <ul>--%>
+<%--&lt;%&ndash;                <li><a href="#">推荐房源</a></li>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                <li><a href="#">最新房源</a></li>&ndash;%&gt;--%>
+<%--            </ul>--%>
         </div>
         <div class="detailinfo">
-            <ul>
-                <li>
-                    <img src="images/小1.png">
-                    <dl>
-                        <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
-                        <dt>2室 54平方米</dt>
-                        <dt>金桥路 海洋石油天野小区</dt>
-                        <dt>来自经纪人：七点房产 海琳</dt>
-                    </dl>
-                    <span>3600元/月</span>
-                </li>
-                <li>
-                    <img src="images/小2.png">
-                    <dl>
-                        <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
-                        <dt>2室 54平方米</dt>
-                        <dt>金桥路 海洋石油天野小区</dt>
-                        <dt>来自经纪人：七点房产 海琳</dt>
-                    </dl>
-                    <span>3600元/月</span>
-                </li>
-                <li>
-                    <img src="images/小3.png">
-                    <dl>
-                        <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
-                        <dt>2室 54平方米</dt>
-                        <dt>金桥路 海洋石油天野小区</dt>
-                        <dt>来自经纪人：七点房产 海琳</dt>
-                    </dl>
-                    <span>3600元/月</span>
-                </li>
-                <li>
-                    <img src="images/小1.png">
-                    <dl>
-                        <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
-                        <dt>2室 54平方米</dt>
-                        <dt>金桥路 海洋石油天野小区</dt>
-                        <dt>来自经纪人：七点房产 海琳</dt>
-                    </dl>
-                    <span>3600元/月</span>
-                </li>
-                <li>
-                    <img src="images/小3.png">
-                    <dl>
-                        <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
-                        <dt>2室 54平方米</dt>
-                        <dt>金桥路 海洋石油天野小区</dt>
-                        <dt>来自经纪人：七点房产 海琳</dt>
-                    </dl>
-                    <span>3600元/月</span>
-                </li>
-                <li>
-                    <img src="images/小1.png">
-                    <dl>
-                        <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
-                        <dt>2室 54平方米</dt>
-                        <dt>金桥路 海洋石油天野小区</dt>
-                        <dt>来自经纪人：七点房产 海琳</dt>
-                    </dl>
-                    <span>3600元/月</span>
-                </li>
-                <li>
-                    <img src="images/小2.png">
-                    <dl>
-                        <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
-                        <dt>2室 54平方米</dt>
-                        <dt>金桥路 海洋石油天野小区</dt>
-                        <dt>来自经纪人：七点房产 海琳</dt>
-                    </dl>
-                    <span>3600元/月</span>
-                </li>
-                <li>
-                    <img src="images/小2.png">
-                    <dl>
-                        <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
-                        <dt>2室 54平方米</dt>
-                        <dt>金桥路 海洋石油天野小区</dt>
-                        <dt>来自经纪人：七点房产 海琳</dt>
-                    </dl>
-                    <span>3600元/月</span>
-                </li>
-                <li>
-                    <img src="images/小1.png">
-                    <dl>
-                        <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
-                        <dt>2室 54平方米</dt>
-                        <dt>金桥路 海洋石油天野小区</dt>
-                        <dt>来自经纪人：七点房产 海琳</dt>
-                    </dl>
-                    <span>3600元/月</span>
-                </li>
-                <li>
-                    <img src="images/小2.png">
-                    <dl>
-                        <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>
-                        <dt>2室 54平方米</dt>
-                        <dt>金桥路 海洋石油天野小区</dt>
-                        <dt>来自经纪人：七点房产 海琳</dt>
-                    </dl>
-                    <span>3600元/月</span>
-                </li>
+            <ul id="rent">
             </ul>
+            <!--                <a href="product-details.jsp?houseid=' + rent.houseId + '">-->
+            <!--                    <li>-->
+            <!--                        <img src="images/小1.png">-->
+            <!--                        <dl>-->
+            <!--                            <dt class="title"><a href="#">整租 | 海洋石油天野小区 天野佳园 元和国际 拎包入住 好停</a></dt>-->
+            <!--                            <dt>2室 54平方米</dt>-->
+            <!--                            <dt>金桥路 海洋石油天野小区</dt>-->
+            <!--                            <dt>来自经纪人：七点房产 海琳</dt>-->
+            <!--                        </dl>-->
+            <!--                        <span>3600元/月</span>-->
+            <!--                    </li>-->
+            <!--                </a>-->
         </div>
+
         <!-- 尾部页码开始 -->
         <div class="page">
-            <ul>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">...</a></li>
-                <li><a href="#">70</a></li>
-                <li><a href="#">下一页</a></li>
-
-            </ul>
+            <ul id="pageNum"></ul>
         </div>
         <!-- 尾部页码结束 -->
+
     </div>
     <!-- 左侧列结束 -->
     <!-- 右侧列开始 -->
     <div class="houseright">
         <div class="retui">
-            热推房源
+            最新房源
         </div>
         <div class="retuiinfo">
-            <ul>
-                <li>
-                    <img src="images/大2.png">
-                    <dl>
-                        <dt class="retuidetail">金桥开发区/金桥路/金桥开发区/金桥路</dt>
-                        <dt class="retuidetail">3室 136.5平</dt>
-                        <dt class="retuiprice">3000元/月</dt>
-                    </dl>
-                </li>
-                <li>
-                    <img src="images/大2.png">
-                    <dl>
-                        <dt class="retuidetail">金桥开发区/金桥路/金桥开发区/金桥路</dt>
-                        <dt class="retuidetail">3室 136.5平</dt>
-                        <dt class="retuiprice">3000元/月</dt>
-                    </dl>
-                </li>
-                <li>
-                    <img src="images/大3.png">
-                    <dl>
-                        <dt class="retuidetail">金桥开发区/金桥路/金桥开发区/金桥路</dt>
-                        <dt class="retuidetail">3室 136.5平</dt>
-                        <dt class="retuiprice">3000元/月</dt>
-                    </dl>
-                </li>
-                <li>
-                    <img src="images/大2.png">
-                    <dl>
-                        <dt class="retuidetail">金桥开发区/金桥路/金桥开发区/金桥路</dt>
-                        <dt class="retuidetail">3室 136.5平</dt>
-                        <dt class="retuiprice">3000元/月</dt>
-                    </dl>
-                </li>
-                <li>
-                    <img src="images/大3.png">
-                    <dl>
-                        <dt class="retuidetail">金桥开发区/金桥路/金桥开发区/金桥路</dt>
-                        <dt class="retuidetail">3室 136.5平</dt>
-                        <dt class="retuiprice">3000元/月</dt>
-                    </dl>
-                </li>
+            <ul id="retuiinfo">
             </ul>
+            <!--                <a href="product-details.jsp?houseid=' + rent.houseId + '">-->
+            <!--                    <li>-->
+            <!--                        <img src="images/大2.png">-->
+            <!--                        <dl>-->
+            <!--                            <dt class="retuidetail">金桥开发区/金桥路/金桥开发区/金桥路</dt>-->
+            <!--                            <dt class="retuidetail">3室 136.5平</dt>-->
+            <!--                            <dt class="retuiprice">3000元/月</dt>-->
+            <!--                        </dl>-->
+            <!--                    </li>-->
+            <!--                </a>-->
         </div>
     </div>
     <!-- 右侧列结束 -->
 
 </div>
 <!-- 房源结束 -->
-<!-- 友情链接开始 -->
-<div class="blogroll w">
-    <h1>
-        友情链接
-    </h1>
-    <ul>
-        <li><a href="#">https://www.bupt.edu.cn/</a></li>
-        <li><a href="#">https://www.bupt.edu.cn/</a></li>
-        <li><a href="#">https://www.bupt.edu.cn/</a></li>
-        <li><a href="#">https://www.bupt.edu.cn/</a></li>
-    </ul>
-</div>
-<!-- 友情链接结束 -->
-<!-- footer开始 -->
-<div class="footer w">
-    <div class="footerl">
-        <img src="images/footerlogo.png" alt="">
-        <ul>
-            <li><a href="#">网站首页</a></li>
-            <li><a href="#">帮助中心</a></li>
-            <li><a href="#">联系我们</a></li>
-            <li><a href="#">招聘信息</a></li>
-            <li><a href="#">客户服务</a></li>
-            <li><a href="#">隐私政策</a></li>
-            <li><a href="#">广告服务</a></li>
-            <li><a href="#">网站地图</a></li>
-            <li><a href="#">意见反馈</a> </li>
-        </ul>
-    </div>
-    <span><img src="images/call.png">24小时客服热线400-000-0000</span>
-    <div class="footerr">
-        <ul>
-            <li><img src="images/weixin.png" alt=""></li>
-            <li><img src="images/sina.png" alt=""></li>
-            <li><img src="images/mail.png" alt=""></li>
-        </ul>
-    </div>
-</div>
-<!-- footer结束 -->
+
+<div id="footer"></div>
+<script>
+    $("#footer").load("footer.jsp");
+</script>
+
+
 <!-- 固定定位开始 -->
-<div class="fix">
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</div>
 <!-- 固定定位结束 -->
+
 </body>
+
+<script>
+    $(function () {
+        var ccity=["不限","朝阳","海淀","昌平","丰台","大兴"];
+        var cprice=["不限","600-1000","1000-1500","1500-2000","2000-3000","3000-5000"];
+        var ctype_bedroom=["不限","一室","两室","三室","三室以上"];
+        var chouseToward=["不限","东","南","西","北","东南","东北","西南","西北"];
+
+        var lis1 = '<span>区域：</span>';
+
+        //遍历数组,拼接字符串
+        for (var i = 0; i < ccity.length; i++) {
+            var li = '<span><a href="rent_list.jsp?ccity='+ccity[i]+'">'+ccity[i]+'</a></span>';
+            lis1 += li;
+        }
+        $("#city_item").html(lis1);
+
+        var lis2 = '<span>租金：</span><span><a href="rent_list.jsp?cprice=不限">不限</a></span>';
+        //遍历数组,拼接字符串
+        for (var i = 1; i < cprice.length; i++) {
+            var li = '<span><a href="rent_list.jsp?cprice='+cprice[i]+'">'+cprice[i]+'元</a></span>';
+            lis2 += li;
+        }
+        $("#price_item").html(lis2);
+
+        var lis3 = '<span>厅室：</span>';
+        //遍历数组,拼接字符串
+        for (var i = 0; i < ctype_bedroom.length; i++) {
+            var li = '<span><a href="rent_list.jsp?ctype_bedroom='+ctype_bedroom[i]+'">'+ctype_bedroom[i]+'</a></span>';
+            lis3 += li;
+        }
+        $("#type_bedroom_item").html(lis3);
+
+        var lis4 = '<span>朝向：</span>';
+        //遍历数组,拼接字符串
+        for (var i = 0; i < chouseToward.length; i++) {
+            var li = '<span><a href="rent_list.jsp?chouseToward='+chouseToward[i]+'">'+chouseToward[i]+'</a></span>';
+            lis4 += li;
+        }
+        $("#houseToward_item").html(lis4);
+        load(1);
+    });
+    // function loadright(currentPage,pageSize) {
+    //     $.get("rent",{currentPage:currentPage,pageSize:pageSize},function (pb) {
+    //         var rent_lis="";
+    //         for (var i=0;i<pb.list.length;i++) {
+    //             var rent = pb.list[i];
+    //
+    //             var li = ' <a href="house_detail.jsp?houseid=' + rent.houseId + '">\n' +
+    //                 '                    <li>\n' +
+    //                 '                    <img width="300" height="170" src="' + rent.houseImg + '" >\n' +
+    //                 '                    <dl>\n' +
+    //                 '                    <dt class="retuidetail">'+rent.city+' '+rent.district+' '+rent.village+'</dt>\n' +
+    //                 '                    <dt class="retuidetail">'+rent.type_bedroom+'室 '+rent.area+'平</dt>\n' +
+    //                 '                <dt class="retuiprice">'+rent.price+'元/月</dt>\n' +
+    //                 '                </dl>\n' +
+    //                 '                </li>\n' +
+    //                 '       </a>';
+    //
+    //             rent_lis += li;
+    //         }
+    //         $("#retuiinfo").html(rent_lis);
+    //
+    //     });
+    // }
+    function load(currentPage) {
+        $.get("rent",{currentPage:currentPage},function (pb) {
+            var lis="";
+            var firstPage='<li onclick="javascript:load(1)"><a href="javascript:void(0)">首页</a></li>';
+            var beforeNum=pb.currentPage-1;
+            if(beforeNum<=0){
+                beforeNum=1;
+            }
+            var beforePage='<li onclick="javascript:load('+beforeNum+')"><a href="javascript:void(0)">上一页</a></li>';
+            lis+=firstPage;
+            lis+=beforePage;
+            for(var i=1;i<=pb.totalPage;i++){
+                var li='<li onclick="javascript:load('+i+')"><a href="javascript:void(0)">'+i+'</a></li>';
+                lis+=li;
+            }
+            var nextNum=pb.currentPage+1;
+            if(nextNum>pb.totalPage){
+                nextNum=pb.totalPage;
+            }
+            var nextPage='<li onclick="javascript:load('+nextNum+')"><a href="javascript:void(0)">下一页</a></li>';
+            var lastPage='<li onclick="javascript:load('+pb.totalPage+')"><a href="javascript:void(0)">尾页</a></li>';
+            lis+=nextPage;
+            lis+=lastPage;
+            $("#pageNum").html(lis);
+
+            var rent_lis="";
+            for (var i=0;i<pb.list.length;i++) {
+                var rent = pb.list[i];
+                var li = '<a href="house_detail.jsp?houseid=' + rent.houseId + '">\n' +
+                    '                    <li>\n' +
+                    '                        <img widtg="160" height="120" src="' + rent.houseImg + '" >\n' +
+                    '                        <dl>\n' +
+                    '                            <dt class="title">'+rent.village+' '+rent.city+' '+rent.district+' | '+rent.type_bedroom+'室 '+rent.area+'</dt>\n' +
+                    '                            <dt>'+rent.floor+'楼 / '+rent.floor_sum+'层</dt>\n' +
+                    '                            <dt>'+rent.type_bedroom+'室 '+rent.type_livingroom+'厅 '+rent.type_bathroom+'卫</dt>\n' +
+                    '                            <dt>'+rent.district+' '+rent.village+' '+rent.address+'</dt>\n' +
+                    '                        </dl>\n' +
+                    '                        <span>'+rent.price+'元/月</span>\n' +
+                    '                    </li>\n' +
+                    '                </a>';
+                rent_lis += li;
+            }
+            $("#rent").html(rent_lis);
+
+            var right_rent_lis="";
+            for (var i=0;i<pb.list2.length;i++) {
+                var rent = pb.list2[i];
+
+                var li = ' <a href="house_detail.jsp?houseid=' + rent.houseId + '">\n' +
+                    '                    <li>\n' +
+                    '                    <img width="300" height="170" src="' + rent.houseImg + '" >\n' +
+                    '                    <dl>\n' +
+                    '                    <dt class="retuidetail">'+rent.city+' '+rent.district+' '+rent.village+'</dt>\n' +
+                    '                    <dt class="retuidetail">'+rent.type_bedroom+'室 '+rent.area+'平</dt>\n' +
+                    '                <dt class="retuiprice">'+rent.price+'元/月</dt>\n' +
+                    '                </dl>\n' +
+                    '                </li>\n' +
+                    '       </a>';
+
+                right_rent_lis+= li;
+            }
+            $("#retuiinfo").html(right_rent_lis);
+        });
+    }
+</script>
 
 </html>

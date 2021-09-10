@@ -1,10 +1,14 @@
 package com.example.rent.service.impl;
 
+import com.example.rent.dao.HouseDao;
 import com.example.rent.dao.ManagerDao;
 import com.example.rent.dao.UserDao;
+import com.example.rent.dao.impl.HouseDaoImpl;
 import com.example.rent.dao.impl.ManagerDaoImpl;
 import com.example.rent.dao.impl.UserDaoImpl;
+import com.example.rent.entity.House;
 import com.example.rent.entity.Manager;
+import com.example.rent.entity.ManagerBean;
 import com.example.rent.entity.User;
 import com.example.rent.service.ManagerService;
 import com.example.rent.util.BaseDao;
@@ -17,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ManagerServiceImpl implements ManagerService {
+    private HouseDao houseDao = new HouseDaoImpl();
     @Override
     public boolean register(Manager manager) {
         String sql = "insert into Manager values (?,?,?,?,?)";
@@ -98,5 +103,27 @@ public class ManagerServiceImpl implements ManagerService {
     @Override
     public boolean deleteManager(Integer userid) {
         return false;
+    }
+
+    @Override
+    public ManagerBean<House> managerQuery(int managerid, int currentPage, int pageSize) {
+        //封装ManagerBean
+        ManagerBean<House> mb = new ManagerBean<House>();
+        //设置当前页码
+        mb.setCurrentPage(currentPage);
+        //设置每页显示条数
+        mb.setPageSize(pageSize);
+
+        //设置总记录数
+        int totalCount = houseDao.findTotalCountByManager(managerid);
+        mb.setTotalCount(totalCount);
+        //设置当前页显示的数据集合
+        int start = (currentPage - 1) * pageSize;//开始的记录数
+        List<House> list = houseDao.findByPageByManager(managerid,start,pageSize);
+        mb.setList(list);
+        //设置总页数 = 总记录数/每页显示条数
+        int totalPage = totalCount % pageSize == 0 ? totalCount / pageSize :(totalCount / pageSize) + 1 ;
+        mb.setTotalPage(totalPage);
+        return mb;
     }
 }

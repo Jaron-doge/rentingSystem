@@ -50,3 +50,54 @@
     background-color: #e7dcdc;
 
 }
+.left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 300px;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.leftnone {
+    display: none;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 300px;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.rightnone {
+    display: none;
+}
+
+.description {
+    position: relative;
+}
+
+.miaoshu {
+    list-style: none;
+    position: absolute;
+    top: 195px;
+    left: 120px;
+    height: 300px;
+    line-height: 43px;
+    width: 600px;
+    padding: 1px;
+    /* background-color: pink; */
+    color: #000000;
+    font-size: 20px;
+    z-index: 2;
+
+    /* word-wrap: break-word;
+    word-break: normal; */
+}
+
+.miaoshu p {
+    float: left;
+}

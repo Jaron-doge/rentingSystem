@@ -1,6 +1,8 @@
 package com.example.rent.service;
 
+import com.example.rent.entity.House;
 import com.example.rent.entity.Manager;
+import com.example.rent.entity.ManagerBean;
 import com.example.rent.entity.User;
 
 import java.util.List;
@@ -42,4 +44,5 @@ public interface ManagerService {
      * 删除用户
      */
     public boolean deleteManager(Integer userid);
+    public ManagerBean<House> managerQuery(int managerid, int currentPage, int pageSize);
 }
